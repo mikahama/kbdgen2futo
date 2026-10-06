@@ -1,0 +1,1012 @@
+! ============================= !
+! File containing abbreviations !
+! ============================= !
+
+! Lexica for adding tags and periods
+! ----------------------------------
+
+! Splitting in 3 groups, because of the preprocessor
+! - - - - - - - - - - - - - - - - - - - - - - - - -
+
+LEXICON Abbreviation
+noperiod ;
+ITRAB ;
+TRNUMAB ;
+TRAB ;
+
+! Now splitting according to POS, and according to dot or not
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+! First collecting POS info, *-noun, *-adv, etc.
+! Also splitting when in doubt: -noun-adj => -noun and -adj
+! Then pointing to two contlexes, a dot-one and a non-dot-one.
+
+LEXICON ab ! No POS, don't know what pos
+ab-nodot ;
+ab-dot ;
+
+LEXICON ab-noun
+ab-nodot-noun ;
+ab-dot-noun ;
+
+!LEXICON ab-adj
+!ab-nodot-adj ;
+!ab-dot-adj ;
+
+!LEXICON ab-adv
+!ab-nodot-adv ;
+!ab-dot-adv ;
+
+!LEXICON ab-num
+!ab-nodot-num ;
+!ab-dot-num;
+
+! Here come POS and Case tags, and no period.
+
+LEXICON ab-nodot-noun ! The bulk
++N+ABBR: # ;  ! no period, that is.
++N+ABBR+Sg+Dat+Def:%-нтень # ;
++N+ABBR+Sg+Gen+Def:%-нть # ;
++N+ABBR+SP+Gen+Indef:%-нь # ;
++N+ABBR+SP+Lat+Indef:%-в # ;
++N+ABBR+Sg+Nom+Def:%-сь # ;
+
+LEXICON ab-nodot-noun-back ! The bulk
++N+ABBR: # ;  ! no period, that is.
++N+ABBR+Sg+Dat+Def:%-нтень # ;
++N+ABBR+Sg+Gen+Def:%-нть # ;
++N+ABBR+SP+Gen+Indef:%-нь # ;
++N+ABBR+SP+Ine+Indef:%-со # ;
++N+ABBR+SP+Ine+Def:%-сонть # ;
++N+ABBR+SP+Ela+Indef:%-сто # ;
++N+ABBR+SP+Ela+Def:%-стонть # ;
++N+ABBR+SP+Lat+Indef:%-в # ;
++N+ABBR+Sg+Nom+Def:%-сь # ;
++N+ABBR+SP+Prl+Indef:%-га # ;
++N+ABBR+SP+Prl+Def:%-ганть # ;
+
+LEXICON ab-nodot-noun-front ! The bulk
++N+ABBR: # ;  ! no period, that is.
++N+ABBR+Sg+Dat+Def:%-нтень # ;
++N+ABBR+Sg+Gen+Def:%-нть # ;
++N+ABBR+SP+Gen+Indef:%-нь # ;
++N+ABBR+SP+Lat+Indef:%-в # ;
++N+ABBR+SP+Ine+Indef:%-сэ # ;
++N+ABBR+SP+Ine+Def:%-сэнть # ;
++N+ABBR+SP+Ela+Indef:%-стэ # ;
++N+ABBR+SP+Ela+Def:%-стэнть # ;
++N+ABBR+Sg+Nom+Def:%-сь # ;
++N+ABBR+SP+Prl+Indef:%-га # ;
++N+ABBR+SP+Prl+Def:%-ганть # ;
+
+LEXICON ab-nodot ! default
++ABBR: # ;  ! no period, that is.
+
+! Here come POS and Case tags, with the period added.
+
+LEXICON ab-dot ! Default
++ABBR:%. # ;
+
+LEXICON ab-dot-noun ! This is the lexicon for abbrs that must have a period.
++N+ABBR:%. # ;
+
+! The idea is that the nominal ones may have case, like e.g. P.E.N.
+
+
+! The abbreviation lexicon itself
+! -------------------------------
+
+! The ones without final period are listed first. They do not
+! need the transitivity division.
+
+LEXICON noperiod
+вп² ab-nodot-noun "км²" ;
+вп ab-nodot-noun "км" ;
+км² ab-nodot-noun ;
+км ab-nodot-noun ;
+см ab-nodot-noun ;
+гг ab-nodot-noun ;
+м3/с ab-nodot-noun ;
+кв  ab-nodot-noun ;
+млн ab-nodot-noun-back ;
+млрд ab-nodot-noun-back ;
+ААНИИ ab-nodot-noun ;
+АвтоВАЗ ab-nodot-noun ;
+АЗС ab-nodot-noun ;
+АИРР ab-nodot-noun ;
+АККОР ab-nodot-noun ;
+АККСБ ab-nodot-noun ;
+АМР ab-nodot-noun ;
+АН  ab-nodot-noun ;
+АНО ab-nodot-noun-back ;
+АО  ab-nodot-noun ;
+АПк ab-nodot-noun ;
+АПК ab-nodot-noun ;
+АПО ab-nodot-noun-back ;
+АПП ab-nodot-noun ;
+АПС ab-nodot-noun ;
+АПЭК ab-nodot-noun ;
+АРЕ ab-nodot-noun ;
+АСИ ab-nodot-noun ;
+АсПУр ab-nodot-noun ;
+АСРОС ab-nodot-noun ;
+АССК ab-nodot-noun ;
+АССР ab-nodot-noun-front ;
+АСУ ab-nodot-noun ;
+АТК  ab-nodot-noun ;
+АТО ab-nodot-noun ;
+АТОС ab-nodot-noun ;
+АТП ab-nodot-noun ;
+АТС ab-nodot-noun ;
+АУ  ab-nodot-noun ;
+АФК ab-nodot-noun ;
+АФУН ab-nodot-noun ;
+АЭС ab-nodot-noun-front ;
+БАМ ab-nodot-noun ;
+БАО ab-nodot-noun ;
+БДД ab-nodot-noun ;
+БЕАР ab-nodot-noun ;
+БК ab-nodot-noun ;
+БКАД ab-nodot-noun ;
+БКД ab-nodot-noun ;
+БКП ab-nodot-noun ;
+БМВ ab-nodot-noun ;
+БМП ab-nodot-noun ;
+БНР ab-nodot-noun ;
+БПЛА ab-nodot-noun ;
+БРИЗ ab-nodot-noun ;
+БРИКС ab-nodot-noun ;
+БССР ab-nodot-noun ;
+БТИ ab-nodot-noun ;
+БТР ab-nodot-noun ;
+БФ ab-nodot-noun ;
+ВАД ab-nodot-noun ;
+ВАДА ab-nodot-noun ;
+ВАЗ ab-nodot-noun ;
+ВАИ ab-nodot-noun ;
+ВАК ab-nodot-noun ;
+ВАСХНИИЛ ab-nodot-noun ;
+ВАСХНИЛ ab-nodot-noun ;
+ВВК ab-nodot-noun ;
+ВВС ab-nodot-noun ;
+ВГИК ab-nodot-noun ;
+ВГТРК ab-nodot-noun ;
+ВДВ ab-nodot-noun ;
+ВДК ab-nodot-noun ;
+ВДНХ ab-nodot-noun-back ;
+ВДПО ab-nodot-noun ;
+ВЗУ ab-nodot-noun ;
+ВИА  ab-nodot-noun ;
+ВИАМ ab-nodot-noun ;
+ВИЧ ab-nodot-noun ;
+ВК ab-nodot-noun ;
+ВКС ab-nodot-noun ;
+ВКСШ ab-nodot-noun ;
+ВЛКСМ  ab-nodot-noun ;
+ВМП  ab-nodot-noun ;
+ВМС ab-nodot-noun ;
+ВМФ  ab-nodot-noun ;
+ВМХ ab-nodot-noun ;
+ВНИГРИ ab-nodot-noun ;
+ВНИИ ab-nodot-noun ;
+ВНИИКП ab-nodot-noun ;
+ВО ab-nodot-noun ;
+ВОБ ab-nodot-noun ;
+ВОВ ab-nodot-noun ;
+ВОЗ ab-nodot-noun ;
+ВОИ ab-nodot-noun ;
+ВОИР  ab-nodot-noun ;
+ВООПИК  ab-nodot-noun ;
+ВОСВОД ab-nodot-noun ;
+ВОХР  ab-nodot-noun ;
+ВПП ab-nodot-noun ;
+ВРП ab-nodot-noun ;
+ВСНХ ab-nodot-noun ;
+ВСУ ab-nodot-noun ;
+ВСХВ ab-nodot-noun ;
+ВТБ ab-nodot-noun ;
+ВТО ab-nodot-noun ;
+ВУЗ ab-nodot-noun ;
+ВФЛА ab-nodot-noun ;
+ВХЛ ab-nodot-noun ;
+ВЦИК ab-nodot-noun ;
+ВЦИОМ ab-nodot-noun ;
+ВЦИОМС ab-nodot-noun ;
+ВЦСПС ab-nodot-noun ;
+ВЧК ab-nodot-noun ;
+ВШЭ ab-nodot-noun ;
+ВЭБ ab-nodot-noun ;
+ВЭД ab-nodot-noun ;
+ГАИ  ab-nodot-noun ;
+ГАПОУ ab-nodot-noun-back ;
+ГАУ ab-nodot-noun ;
+ГБОУ ab-nodot-noun ;
+ГБПОУ ab-nodot-noun-back ;
+ГБУ ab-nodot-noun ;
+ГБУЗ ab-nodot-noun ;
+ГД ab-nodot-noun ;
+ГДР  ab-nodot-noun ;
+ГЖК ab-nodot-noun ;
+ГИБДД ab-nodot-noun ;
+ГИЗ ab-nodot-noun ;
+ГИМС ab-nodot-noun ;
+ГИС ab-nodot-noun ;
+ГИТИС ab-nodot-noun ;
+ГИХЛ ab-nodot-noun ;
+ГК ab-nodot-noun ;
+ГКУ ab-nodot-noun-back ;
+ГКЧП ab-nodot-noun ;
+ГлавПУР ab-nodot-noun ;
+ГМО ab-nodot-noun ;
+ГНЦ ab-nodot-noun ;
+ГО ab-nodot-noun ;
+ГОМ  ab-nodot-noun ;
+ГОСТ ab-nodot-noun ;
+ГОСУКС ab-nodot-noun ;
+ГПС ab-nodot-noun ;
+ГПТУ  ab-nodot-noun ;
+ГПУ  ab-nodot-noun ;
+ГРО ab-nodot-noun ;
+ГРП  ab-nodot-noun ;
+ГРПП ab-nodot-noun ;
+ГРУ ab-nodot-noun ;
+ГРЭС ab-nodot-noun ;
+ГСВГ ab-nodot-noun ;
+ГСМ ab-nodot-noun ;
+ГСО ab-nodot-noun ;
+ГТО ab-nodot-noun ;
+ГТРК ab-nodot-noun ;
+ГТС ab-nodot-noun ;
+ГУ ab-nodot-noun ;
+ГУК ab-nodot-noun ;
+ГУЛАГ  ab-nodot-noun ;
+ГУП ab-nodot-noun ;
+ГУФСИН ab-nodot-noun ;
+ГЦАС ab-nodot-noun ;
+ГЭС  ab-nodot-noun ;
+ДВП  ab-nodot-noun ;
+ДЗОТ  ab-nodot-noun ;
+ДИНА ab-nodot-noun ;
+ДИП  ab-nodot-noun ;
+ДК ab-nodot-noun ;
+ДКБ ab-nodot-noun ;
+ДКИ ab-nodot-noun ;
+ДМШ ab-nodot-noun ;
+ДНД ab-nodot-noun ;
+ДНР ab-nodot-noun-front ;
+ДНТ ab-nodot-noun ;
+ДОСААФ  ab-nodot-noun ;
+ДОУ ab-nodot-noun ;
+ДПД  ab-nodot-noun ;
+ДПМК ab-nodot-noun ;
+ДПО ab-nodot-noun ;
+ДПП ab-nodot-noun ;
+ДПС ab-nodot-noun ;
+ДРБ  ab-nodot-noun ;
+ДРВ ab-nodot-noun ;
+ДРСУ ab-nodot-noun ;
+ДСК ab-nodot-noun ;
+ДСО ab-nodot-noun ;
+ДСПМК ab-nodot-noun ;
+ДСУ ab-nodot-noun ;
+ДТ  ab-nodot-noun ;
+ДТП ab-nodot-noun-front ;
+ДХС ab-nodot-noun ;
+ДШИ ab-nodot-noun ;
+ДЭО ab-nodot-noun ;
+ДЭУ ab-nodot-noun ;
+ДЮКФП ab-nodot-noun ;
+ДЮСШ ab-nodot-noun ;
+ДЮФКП ab-nodot-noun ;
+ДЮШС ab-nodot-noun ;
+ЕвразЭС ab-nodot-noun ;
+ЕГИСЗ ab-nodot-noun ;
+ЕГРН ab-nodot-noun ;
+ЕГЭ ab-nodot-noun ;
+ЕДДС ab-nodot-noun ;
+ЕС ab-nodot-noun-front ;
+ЕТС ab-nodot-noun ;
+ЕЭС ab-nodot-noun-front ;
+ЖК ab-nodot-noun ;
+ЖКО ab-nodot-noun ;
+ЖКУ ab-nodot-noun ;
+ЖКХ ab-nodot-noun-back ;
+ЖЭС ab-nodot-noun ;
+ЖЭУ  ab-nodot-noun ;
+ЗАГС  ab-nodot-noun-back ;
+ЗАО   ab-nodot-noun ;
+ЗЖБИ ab-nodot-noun ;
+ЗИЛ  ab-nodot-noun ;
+ЗОЖ ab-nodot-noun ;
+ИВЛ ab-nodot-noun ;
+ИВС ab-nodot-noun ;
+ИГИЛ ab-nodot-noun ;
+ИГИЛС ab-nodot-noun ;
+ИД ab-nodot-noun ;
+ИЖС ab-nodot-noun ;
+ИК ab-nodot-noun ;
+ИКП ab-nodot-noun ;
+ИМЦП ab-nodot-noun ;
+ИНО ab-nodot-noun ;
+ИП ab-nodot-noun ;
+ИПК ab-nodot-noun ;
+ИПККНО ab-nodot-noun ;
+ИППО ab-nodot-noun ;
+ИСУ ab-nodot-noun ;
+ИТК ab-nodot-noun ;
+ИТМО ab-nodot-noun ;
+ИТР ab-nodot-noun ;
+ИУУ  ab-nodot-noun ;
+ИФНС ab-nodot-noun ;
+ИЦВО ab-nodot-noun ;
+ИЯЛИ ab-nodot-noun ;
+КамАЗ ab-nodot-noun ;
+КАМАЗ ab-nodot-noun ;
+КАПП  ab-nodot-noun ;
+КАС ab-nodot-noun ;
+КАССР ab-nodot-noun ;
+КБО  ab-nodot-noun ;
+КбшЖД ab-nodot-noun ;
+КВЖД ab-nodot-noun ;
+КВН  ab-nodot-noun ;
+КВЧ ab-nodot-noun ;
+КГ ab-nodot-noun ;
+КГБ  ab-nodot-noun ;
+КГПИ ab-nodot-noun ;
+КЖД ab-nodot-noun ;
+КИМ  ab-nodot-noun ;
+КИП ab-nodot-noun ;
+КИППТ  ab-nodot-noun ;
+КИПТ ab-nodot-noun ;
+КИР  ab-nodot-noun ;
+ККОВ ab-nodot-noun ;
+КМЕТ ab-nodot-noun ;
+КНВ ab-nodot-noun ;
+КНГ ab-nodot-noun ;
+КНДР ab-nodot-noun ;
+КНР  ab-nodot-noun ;
+КНЦ ab-nodot-noun ;
+КНШ ab-nodot-noun ;
+КомбиС ab-nodot-noun ;
+КП  ab-nodot-noun ;
+КПГ ab-nodot-noun ;
+КПДН ab-nodot-noun ;
+КПЗ  ab-nodot-noun ;
+КПП ab-nodot-noun ;
+КПРФ ab-nodot-noun ;
+КПСС  ab-nodot-noun ;
+КПТ ab-nodot-noun ;
+КПУ ab-nodot-noun ;
+КР ab-nodot-noun ;
+КРАГСиУ ab-nodot-noun ;
+КРАПТ ab-nodot-noun ;
+КРБ ab-nodot-noun ;
+КРИРО ab-nodot-noun ;
+КРИРОиПК ab-nodot-noun ;
+КРО ab-nodot-noun ;
+КРОО ab-nodot-noun ;
+КРС ab-nodot-noun ;
+КРТК ab-nodot-noun ;
+КРЦДОД ab-nodot-noun ;
+КТ ab-nodot-noun ;
+КТП ab-nodot-noun ;
+КУПНО ab-nodot-noun-back ;
+КФХ ab-nodot-noun ;
+КЭБ  ab-nodot-noun ;
+ЛВЗ ab-nodot-noun ;
+ЛГУ ab-nodot-noun ;
+ЛДК ab-nodot-noun ;
+ЛДНР ab-nodot-noun ;
+ЛДПР ab-nodot-noun ;
+ЛЕГО ab-nodot-noun ;
+ЛЗУ ab-nodot-noun ;
+ЛНР ab-nodot-noun-front ;
+ЛПК  ab-nodot-noun ;
+ЛПО ab-nodot-noun ;
+ЛПХ ab-nodot-noun ;
+ЛСГ ab-nodot-noun ;
+ЛТО ab-nodot-noun ;
+ЛТП ab-nodot-noun ;
+ЛУАД ab-nodot-noun ;
+ЛУКОЙЛ ab-nodot-noun ;
+ЛФК ab-nodot-noun ;
+ЛЭП ab-nodot-noun ;
+МА  ab-nodot-noun ;
+МАГАТЭ ab-nodot-noun ;
+МАЗ  ab-nodot-noun ;
+МАПО ab-nodot-noun-back ;
+МАССР  ab-nodot-noun-front ;
+МАФУН ab-nodot-noun ;
+МБОУ ab-nodot-noun-back ;
+МВД  ab-nodot-noun ;
+МВФ ab-nodot-noun ;
+МГБ ab-nodot-noun ;
+МГИМО ab-nodot-noun ;
+МГМСУ ab-nodot-noun ;
+МГПИ ab-nodot-noun ;
+МГПУ ab-nodot-noun-back ;
+МГУ  ab-nodot-noun ;
+МЖКХ ab-nodot-noun ;
+МИА ab-nodot-noun ;
+МИД ab-nodot-noun ;
+МинЖКХ ab-nodot-noun ;
+МКД ab-nodot-noun ;
+МКПП ab-nodot-noun ;
+МКС ab-nodot-noun ;
+ММС  ab-nodot-noun ;
+МОД ab-nodot-noun ;
+МОК  ab-nodot-noun ;
+МОУ ab-nodot-noun ;
+МП ab-nodot-noun ;
+МПК ab-nodot-noun ;
+МПС  ab-nodot-noun ;
+МР ab-nodot-noun ;
+МРКБ ab-nodot-noun ;
+МРМИИ ab-nodot-noun ;
+МРМЦ ab-nodot-noun ;
+МРО ab-nodot-noun-back ;
+МРОТ ab-nodot-noun ;
+МРСК ab-nodot-noun ;
+МРТ ab-nodot-noun ;
+МРЦКБ ab-nodot-noun ;
+МСК ab-nodot-noun ;
+МСНК ab-nodot-noun ;
+МСП ab-nodot-noun ;
+МССР  ab-nodot-noun-front ;
+МСФПС ab-nodot-noun ;
+МТК ab-nodot-noun ;
+МТС  ab-nodot-noun-front ;
+МТФ  ab-nodot-noun ;
+МУК ab-nodot-noun ;
+МУП ab-nodot-noun ;
+МФЛ ab-nodot-noun ;
+МФТИ ab-nodot-noun ;
+МФЦ ab-nodot-noun ;
+МХАТ ab-nodot-noun ;
+МЧС ab-nodot-noun ;
+МЭИ ab-nodot-noun ;
+НА ab-nodot-noun ;
+НАКЮ ab-nodot-noun ;
+НАО ab-nodot-noun ;
+НАСА ab-nodot-noun ;
+НАТО ab-nodot-noun ;
+НБ ab-nodot-noun ;
+НВХО ab-nodot-noun ;
+НГДУ ab-nodot-noun ;
+НДС ab-nodot-noun ;
+НДФЛ ab-nodot-noun ;
+НИИ ab-nodot-noun ;
+НИИИС ab-nodot-noun ;
+НИИУ ab-nodot-noun ;
+НИЛ ab-nodot-noun ;
+НИОКР ab-nodot-noun ;
+НИПТИ ab-nodot-noun ;
+НК ab-nodot-noun ;
+НКВД  ab-nodot-noun ;
+НКГБ ab-nodot-noun ;
+НКО ab-nodot-noun ;
+НКСД ab-nodot-noun ;
+НКФ ab-nodot-noun ;
+НЛО  ab-nodot-noun ;
+НОЦ ab-nodot-noun ;
+НП  ab-nodot-noun ;
+НПЗ  ab-nodot-noun ;
+НПО ab-nodot-noun-back ;
+НРБ ab-nodot-noun ;
+НСИ ab-nodot-noun ;
+НСПК ab-nodot-noun ;
+НСФЛ ab-nodot-noun ;
+НСШ ab-nodot-noun ;
+НТВ ab-nodot-noun ;
+НТМ ab-nodot-noun ;
+НТР ab-nodot-noun ;
+НТС ab-nodot-noun ;
+НХЛ ab-nodot-noun ;
+НЭП ab-nodot-noun ;
+ОАО ab-nodot-noun ;
+ОАР ab-nodot-noun ;
+ОАЭ ab-nodot-noun ;
+ОБЖ ab-nodot-noun ;
+ОблОНО ab-nodot-noun ;
+ОбОНО ab-nodot-noun ;
+ОБСЕ ab-nodot-noun ;
+ОБХСС  ab-nodot-noun ;
+ОБЭП ab-nodot-noun ;
+ОВД ab-nodot-noun ;
+ОВС  ab-nodot-noun ;
+ОГИПТАД ab-nodot-noun ;
+ОГПН ab-nodot-noun ;
+ОГПУ  ab-nodot-noun ;
+ОГЭ ab-nodot-noun ;
+ОДВФ ab-nodot-noun ;
+ОИКК ab-nodot-noun ;
+ОК  ab-nodot-noun ;
+ОКК-РКИ ab-nodot-noun ;
+ОЛП ab-nodot-noun ;
+ОМВД ab-nodot-noun ;
+ОМОн ab-nodot-noun ;
+ОМОН ab-nodot-noun ;
+ОМС ab-nodot-noun ;
+ОМСН ab-nodot-noun ;
+ОНО ab-nodot-noun ;
+ОНФ ab-nodot-noun ;
+ООН  ab-nodot-noun-back ;
+ООО  ab-nodot-noun ;
+ОП ab-nodot-noun ;
+ОПГ ab-nodot-noun ;
+ОПК ab-nodot-noun ;
+ОПС ab-nodot-noun ;
+ОРВИ ab-nodot-noun-front ;
+ОРКД ab-nodot-noun ;
+ОРС  ab-nodot-noun ;
+ОСВОД ab-nodot-noun ;
+ОСП ab-nodot-noun ;
+ОТК  ab-nodot-noun ;
+ОТФ  ab-nodot-noun ;
+ОУН ab-nodot-noun ;
+ОУН-УПА ab-nodot-noun ;
+ОУПД ab-nodot-noun ;
+ОЭЗ ab-nodot-noun ;
+ПАЗ ab-nodot-noun ;
+ПАК ab-nodot-noun ;
+ПАО ab-nodot-noun ;
+ПАТП ab-nodot-noun ;
+ПВО ab-nodot-noun ;
+ПГ ab-nodot-noun ;
+ПГЭС ab-nodot-noun ;
+ПДД ab-nodot-noun ;
+ПДН ab-nodot-noun ;
+ПечорНИУИ ab-nodot-noun ;
+ПК ab-nodot-noun ;
+ПЛ ab-nodot-noun ;
+ПМК  ab-nodot-noun ;
+ПМЭФ ab-nodot-noun ;
+ПО ab-nodot-noun ;
+ППК ab-nodot-noun ;
+ППС ab-nodot-noun ;
+ПРО ab-nodot-noun ;
+ПСД ab-nodot-noun ;
+ПСК ab-nodot-noun ;
+ПСО ab-nodot-noun-back ;
+ПТО  ab-nodot-noun ;
+ПТУ  ab-nodot-noun ;
+ПУ ab-nodot-noun ;
+ПУРП  ab-nodot-noun ;
+ПФК ab-nodot-noun ;
+ПФКИ ab-nodot-noun ;
+ПФЛ ab-nodot-noun ;
+ПФО ab-nodot-noun-back ;
+ПФР ab-nodot-noun ;
+ПЭВМ ab-nodot-noun ;
+ПЭМФ ab-nodot-noun ;
+ПЭС  ab-nodot-noun ;
+РАЕН ab-nodot-noun ;
+РАМН ab-nodot-noun ;
+РАН ab-nodot-noun ;
+РАНХиГС ab-nodot-noun ;
+РАПО  ab-nodot-noun ;
+РАПП  ab-nodot-noun ;
+РАФУЖ ab-nodot-noun ;
+РБК ab-nodot-noun ;
+РВА ab-nodot-noun ;
+РВИО ab-nodot-noun ;
+РГД  ab-nodot-noun ;
+РГПУ ab-nodot-noun ;
+РГСУ ab-nodot-noun ;
+РГУ ab-nodot-noun ;
+РДДМ ab-nodot-noun ;
+РДК ab-nodot-noun ;
+РДШ ab-nodot-noun ;
+РДЮСШ ab-nodot-noun ;
+РЖД ab-nodot-noun ;
+РИА ab-nodot-noun ;
+РИК  ab-nodot-noun ;
+РИПКРО ab-nodot-noun ;
+РК   ab-nodot-noun ;
+РКБ ab-nodot-noun ;
+РКИ ab-nodot-noun ;
+РККА  ab-nodot-noun ;
+РКП  ab-nodot-noun ;
+РКСМ  ab-nodot-noun ;
+РКЦ ab-nodot-noun ;
+РЛС ab-nodot-noun ;
+РМ ab-nodot-noun ;
+РМЗ ab-nodot-noun ;
+РММ  ab-nodot-noun ;
+РМЦ  ab-nodot-noun ;
+РНА ab-nodot-noun ;
+РО ab-nodot-noun ;
+РОА ab-nodot-noun ;
+РОВД ab-nodot-noun ;
+РОНО ab-nodot-noun ;
+РОР ab-nodot-noun ;
+РОСНАНО ab-nodot-noun-back ;
+РПА ab-nodot-noun ;
+РПД  ab-nodot-noun ;
+РПЛ ab-nodot-noun ;
+РПП ab-nodot-noun ;
+РПЦ ab-nodot-noun ;
+РРМЦ ab-nodot-noun ;
+РСДПР ab-nodot-noun ;
+РСДРП  ab-nodot-noun ;
+РСК ab-nodot-noun ;
+РСПП ab-nodot-noun ;
+РСС ab-nodot-noun ;
+РССМ ab-nodot-noun ;
+РСТ ab-nodot-noun ;
+РСУ ab-nodot-noun ;
+РСФР ab-nodot-noun ;
+РСФРС ab-nodot-noun ;
+РСФСР  ab-nodot-noun ;
+РСХБ ab-nodot-noun ;
+РСЧС ab-nodot-noun ;
+РТ ab-nodot-noun ;
+РТО ab-nodot-noun ;
+РТПЦ ab-nodot-noun ;
+РТРС ab-nodot-noun ;
+РТС  ab-nodot-noun ;
+РУДН ab-nodot-noun ;
+РУНО ab-nodot-noun ;
+РФ   ab-nodot-noun-back ;
+РФПИ ab-nodot-noun ;
+РФС ab-nodot-noun ;
+РФФИ ab-nodot-noun ;
+РХТУ ab-nodot-noun ;
+РЦИ ab-nodot-noun ;
+РЦКБ ab-nodot-noun ;
+РЭБ ab-nodot-noun ;
+РЭО ab-nodot-noun ;
+РЭС ab-nodot-noun ;
+РЭУ ab-nodot-noun ;
+РЭЦ ab-nodot-noun ;
+СанПиН ab-nodot-noun ;
+САПР ab-nodot-noun ;
+СБЕР ab-nodot-noun ;
+СБУ ab-nodot-noun ;
+СВО ab-nodot-noun-back ;
+СГУ  ab-nodot-noun ;
+СД  ab-nodot-noun ;
+СДЮСШ ab-nodot-noun ;
+СДЮСШОР ab-nodot-noun ;
+СЕПГ ab-nodot-noun ;
+СЗПК ab-nodot-noun ;
+СЗФО ab-nodot-noun ;
+СИЗО ab-nodot-noun ;
+СК ab-nodot-noun ;
+СКА ab-nodot-noun ;
+СКУ ab-nodot-noun ;
+СКФО ab-nodot-noun ;
+СЛВЗ ab-nodot-noun ;
+СЛДК ab-nodot-noun ;
+СЛИ ab-nodot-noun ;
+СЛПК ab-nodot-noun ;
+СМЕРШ ab-nodot-noun ;
+СМЗ  ab-nodot-noun ;
+СМИ ab-nodot-noun-front ;
+СМИТ ab-nodot-noun ;
+СМУ  ab-nodot-noun ;
+СНГ ab-nodot-noun-front ;
+СНК  ab-nodot-noun ;
+СОБР ab-nodot-noun ;
+СОФИН ab-nodot-noun ;
+СОЦ ab-nodot-noun ;
+СОШ ab-nodot-noun ;
+СП ab-nodot-noun ;
+СПб ab-nodot-noun ;
+СПбГИК ab-nodot-noun ;
+СПбГУ ab-nodot-noun ;
+СПбГУСЭ ab-nodot-noun ;
+СПГ ab-nodot-noun ;
+СПК ab-nodot-noun ;
+СПО ab-nodot-noun-back ;
+СПОГАТ ab-nodot-noun ;
+СПСЧ ab-nodot-noun ;
+СПТУ  ab-nodot-noun ;
+СРО ab-nodot-noun ;
+СС ab-nodot-noun ;
+ССО  ab-nodot-noun ;
+ССП  ab-nodot-noun ;
+ССР  ab-nodot-noun ;
+СССР  ab-nodot-noun-front ;
+СТЗ ab-nodot-noun ;
+СТО ab-nodot-noun ;
+СТФ   ab-nodot-noun ;
+СТЭК ab-nodot-noun ;
+стр ab-nodot-noun ;
+СУ ab-nodot-noun ;
+СУАЛ ab-nodot-noun ;
+СУС  ab-nodot-noun ;
+СФ ab-nodot-noun ;
+СХПК ab-nodot-noun ;
+СЦБТ ab-nodot-noun ;
+США  ab-nodot-noun-back ;
+СШОР ab-nodot-noun ;
+СыктГУ ab-nodot-noun ;
+СЭВ ab-nodot-noun ;
+ТАП  ab-nodot-noun ;
+ТАСС  ab-nodot-noun ;
+ТАССР ab-nodot-noun ;
+ТБО ab-nodot-noun ;
+ТВ ab-nodot-noun ;
+ТГУ ab-nodot-noun ;
+ТИК ab-nodot-noun ;
+ТК ab-nodot-noun ;
+ТКЗХ ab-nodot-noun ;
+ТКО ab-nodot-noun-back ;
+ТКУ ab-nodot-noun ;
+ТКЦ ab-nodot-noun ;
+ТМХ ab-nodot-noun ;
+ТНВ ab-nodot-noun ;
+ТНТ ab-nodot-noun ;
+ТО ab-nodot-noun ;
+ТОЗ   ab-nodot-noun ;
+ТОО ab-nodot-noun ;
+ТОР ab-nodot-noun ;
+ТОС ab-nodot-noun ;
+ТОСЭР ab-nodot-noun ;
+ТПК ab-nodot-noun ;
+ТПП ab-nodot-noun ;
+ТРЦ ab-nodot-noun ;
+ТСЖ ab-nodot-noun ;
+ТУ  ab-nodot-noun ;
+ТЦ ab-nodot-noun ;
+ТЭК ab-nodot-noun ;
+ТЭФИ ab-nodot-noun ;
+ТЭЦ  ab-nodot-noun ;
+УАЗ  ab-nodot-noun ;
+УАССР ab-nodot-noun ;
+УБОП ab-nodot-noun ;
+УВД ab-nodot-noun ;
+УВД-ОВД ab-nodot-noun ;
+УГБ ab-nodot-noun ;
+УГИБДД ab-nodot-noun ;
+УГТУ ab-nodot-noun ;
+УдГУ ab-nodot-noun ;
+УЕФА ab-nodot-noun ;
+УЖД ab-nodot-noun ;
+УЗИ  ab-nodot-noun ;
+УИИ ab-nodot-noun ;
+УИК ab-nodot-noun ;
+УИН ab-nodot-noun ;
+УИС ab-nodot-noun ;
+УКОМ ab-nodot-noun ;
+УКП ab-nodot-noun ;
+УКС ab-nodot-noun ;
+УМВД ab-nodot-noun ;
+УМЦ ab-nodot-noun ;
+УНА-УПА ab-nodot-noun ;
+УНКВД ab-nodot-noun ;
+УОНО  ab-nodot-noun ;
+УПА ab-nodot-noun ;
+УПН ab-nodot-noun ;
+УР ab-nodot-noun ;
+УРБ ab-nodot-noun ;
+УРС  ab-nodot-noun ;
+УСЕВЛОН ab-nodot-noun ;
+УССР  ab-nodot-noun-front ;
+УТ ab-nodot-noun ;
+УФАС ab-nodot-noun ;
+УФК ab-nodot-noun ;
+УФМС ab-nodot-noun ;
+УФНС ab-nodot-noun ;
+УФПС ab-nodot-noun ;
+УФСБ ab-nodot-noun ;
+УФСИН ab-nodot-noun ;
+УФССП ab-nodot-noun ;
+УЧК  ab-nodot-noun ;
+ушод ab-nodot-noun ;!paragraph 1821-1827
+УЭБиПК ab-nodot-noun ;
+ФАДН ab-nodot-noun ;
+ФАП ab-nodot-noun ;
+ФАС ab-nodot-noun ;
+ФАУ ab-nodot-noun ;
+ФБУ ab-nodot-noun ;
+ФГАОУ ab-nodot-noun ;
+ФГБОУ ab-nodot-noun ;
+ФГБУ ab-nodot-noun ;
+ФГКВОУ ab-nodot-noun ;
+ФГКУ ab-nodot-noun ;
+ФГП ab-nodot-noun ;
+ФГУ ab-nodot-noun ;
+ФГУП ab-nodot-noun ;
+ФЗД ab-nodot-noun ;
+ФЗО  ab-nodot-noun ;
+ФЗУ  ab-nodot-noun ;
+ФИФА ab-nodot-noun ;
+ФК ab-nodot-noun ;
+ФКС ab-nodot-noun ;
+ФКУ ab-nodot-noun ;
+ФЛГР ab-nodot-noun ;
+ФМБА ab-nodot-noun-back ;
+ФНЛ ab-nodot-noun ;
+ФНПР ab-nodot-noun ;
+ФНС ab-nodot-noun ;
+ФОМС ab-nodot-noun ;
+ФПГ ab-nodot-noun ;
+ФРГ  ab-nodot-noun-front ;
+ФРПБ ab-nodot-noun ;
+ФС ab-nodot-noun ;
+ФСБ ab-nodot-noun ;
+ФСИН ab-nodot-noun ;
+ФСКН ab-nodot-noun ;
+ФСО ab-nodot-noun ;
+ФСС ab-nodot-noun ;
+ФССП ab-nodot-noun ;
+ФФККР ab-nodot-noun ;
+ФЦК ab-nodot-noun ;
+ХАД ab-nodot-noun ;
+ХК ab-nodot-noun ;
+ЦБ ab-nodot-noun ;
+ЦБТИ ab-nodot-noun ;
+ЦВР ab-nodot-noun ;
+ЦГА  ab-nodot-noun ;
+ЦДТ ab-nodot-noun ;
+ЦЗН ab-nodot-noun ;
+ЦИК  ab-nodot-noun ;
+ЦК  ab-nodot-noun-back ;
+ЦНИИ ab-nodot-noun ;
+ЦНИИМЭ ab-nodot-noun ;
+ЦОДД ab-nodot-noun ;
+ЦОПП ab-nodot-noun ;
+ЦПИ ab-nodot-noun ;
+ЦРБ ab-nodot-noun ;
+ЦРМ  ab-nodot-noun ;
+ЦРУ ab-nodot-noun ;
+ЦСКА ab-nodot-noun ;
+ЦСУ  ab-nodot-noun ;
+ЦТП ab-nodot-noun ;
+ЦУКС ab-nodot-noun ;
+ЦУМ ab-nodot-noun ;
+ЦУР ab-nodot-noun ;
+ЦФО ab-nodot-noun ;
+ЧАЭС ab-nodot-noun ;
+ЧГТРК ab-nodot-noun ;
+ЧК  ab-nodot-noun ;
+ЧОН ab-nodot-noun ;
+ЧОС ab-nodot-noun ;
+ЧП  ab-nodot-noun ;
+ЧС ab-nodot-noun ;
+ЧССР ab-nodot-noun ;
+ШВК ab-nodot-noun ;
+ШИК ab-nodot-noun ;
+ШКМ  ab-nodot-noun ;
+ШСУ  ab-nodot-noun ;
+ЭВМ ab-nodot-noun ;
+ЭКГ ab-nodot-noun ;
+ЭКМО ab-nodot-noun ;
+ЭКО ab-nodot-noun-back ;
+ЭССР ab-nodot-noun ;
+ЮАР ab-nodot-noun ;
+ЮКОС ab-nodot-noun ;
+ЮНЕСКО ab-nodot-noun ;
+ЮПС ab-nodot-noun ;
+ЮЭС ab-nodot-noun ;
+
+! =============================================== !
+!            Intransitive abbreviations           !
+! =============================================== !
+
+! These give clause boundaries before capital letters
+! and numbers, but not elsewhere.
+! Vi bor i Sth. CLB 10 av oss er innflyttere.
+! Vi bor i Sth. CLB Saara er også innflytter.
+! Vi vet at Sth. er en fin by.
+
+
+LEXICON ITRAB
+
+
+в ab ;
+г ab ;
+гг ab ;
+
+
+! =============================================== !
+!    Transitive number-related abbreviations      !
+! =============================================== !
+
+! These ones are transitive when followed by numbers or
+! singleton letters, and intransitive elsewhere.
+! Gården har Gnr. 10.
+! Gården har Gnr. 5. a.
+! Alle gårder har ikke Gnr. CLB Det er et problem.
+! Alle gårder har ikke Gnr. og det er et problem.
+
+LEXICON TRNUMAB
+
+Apd		ab-dot ;                                      !
+Вып ab-dot ;
+
+
+! =============================================== !
+!              Transitive abbreviations           !
+! =============================================== !
+
+LEXICON TRAB
+
+! dot% noStb.db
+! Abbreviations that never induce sentence boundaries
+
+досл ab-dot ;
+
+! fenr. 10.
+! fenr. 5. a.
+! fenr. Ståhl.
+! fenr. stål.
+! They simply do never give CLB.
+
+! Capital
+А ab-noun ;
+Б ab-noun ;
+В ab-noun ;
+Г ab-noun ;
+Д ab-noun ;
+Е ab-noun ;
+Ж ab-noun ;
+З ab-noun ;
+И ab-noun ;
+Й ab-noun ;
+К ab-noun ;
+Л ab-noun ;
+М ab-noun ;
+Н ab-noun ;
+О ab-noun ;
+П ab-noun ;
+Р ab-noun ;
+С ab-noun ;
+Т ab-noun ;
+У ab-noun ;
+Ф ab-noun ;
+Х ab-noun ;
+Ц ab-noun ;
+Ч ab-noun ;
+Ш ab-noun ;
+Щ ab-noun ;
+Ъ ab-noun ;
+Ы ab-noun ;
+Ь ab-noun ;
+Э ab-noun ;
+Ю ab-noun ;
+Я ab-noun ;
+Ё ab-noun ;
+!І ab-noun ;
+!Ӧ ab-noun ;
+
+! Small
+а ab-noun ;
+б ab-noun ;
+в ab-noun ;
+г ab-noun ;
+д ab-noun ;
+е ab-noun ;
+ж ab-noun ;
+з ab-noun ;
+и ab-noun ;
+й ab-noun ;
+к ab-noun ;
+л ab-noun ;
+м ab-noun ;
+н ab-noun ;
+о ab-noun ;
+п ab-noun ;
+р ab-noun ;
+с ab-noun ;
+т ab-noun ;
+у ab-noun ;
+ф ab-noun ;
+х ab-noun ;
+ц ab-noun ;
+ч ab-noun ;
+ш ab-noun ;
+щ ab-noun ;
+ъ ab-noun ;
+ы ab-noun ;
+ь ab-noun ;
+э ab-noun ;
+ю ab-noun ;
+я ab-noun ;
+ё ab-noun ;
+!і ab-noun ;
+!ӧ ab-noun ;
+
+

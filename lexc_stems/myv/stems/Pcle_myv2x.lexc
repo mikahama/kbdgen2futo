@@ -1,0 +1,33 @@
+
+LEXICON Pcle_myv2x
+
+а+Pcle:а PCLE-NEG  "" ;
+аволь+Pcle:аволь PCLE-NEG-CONTRAST  "" ;
+азька+Pcle:азька PCLE-EPIST  "ehkä" ;
+аразде+Pcle:аразде PCLE_  "sitten" ;
+арази+Pcle:арази PCLE_  "" ;
+арай+Pcle:арай PCLE_  "" ;
+ат+Pcle:ат PCLE-NEG  "" ;
+бу+Pcle:бу PCLE_AUX_CONJ  "(konditionaalipartikkeli)." ;
+бульчом+Pcle:бульчом PCLE_  "" ;
+буто+Pcle:буто PCLE_  "" ;
+ведь+Pcle:ведь PCLE_  "-han" ;
+вопче+Pcle:вопче PCLE_  "" ;
+деря+Pcle:деря MorphTag  "" ;
+допрок+Pcle:допрок PCLE_  "" ;
+ды+Pcle:ды PCLE_  "" ;
+едь+Pcle:едь PCLE_  "-han" ;
+жо+Pcle:жо PCLE_  "mutta" ;
+каня+Pcle:каня PCLE_  "" ;
+ли+Pcle:ли PCLE_  "" ;
+нама+Pcle:нама PCLE_  "" ;
+натой+Pcle:натой PCLE_  "" ;
+некак+Pcle:некак PCLE_  "" ;
+паряк+Pcle:паряк PCLE-EPIST  "ehkä" ;
+прок+Pcle:прок PCLE_  "" ;
+тык+Pcle:тык PCLE_  "" ;
+тыки+Pcle:тыки PCLE_  "" ;
+улема+Pcle:улема PCLE-EPIST  "" ;
+уш+Pcle:уш PCLE_  "" ;
+эдь+Pcle:эдь PCLE-EPIST  "-han" ;
+эно+Pcle:эно PCLE-EPIST  "kyllä" ;

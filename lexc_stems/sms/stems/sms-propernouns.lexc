@@ -1,0 +1,44 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@uit.no or feedback@divvun.no
+
+
+!! # Propernoun lexicon, Skolt Sámi specific names 
+
+
+LEXICON ProperNoun
+!! The lexicon *@LEXNAME@* lists the proper nouns
+
+
+!! ## First part of complex names
+
+Uʹcc+N+Prop:Uʹcc FirstTag ;
+Joohan+N+Prop:Joohan FirstTag ;
+Jõnn+N+Prop:Jõnn FirstTag ;
+
+
+!! ## Ordinary person names
+
+Oʹlssi+N+Prop:Oʹlssi TEMPORARY ;
+Onsim+N+Prop:Onsim TEMPORARY ;
+Evvan+N+Prop:Evvan TEMPORARY ;
+Kuʹǩes-Evvan+N+Prop+Sem/Mal:Kuʹǩes-Evvan TEMPORARY ;
+
+!! ## Ordinary place names
+
+Äʹnnjääuʹraž+N+Prop:Äʹnnjääuʹraž TEMPORARY ;
+
+
+!! ## Ordinary misc names
+
+Interreg+N+Prop:Interreg TEMPORARY ;

@@ -1,0 +1,33 @@
+
+LEXICON determiners
+
+
+татчӧс+A:татчӧс A_  "täkäläinen" ;
+татчӧсса+A:татчӧсса A_  "täkäläinen" ;
+татшӧмкодь+A:татшӧмкодь A_  "tämän kaltainen" ;
+сэтчаньса+A:сэтчаньса A_  "" ;
+сэтчӧс+A:сэтчӧс A_  "paikallinen" ;
+сэкся+A:сэкся A_  "silloinen" ;
+сэкъя+A:сэкъя A_  "" ;
+сэтшӧм+A:сэтшӧм A_  "sellainen" ;
+татшӧм+A:татшӧм A_  "tällainen" ;
+этатшӧм+A:этатшӧм A_  "juuri tällainen" ;
+уна+Det:уна A_  "" ;
+уна+Det+Comp:унджык A_  "" ;
+
+мукӧд+Det:мукӧд DET_  "" ;
+кыкнан+Det:кыкнан DET_END ;
+некоднан+Det:некоднан DET_END ;
+куимнан+Det:куимнан DET_END ;
+нёльнан+Det:нёльнан DET_END ;
+витнан+Det:витнан DET_END ;
+квайтнан+Det:квайтнан DET_END ;
+сизимнан+Det:сизимнан DET_END ;
+кӧкъямыснан+Det:кӧкъямыснан DET_END ;
+ӧкмыснан+Det:ӧкмыснан DET_END ;
+даснан+Det:даснан DET_END ;
+кызьнан+Det:кызьнан DET_END ;
+комыннан+Det:комыннан DET_END ;
+нелямыннан+Det:нелямыннан DET_END ;
+ӧтинан+Det:ӧтинан DET_END ;
+коднан+Det:коднан DET_END ;

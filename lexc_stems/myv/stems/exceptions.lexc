@@ -1,0 +1,1257 @@
+!! Exceptions are quite strange word-forms. the ones that do not fit anywhere 
+!! else. This file contains all enumerated word forms that cannot reasonably be
+!! created from lexical data by regular inflection. Usually there should be next
+!! to none exceptions, it's always better to have a paradigm that covers only
+!! one or few words than an exception since these will not work nicely with e.g.
+!! compounding scheme or possibly many end applications.
+
+LEXICON EXCEPTIONS
+
+!! verbs of negation have partial inflection:
+!! € аволь
+!! € иля
+!! € эзь
+!а+V+Neg+Conj+ScPl3:авольть # ;
+!@P.CONJ.ObjAll@а+V+Neg+Conj:@P.CONJ.ObjAll@а  ConjPers-withO-all ;
+!аволь+V+Neg+Conj+ScSg3:аволь # ;
+!@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.60@а+V+Neg+Ind+Prt1+ScPl3:@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.60@Ӓ3зть # ;
+!@P.CONJ.ObjAll@а+V+Neg+Ind:@P.CONJ.ObjAll@Ӓ3зь IndicativePrt2_kadoms ;
+!@P.CONJ.ObjAll@а+V+Neg:@P.CONJ.ObjAll@Ӓ3зь IND_PRT1_all-but-Sc3 ;
+!@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.30@а+V+Neg+Ind+Prt1+ScSg3:@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.30@Ӓ3зь # ;
+@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.60@а+Use/NG+Err/Orth+V+Neg+Ind+Prt1+ScPl3:@U.CONJ-MX.IND@@U.CONJ-TX.PRT1@@U.CONJ-PX.60@Ӓ3сть # ;
+а+Use/NG+Err/Orth+V+Aux+Neg+Ind+Prt1+ScSg3+OcSg3:Ӓ3се # ;
+а+Use/NG+Err/Orth+V+Aux+Neg+Ind+Prt1+ScSg3+OcSg3:Ӓ3ссе # ;
+а+Use/NG+Err/Orth+V+Aux+Neg+Ind+Prt1+ScSg3+OcSg3:Ӓ3зсе K ;
+а+V+Aux+Neg+Ind+Prt1+ScPl3+Err/Orth:Ӓ3сть K ;
+а+V:а V-AUX-NEG-CONJ  "" ; !аволь
+а+V:Ӓ3зь V-AUX-NEG-PRT1 ;
+а+V+Use/NG+Err/Orth+V+Neg+Ind+Prt1+ScPl2:Ӓ3зде # ;
+а+V:иля VA_ILJA  ;
+а+V+Aux+Neg:а ENDLEX ; ! used with present, desiderative, conditional
+а+V+Aux+Neg+Err/Orth:ат ENDLEX ; ! used with present, desiderative, conditional
+@U.COMPOUND.NO@а+V+Aux+Neg+ConvPrc:@U.COMPOUND.NO@апак _LAK-Tenses-Obl ;
+@U.COMPOUND.NO@а+V+Aux+Neg+ConvPrc:@U.COMPOUND.NO@апак ENDLEX ;
+
+давай+V+Imprt+ScPl2:давайте ENDLEX ;
+дай+V+Imprt+ScPl2:дайте ENDLEX ;
+дай+V+Prec+ScSg2:дайка ENDLEX ;
+давай+V+Prec+ScSg2:давайка ENDLEX ;
+айдо+V+Imprt:айдо ENDLEX ;
+не+Pcle+Neg+F:не ENDLEX "Russian" ;
+прощай+Interj:прощай INTERJ_ ;
+вантака+Interj:вантака INTERJ_ ;
+вантакая+Interj:вантакая INTERJ_ ;
+ёлки-маталки+Interj:ёлки-маталки INTERJ_ ;
+ёлки-моталки+Interj:ёлки-моталки INTERJ_ ;
+
+Олёш+N+Prop:Олёш PROP_OSH_MAL ;
+Ёжка+N+Prop:Ёжка PROP_KUDO_MAL ;
+Ортём+N+Prop:Ортём PROP_LAV_MAL ;
+Иваньбиё+N+Prop:Иваньбиё PROP_KUDO ;
+Льёва+N+Prop:Льёва PROP_KUDO ;
+
+
+!! The verb ярсамс has additional irregular forms:
+!! € ярстано
+!! € ярстадо
+ярсамс+V+Use/NG:ярс     IND_PRS_40    ;
+ярсамс+V+Use/NG:ярс     IND_PRS_50    ;
+
+
+!! The verb сеземс
+сеземс+V:сей V-FINITE-FORMS-IN-S ;
+кирваземс+V+Ind+Prt1+ScSg3:кирвайсь K ;
+кирваземс+V+Ind+Prt1+ScPl3:кирвайсть K ;
+манендямс+V:манендя IV_KUNDAMS ;
+чентямс+V:чентя TV_KUNDAMS ;
+пачтямс+V:пачть TV_LEDEMS_errorth ;
+индустриализовамс+V:индустриализова TV_KUNDAMS ;
+эксплоатировамс+V:эксплоатирова TV_KUNDAMS ;
+плотнакстомомс+V:плотнакстом IV_KADOMS ;
+свежакстомтомс+V:свежакстомт TV_KADOMS ;
+мелкойгавтомс+V:мелкойгавт TV_KADOMS ;
+ровналгавтомс+V:ровналгавт TV_KADOMS ;
+христосовамс+V:христосова TV_KUNDAMS ;
+тылкадемс+V:тылкадь TV_KADOMS ;
+горбунгалемс+V:горбунгале TV_KUNDAMS ;
+удобрямс+V:удобря TV_KUNDAMS ;
+качаямс+V:качая TV_KUNDAMS ;
+
+!! Some of the nouns have archaic consonant stem forms left:
+!! € ийть
+
+ие+N:ий%>     PL-NOM-INDEF ;
+
+ломань+N+Pl+Nom+Indef+Use/NG+Err/Orth:ломать K ;
+ломань+N+Use/NG+Err/Orth:лома NMN_DEF_PL_DECLENSION ;
+
+он+N:он%>с INE_INDEF/PX_ne ;!CHECKME
+
+!! Periferal
+!
+!ськамон+Pron+AssocColl+Sg1:ськамо OBL-PX4-CLTCOP_NMNSG1 ;
+!ськамот+Pron+AssocColl+Sg2:ськамо OBL-PX4-CLTCOP_NMNSG2 ;
+!ськамонзо+Pron+AssocColl+Sg3:ськамо OBL-PX4-CLTCOP_NMNSG3 ;
+!ськамонок+Pron+AssocColl+Pl1:ськамо OBL-PX4-CLTCOP_NMNPL1 ;
+!ськамонк+Pron+AssocColl+Pl2:ськамо OBL-PX4-CLTCOP_NMNPL2 ;
+!ськамост+Pron+AssocColl+Pl3:ськамо OBL-PX4-CLTCOP_NMNPL3 ;
+
+@U.CX.ILL@ськамон+Pron+AssocColl+Sg1+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNSG1 ;
+@U.CX.ILL@ськамот+Pron+AssocColl+Sg2+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNSG2 ;
+@U.CX.ILL@ськамонзо+Pron+AssocColl+Sg3+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNSG3 ;
+@U.CX.ILL@ськамонок+Pron+AssocColl+Pl1+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNPL1 ;
+@U.CX.ILL@ськамонк+Pron+AssocColl+Pl2+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNPL2 ;
+@U.CX.ILL@ськамост+Pron+AssocColl+Pl3+Ill:@U.CX.ILL@ськамоз OBL-PX4-CLTCOP_NMNPL3 ;
+
+!ськамон+v1+Pron+AssocColl+Sg1+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNSG1 ;
+!ськамот+v1+Pron+AssocColl+Sg2+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNSG2 ;
+!ськамонзо+v1+Pron+AssocColl+Sg3+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNSG3 ;
+!ськамонок+v1+Pron+AssocColl+Pl1+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNPL1 ;
+!ськамонк+v1+Pron+AssocColl+Pl2+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNPL2 ;
+!ськамост+v1+Pron+AssocColl+Pl3+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNPL3 ;
+
+!ськамон+v2+Pron+AssocColl+Sg1+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNSG1 ;
+!ськамот+v2+Pron+AssocColl+Sg2+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNSG2 ;
+!ськамонзо+v2+Pron+AssocColl+Sg3+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNSG3 ;
+!ськамонок+v2+Pron+AssocColl+Pl1+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNPL1 ;
+!ськамонк+v2+Pron+AssocColl+Pl2+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNPL2 ;
+!ськамост+v2+Pron+AssocColl+Pl3+Der/Dimin:ськамнэ OBL-PX4-CLTCOP_NMNPL3 ;
+
+!ськамон+v3+Pron+AssocColl+Sg1+Der/Dimin:ськамине OBL-PX4-CLTCOP_NMNSG1 ;
+!ськамот+v3+Pron+AssocColl+Sg2+Der/Dimin:ськамине OBL-PX4-CLTCOP_NMNSG2 ;
+!ськамонзо+v3+Pron+AssocColl+Sg3+Der/Dimin:ськамине OBL-PX4-CLTCOP_NMNSG3 ;
+!ськамонок+v3+Pron+AssocColl+Pl1+Der/Dimin:ськамине OBL-PX4-CLTCOP_NMNPL1 ;
+!ськамонк+v3+Pron+AssocColl+Pl2+Der/Dimin:ськамине OBL-PX4-CLTCOP_NMNPL2 ;
+!ськамост+v3+Pron+AssocColl+Pl3+Der/Dimin:ськамне OBL-PX4-CLTCOP_NMNPL3 ;
+
+!ськамон+v4+Pron+AssocColl+Sg1+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNSG1 ;
+!ськамот+v4+Pron+AssocColl+Sg2+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNSG2 ;
+!ськамонзо+v4+Pron+AssocColl+Sg3+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNSG3 ;
+!ськамонок+v4+Pron+AssocColl+Pl1+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNPL1 ;
+!ськамонк+v4+Pron+AssocColl+Pl2+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNPL2 ;
+!ськамост+v4+Pron+AssocColl+Pl3+Der/Dimin:ськамнине OBL-PX4-CLTCOP_NMNPL3 ;
+
+@U.CX.ILL@ськамон+v1+Pron+AssocColl+Sg1+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNSG1 ;
+@U.CX.ILL@ськамот+v1+Pron+AssocColl+Sg2+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNSG2 ;
+@U.CX.ILL@ськамонзо+v1+Pron+AssocColl+Sg3+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNSG3 ;
+@U.CX.ILL@ськамонок+v1+Pron+AssocColl+Pl1+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNPL1 ;
+@U.CX.ILL@ськамонк+v1+Pron+AssocColl+Pl2+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNPL2 ;
+@U.CX.ILL@ськамост+v1+Pron+AssocColl+Pl3+Der/Dimin+Ill:@U.CX.ILL@ськамнез OBL-PX4-CLTCOP_NMNPL3 ;
+
+@U.CX.ILL@ськамон+v2+Pron+AssocColl+Sg1+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNSG1 ;
+@U.CX.ILL@ськамот+v2+Pron+AssocColl+Sg2+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNSG2 ;
+@U.CX.ILL@ськамонзо+v2+Pron+AssocColl+Sg3+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNSG3 ;
+@U.CX.ILL@ськамонок+v2+Pron+AssocColl+Pl1+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNPL1 ;
+@U.CX.ILL@ськамонк+v2+Pron+AssocColl+Pl2+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNPL2 ;
+@U.CX.ILL@ськамост+v2+Pron+AssocColl+Pl3+Der/Dimin+Ill:@U.CX.ILL@ськамнэз OBL-PX4-CLTCOP_NMNPL3 ;
+
+@U.CX.ILL@ськамон+v3+Pron+AssocColl+Sg1+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNSG1 ;
+@U.CX.ILL@ськамот+v3+Pron+AssocColl+Sg2+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNSG2 ;
+@U.CX.ILL@ськамонзо+v3+Pron+AssocColl+Sg3+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNSG3 ;
+@U.CX.ILL@ськамонок+v3+Pron+AssocColl+Pl1+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNPL1 ;
+@U.CX.ILL@ськамонк+v3+Pron+AssocColl+Pl2+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNPL2 ;
+@U.CX.ILL@ськамост+v3+Pron+AssocColl+Pl3+Der/Dimin+Ill:@U.CX.ILL@ськаминез OBL-PX4-CLTCOP_NMNPL3 ;
+
+@U.CX.ILL@ськамон+v4+Pron+AssocColl+Sg1+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNSG1 ;
+@U.CX.ILL@ськамот+v4+Pron+AssocColl+Sg2+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNSG2 ;
+@U.CX.ILL@ськамонзо+v4+Pron+AssocColl+Sg3+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNSG3 ;
+@U.CX.ILL@ськамонок+v4+Pron+AssocColl+Pl1+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNPL1 ;
+@U.CX.ILL@ськамонк+v4+Pron+AssocColl+Pl2+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNPL2 ;
+@U.CX.ILL@ськамост+v4+Pron+AssocColl+Pl3+Der/Dimin+Ill:@U.CX.ILL@ськамнинез OBL-PX4-CLTCOP_NMNPL3 ;
+
+!! Some random Russian elements:
+нельзя+Adv:нельзя ADV_CAN_TAKE_PRTSG3 ;
+кода+Adv:кода ADV_CAN_TAKE_PRTSG3 ;
+мейсэ+Pron:мейсэ COPULA-PRT-30 ;
+нацяс+Adv:нацяс ADV_ ;
+проста+Adv:проста ADV_ ;
+
+научно+Adv+Use/SpellNoSugg:научно ENDLEX ;
+северо+Adv+Use/SpellNoSugg:северо ENDLEX ;
+юго+Adv+Use/SpellNoSugg:юго ENDLEX ;
+больше+Adv+Use/SpellNoSugg:больше ENDLEX ;
+социалистическо+Adv+Use/SpellNoSugg:социалистическо ENDLEX ;
+исследовательско+Adv+Use/SpellNoSugg:исследовательско ENDLEX ;
+
+можобуть+v1+Adv:можобуть ADV_ ;
+можобуть+v2+Adv:можобут ADV_ ;
+можот+v1+Adv:можот ADV_ ;
+можот+v2+Adv:можоть ADV_ ;
+можот+v3+Adv:можуть ADV_ ;
+можот+v4+Adv:можо ADV_ ;
+нулкасто+Adv:нулкасто ADV_ ;
+нучк-пачк+Adv:нучк-пачк ADV_ ;
+вепеле+Adv:вепеле ADV_ ;
+псистэ+Adv:псистэ ADV_ ;
+действительна+Adv:действительна ADV_ ;
+ёжоцек+Adv:ёжоцек ADV_ ;
+ояцек+Adv:ояцек ADV_ ;
+мельцек+Adv:мельсек ADV_errorth ;
+сэтьминестэ+Adv:сэтьминестэ ADV_ ;
+
+неемс+V+Ind+Prs+ScPl1:нетяно K ;
+неемс+V+Ind+Prs+ScPl1:нетяно K ;
+! old orthography
+!васоло:васол
+!буть:буть
+!ульгак:ульгак, уль
+!азьдо:азьдо
+!стувт:стувт
+!пеляз:пеляз
+!цю:цю
+!ушкс:ушкс
+!знярт:знярт
+!ванст:ванст
+!тияк:тияк
+!патей:патей
+!максть:максть
+!Зяроце:Зяроце
+!ёжоцек:ёжоцек
+!тонавт:тонавт
+!саесэ:саесэ
+!тияк:тияк
+!машсь:машсь
+!качам:качам
+!илясо:илясо
+!йоки:йоки
+!аразди:аразди
+!алыж:алыж
+!ёнсе:ёнсе
+!тоёнов:тоёнов
+!раужт:раужт
+!плащсэ:плащсэ
+!мекевс:мекевс
+!майшсь:майшсь
+!лыр:лыр
+!илинзе:илинзе
+!дошуз:дошуз
+!гхм:гхм
+!ыгы:ыгы
+!ныгы:ныгы
+!хе:хе
+!кхе:кхе
+!листяя:листяя
+!гхм:гхм
+!валк:валк
+!адядоя:адядоя
+!уряжет:уряжет
+!цёркай:цёркай
+! child speech
+!яйцамо:яйцамо 
+! Russianish
+!беш:беш
+!бох:бох
+!тибе:тибе
+!знашь:знашь
+!неушто:неушто
+!бешом:бешом
+!ёще:ёще
+!слышка:слышка
+!сётыки:сётыки
+! plural with single т old
+омбонст+Num+Coll+Pl+Nom+Def+Use/SpellNoSugg:омбонстнэ K ;
+карадо-каршонь+A:карадо-каршонь A_IS_GEN ;
+вейссовавтозь+A:вейссовавтозь A_L1 ;
+вейспурнамонь+A:вейспурнамонь A_IS_GEN ;
+сняро+Num:сняро NUM-INTERR_ ;
+коть+CS:коть CS_ ;
+штоб+CS:штоб CS_ ;
+ёнце+Det:ёнце DET-DEM_ALCE ;
+ёндонь+A:ёндонь A_IS_GEN ;
+мог+Pcle:мог PCLE_ ;
+силой+Adv:силой ADV_ ;
+мокшо-эрзянь+A:мокшо-эрзянь A_IS_GEN ;
+милок+Interj:милок INTERJ_ ;
+алуж+N:алыж N_OSH ;
+
+мг+Interj:мг INTERJ_ ;
+э-э+Interj:э-э INTERJ_ ;
+тьфу+Interj:тьфу INTERJ_ ;
+у-у-у+Interj:у-у-у INTERJ_ ;
+э-э-э+Interj:э-э-э INTERJ_ ;
+вай-вай+Interj:вай-вай INTERJ_ ;
+охо-хо+Interj:охо-хо INTERJ_ ;
+сё+Interj:сё INTERJ_ ;
+ай+Interj:ай INTERJ_ ;
+господи+Interj:господи INTERJ_ ;
+амен+Interj:амен INTERJ_ ;
+деряй+Pcle:деряй PCLE_AUX_COND ;
+эстэ+Adv+Temp+Dial/M:эстэ ADV_ ;
+тяни+Adv+Temp+Dial/M:тяни ADV_ ;
+сембе+Pron+Dial/M:сембе K ;
+опек+Adv:опек ADV_DEG ;
+кона-кона+Pron+Sg+Nom:кона-кона K ;
+
+Ерусалим+v2+N+Prop+Sem/Plc:Іерусалим PROP_KAL_PLC "Z" ;
+Вифсфагия+v1+N+Prop+Sem/Plc:Вифсфагия PROP_KUDO_PLC "Z" ;
+Вифсфагия+v2+N+Prop+Sem/Plc:Виѳсфагія PROP_KUDO_PLC "Z" ;
+Вифания+v1+N+Prop+Sem/Plc:Вифания PROP_KUDO_PLC "Z" ;
+Вифания+v2+N+Prop+Sem/Plc:Виѳанія PROP_KUDO_PLC "Z" ;
+Гефсимания+v1+N+Prop+Sem/Plc:Гефсимания PROP_KUDO_PLC "Z" ;
+Гефсимания+v2+N+Prop+Sem/Plc:Геѳсиманія PROP_KUDO_PLC "Z" ;
+Голгофа+v1+N+Prop+Sem/Plc:Голгофа PROP_KUDO_PLC "Z" ;
+Голгофа+v2+N+Prop+Sem/Plc:Голгоѳа PROP_KUDO_PLC "Z" ;
+Вифсаида+v1+N+Prop+Sem/Mal:Вифсаида PROP_KUDO "Z" ;
+Вифсаида+v2+N+Prop+Sem/Mal:Виѳсаида PROP_KUDO "Z" ;
+
+Илѝ+N+F:Илѝ N_KUDO "Пазом" ;
+
+стенка+N:стенка N_KUDO ;
+золота+N:золота N_KUDO "сырне" ;
+бутыль+N:бутыль N_L1 "сулика" ;
+пыльца+N:пыльца N_KUDO ;
+цветка+N:цветка N_KUDO "цеця/панчт" ;
+перегонка+N:перегонка N_KUDO ;
+микроб+N:микроб N_LAV ;
+упругость+N:упругость N_GAJT1 ;
+порошок+N:порошок N_LAV ;
+термометр+N:термометр N_TYL ;
+озимь+N:озимь N_OZIM1 ;
+колос+N:колос N_BS ;
+змей+N:змей N_J ;
+одуванчик+N:одуванчик N_TEV ;
+фильтрования+N:фильтрования N_KUDO ;
+песчаник+N:песчаник N_TEV ;
+мергель+N:мергель N_L1 ;
+товарищ+N:товарищ N_TEV ;
+чешуйка+N:чешуйка N_KUDO ;
+кшнибетон+N:кшнибетон N_KAL ;
+завязь+N:завязь N_ROZ1 ;
+одижа+N:одижа N_KUDO ;
+зачатка+N:зачатка N_KUDO ;
+сосуд+N:сосуд N_KAL ;
+пестик+N:пестик N_TEV ;
+экектростанция+N:экектростанция N_KUDO ;
+цветоводства+N:цветоводства N_KUDO ;
+предрассудка+N:предрассудка N_KUDO ;
+разработка+N:разработка N_KUDO ;
+традесканция+N:традесканция N_KUDO ;
+особенность+N:особенность N_GAJT1 ;
+поверхность+N:поверхность N_GAJT1 ;
+килограмм+N:килограмм N_LAV ;
+раковинка+N:раковинка N_KUDO ;
+яровизация+N:яровизация N_KUDO ;
+стахановец+N:стахановец N_LEVKS ;
+пыльник+N:пыльник N_TEV ;
+папоротник+N:папоротник N_TEV ;
+опыления+N:опыления N_KUDO ;
+шпат+N:шпат N_ART ;
+
+
+!! Some of the nouns have special forms for Gen PxSg1 and PxSg2:
+ялга+N:ялга N_KIN-TYPE-PX-GEN-SG1-SG2 ;
+шабра+N:шабра N_KIN-TYPE-PX-GEN-SG1-SG2 ;
+цёра+N:цёра N_KIN-TYPE-PX-GEN-SG1-SG2 ;
+
+
+
+!! Reciprocal pronouns
+!! These might be done with flags
+вейкенек-вейкенек+Pron+Recipr+PxPl1:вейкенек-вейкенек K ;
+вейкенек-вейкенек+Pron+Recipr+PxPl1:вейке-вейкенек # ;
+вейкенк-вейкенк+Pron+Recipr+PxPl2:вейкенк-вейкенк K ;
+вейкест-вейкест+Pron+Recipr+PxPl3:вейкест-вейкест K ;
+вейке-вейке+Pron+Recipr+Gen:вейке-вейкень # ;
+вейке-вейке+Pron+Recipr+Dat:вейке-вейкенень # ;
+вейке-омбоце+Pron+Recipr+Sg+Nom:вейке-омбоце # ;
+
+!!
+!! These two stems have м loss but its presence can be
+!! observed in the choice of "тнэ" over "тне"
+!! This has special hard after lost consonant
+истямо+A+Pl+Nom+Def:истятнэ _KUDO-NomPl-Conjugation ;
+истямо+A+Pl+Gen+Def:истятнэнь K ;
+истямо+A+Pl+Dat+Def:истятнэнь K ;
+истямо+A+Pl+Abl+Def:истятнэде K ;
+истямо+A+Pl+Ela+Def:истятнэстэ K ;
+истямо+A+Pl+Ill+Def:истятнэс K ;
+истямо+A+Pl+Ine+Def:истятнэсэ K ;
+истямо+A+Pl+Prl+Def:истятнэва K ;
+истямо+A+Pl+Cmpr+Def:истятнэшка K ;
+истямо+A+Pl+Abe+Def:истятнэвтеме K ;
+истямо+A+Pl+Tra+Def:истятнэкс K ;
+истямо+A+Pl+Lat+Def:истятнэв K ;
+истямо+A+Pl+Nom+Indef:истят K ;
+!! This has special hard after lost consonant
+кондямо+A+Pl+Nom+Def:кондятнэ _KUDO-NomPl-Conjugation ;
+
+
+эсь+A+Sg+Nom+Indef:Ӓ3сь ENDLEX ; ! Grammars see this as a base form for pronouns, but it only exists as a determiner
+
+!! 1930s Phonetic transcription
+!! дс >> ц
+ладсо+Adv+Ine+Use/NG+Err/Orth:лацо K ;
+!! гт >> к
+мекевлангт+Adv+Use/NG+Err/Orth:мекевланк K ;
+мекевлангт+Adv+Use/NG+Err/Orth:мекевланг K ; !!= @CODE@ Half way between morphology and phonetics with a Russian twist 
+
+рыжой+Use/NG+Err/Orth:рижой A_KAL ;
+
+!! ### ADPOSITIONS
+
+та+Adv:та ADV_ ;
+
+!! ### IDEOPHONES
+!! are dealt with as adverbs
+диль-диль+Adv:диль-диль ADV-IDEOPH ;
+кулдыр-гув+Adv:кулдыр-гув ADV-IDEOPH ;
+лоцьк+Adv:лоцьк ADV-IDEOPH ;
+ух-вах+Adv:ух-вах ADV-IDEOPH ;
+гув-гув+Adv:гув-гув ADV-IDEOPH ;
+гронк+Adv:гронк ADV-IDEOPH ;
+кальцк+Adv:кальцк ADV-IDEOPH ;
+цок+Adv:цок ADV-IDEOPH ;
+носк+Adv:носк ADV-IDEOPH ;
+лоськ+Adv:лоськ ADV-IDEOPH ;
+ланшк+Adv:ланшк ADV-IDEOPH ;
+бенськ+Adv:бенськ ADV-IDEOPH ;
+юлск+Adv:юлск ADV-IDEOPH ;
+шуморк+Adv:шуморк ADV-IDEOPH ;
+шварк+Adv:шварк ADV-IDEOPH ;
+чошк+Adv:чошк ADV-IDEOPH ;
+чирьк+Adv:чирьк ADV-IDEOPH ;
+цёк+Adv:цёк ADV-IDEOPH ;
+цямк+Adv:цямк ADV-IDEOPH ;
+хр-рьк+Adv:хр-рьк ADV-IDEOPH ;
+хр-рк+Adv:хр-рк ADV-IDEOPH ;
+сёрск+Adv:сёрск ADV-IDEOPH ;
+моск+Adv:моск ADV-IDEOPH ;
+корцьк+Adv:корцьк ADV-IDEOPH ;
+клавцк+Adv:клавцк ADV-IDEOPH ;
+гувк+Adv:гувк ADV-IDEOPH ;
+глянк+Adv:глянк ADV-IDEOPH ;
+гамк+Adv:гамк ADV-IDEOPH ;
+вышк+Adv:вышк ADV-IDEOPH ;
+выйк+Adv:выйк ADV-IDEOPH ;
+варск+Adv:варск ADV-IDEOPH ;
+беньк+Adv:беньк ADV-IDEOPH ;
+ашкорк+Adv:ашкорк ADV-IDEOPH ;
+шпанк+Adv:шпанк ADV-IDEOPH ;
+ширк+Adv:ширк ADV-IDEOPH ;
+чочк+Adv:чочк ADV-IDEOPH ;
+ланшк+Adv:ланшк ADV-IDEOPH ;
+лакорк+Adv:лакорк ADV-IDEOPH ;
+киторк+Adv:киторк ADV-IDEOPH ;
+дренк+Adv:дренк ADV-IDEOPH ;
+глянк+Adv:глянк ADV-IDEOPH ;
+бамцк+Adv:бамцк ADV-IDEOPH ;
+бамк+Adv:бамк ADV-IDEOPH ;
+скирьк-скирьк+Adv:скирьк-скирьк ADV-IDEOPH ;
+либорк-либорк+Adv:либорк-либорк ADV-IDEOPH ;
+длинь-длинь+Adv:длинь-длинь ADV-IDEOPH ;
+ноцк-ноцк+Adv:ноцк-ноцк ADV-IDEOPH ;
+тук-тук+Adv:тук-тук ADV-IDEOPH ;
+лип-лип+Adv:лип-лип ADV-IDEOPH ;
+ток-ток+Adv:ток-ток ADV-IDEOPH ;
+типельк-типельк+Adv:типельк-типельк ADV-IDEOPH ;
+пукштор-лукштор+Adv:пукштор-лукштор ADV-IDEOPH ;
+пукштор-лакштор+Adv:пукштор-лакштор ADV-IDEOPH ;
+лостерь-лостерь+Adv:лостерь-лостерь ADV-IDEOPH ;
+кичкерь-мичкерь+Adv:кичкерь-мичкерь ADV-IDEOPH ;
+шлёберь-шлёберь+Adv:шлёберь-шлёберь ADV-IDEOPH ;
+чикорк-чикорк+Adv:чикорк-чикорк ADV-IDEOPH ;
+ципель-ципель+Adv:ципель-ципель ADV-IDEOPH ;
+мизолк-мизолк+Adv:мизолк-мизолк ADV-IDEOPH ;
+калдор-кулдор+Adv:калдор-кулдор ADV-IDEOPH ;
+петерь-петерь+Adv:петерь-петерь ADV-IDEOPH ;
+луньк-луньк+Adv:луньк-луньк ADV-IDEOPH ;
+лодор-лодор+Adv:лодор-лодор ADV-IDEOPH ;
+либор-либор+Adv:либор-либор ADV-IDEOPH ;
+кивчк-кивчк+Adv:кивчк-кивчк ADV-IDEOPH ;
+дзинь-дзинь+Adv:дзинь-дзинь ADV-IDEOPH ;
+блюнк-блюнк+Adv:блюнк-блюнк ADV-IDEOPH ;
+берть-берть+Adv:берть-берть ADV-IDEOPH ;
+беньк-беньк+Adv:беньк-беньк ADV-IDEOPH ;
+сурть-сурть+Adv:сурть-сурть ADV-IDEOPH ;
+поцер-поцер+Adv:поцер-поцер ADV-IDEOPH ;
+дзинь-дзинь+Adv:дзинь-дзинь ADV-IDEOPH ;
+глинь-глинь+Adv:глинь-глинь ADV-IDEOPH ;
+суль-суль+Adv:суль-суль ADV-IDEOPH ;
+сорк-сорк+Adv:сорк-сорк ADV-IDEOPH ;
+оцор-оцор+Adv:оцор-оцор ADV-IDEOPH ;
+нулк-нулк+Adv:нулк-нулк ADV-IDEOPH ;
+ноцк-ноцк+Adv:ноцк-ноцк ADV-IDEOPH ;
+тук-тук+Adv:тук-тук  ADV-IDEOPH ;
+тянк-тянк+Adv:тянк-тянк ADV-IDEOPH ;
+кхе-кхе+Adv:кхе-кхе ADV-IDEOPH ;
+чэ-чэ+Adv:чэ-чэ ADV-IDEOPH ;
+та-та+Adv:та-та ADV-IDEOPH ;
+кря-кря+Adv:кря-кря ADV-IDEOPH ;
+гул-гул+Adv:гул-гул ADV-IDEOPH ;
+уф-уф+Adv:уф-уф ADV-IDEOPH ;
+тапор-тупор+Adv:тапор-тупор ADV-IDEOPH ;
+чожк-чожк+Adv:чожк-чожк ADV-IDEOPH ;
+сёрк-сёрк+Adv:сёрк-сёрк ADV-IDEOPH ;
+сырк-сырк+Adv:сырк-сырк ADV-IDEOPH ;
+чав-чав+Adv:чав-чав ADV-IDEOPH ;
+цяк-цяк+Adv:цяк-цяк ADV-IDEOPH ;
+цок-цок+Adv:цок-цок ADV-IDEOPH ;
+мус-мус+Adv:мус-мус ADV-IDEOPH ;
+лап-лап+Adv:лап-лап ADV-IDEOPH ;
+кру-кру+Adv:кру-кру ADV-IDEOPH ;
+чэк-чэк+Adv:чэк-чэк ADV-IDEOPH ;
+кха-кха+Adv:кха-кха ADV-IDEOPH ;
+дёр-дёр+Adv:дёр-дёр ADV-IDEOPH ;
+чэ-чэ+Adv:чэ-чэ ADV-IDEOPH ;
+ти-ти+Adv:ти-ти ADV-IDEOPH ;
+ля-ля+Adv:ля-ля ADV-IDEOPH ;
+ль-ль+Adv:ль-ль ADV-IDEOPH ;
+ли-ли+Adv:ли-ли ADV-IDEOPH ;
+го-го+Adv:го-го ADV-IDEOPH ;
+то-то+Adv:то-то ADV-IDEOPH ;
+ну-ну+Adv:ну-ну ADV-IDEOPH ;
+ко-ко+Adv:ко-ко ADV-IDEOPH ;
+ва-ва+Adv:ва-ва ADV-IDEOPH ;
+ба-ба+Adv:ба-ба ADV-IDEOPH ;
+у-у+Adv:у-у ADV-IDEOPH ;
+цок-цок-цок+Adv:цок-цок-цок ADV-IDEOPH ;
+тук-тук-тук+Adv:тук-тук-тук ADV-IDEOPH ;
+жох+Adv:жох ADV-IDEOPH ;
+луп+Adv:луп ADV-IDEOPH ;
+пус+Adv:пус ADV-IDEOPH ;
+боцк+Adv:боцк ADV-IDEOPH ;
+гилк+Adv:гилк ADV-IDEOPH ;
+гиск+Adv:гиск ADV-IDEOPH ;
+дёрк+Adv:дёрк ADV-IDEOPH ;
+жоль+Adv:жоль ADV-IDEOPH ;
+здок+Adv:здок ADV-IDEOPH ;
+лоцк+Adv:лоцк ADV-IDEOPH ;
+ноцк+Adv:ноцк ADV-IDEOPH ;
+нулк+Adv:нулк ADV-IDEOPH ;
+цярк+Adv:цярк ADV-IDEOPH ;
+чивк+Adv:чивк ADV-IDEOPH ;
+сырк-сарк+Adv:сырк-сарк ADV-IDEOPH ;
+бульк+Adv:бульк ADV-IDEOPH ;
+буньк+Adv:буньк ADV-IDEOPH ;
+губол+Adv:губол ADV-IDEOPH ;
+нолшт+Adv:нолшт ADV-IDEOPH ;
+цитёр+Adv:цитёр ADV-IDEOPH ;
+кепсть+Adv:кепсть ADV-IDEOPH ;
+чикорк+Adv:чикорк ADV-IDEOPH ;
+чополк+Adv:чополк ADV-IDEOPH ;
+ёмболк+Adv:ёмболк ADV-IDEOPH ;
+вандол-вандол+Adv:вандол-вандол ADV-IDEOPH ;
+кувтол-кувтол+Adv:кувтол-кувтол ADV-IDEOPH ;
+кувтёл-кувтёл+Adv:кувтёл-кувтёл ADV-IDEOPH ;
+кумбол-кумбол+Adv:кумбол-кумбол ADV-IDEOPH ;
+болдорк+Adv:болдорк ADV-IDEOPH ;
+вандолк+Adv:вандолк ADV-IDEOPH ;
+зэхельк+Adv:зэхельк ADV-IDEOPH ;
+кашторк+Adv:кашторк ADV-IDEOPH ;
+кумболк+Adv:кумболк ADV-IDEOPH ;
+кувтолк-кувтолк+Adv:кувтолк-кувтолк ADV-IDEOPH ;
+кувтёлк-кувтёлк+Adv:кувтёлк-кувтёлк ADV-IDEOPH ;
+цильдёрьк+Adv:цильдёрьк ADV-IDEOPH ;
+лып+Adv:лып ADV-IDEOPH ;
+нюк+Adv:нюк ADV-IDEOPH ;
+тупор-тапор+Adv:тупор-тапор ADV-IDEOPH ;
+ёлск+Adv:ёлск ADV-IDEOPH ;
+ёлск-ёлск+Adv:ёлск-ёлск ADV-IDEOPH ;
+ёлцк+Adv:ёлцк ADV-IDEOPH ;
+ёлчк+Adv:ёлчк ADV-IDEOPH ;
+ёлшт+Adv:ёлшт ADV-IDEOPH ;
+ёлок-улок+Adv:ёлок-улок ADV-IDEOPH ;
+ёзол+Adv:ёзол ADV-IDEOPH ;
+ёзол-ёзол+Adv:ёзол-ёзол ADV-IDEOPH ;
+ёкшт-пакшт+Adv:ёкшт-пакшт ADV-IDEOPH ;
+
+
+ок+Interj:ок INTERJ_ ;
+ну-ка+Interj:ну-ка INTERJ_ ;
+аффф+Interj:аффф INTERJ_ ;
+псс+Interj:псс INTERJ_ ;
+
+
+!! ### PRONOUNS
+мезе+Pron:мезева PRON-IS-INTERR-SPAT-PRL ;
+мезе+Pron:мезестэ PRON-IS-INTERR-SPAT-ELA ;
+мезе+Pron:мезесэ PRON-IS-INTERR-SPAT-INE ;
+лия-мезе+Pron:лия-мезе PRON_ ;
+конат-конат+Pron+Indef+Distr+Pl+Nom+Indef:конат-конат K ;
+
+!! ### QUANTIFIERS
+сисем+Num+Ord:сисеме NUMORD_KUDO ; !!= @CODE@ This is irregularly formed, cf. сисемце
+кавто-колмо+Num+Appr+Sg+Nom+Indef:кавто-колмо ENDLEX ;
+колмо-ниле+Num+Appr+Sg+Nom+Indef:колмо-ниле ENDLEX ;
+ниле-вете+Num+Appr+Sg+Nom+Indef:ниле-вете ENDLEX ;
+вете-кото+Num+Appr+Sg+Nom+Indef:вете-кото ENDLEX ;
+
+
+
+!! ### NOUNS
+продагент+N:продагент N_KIT ;
+продинспектор+N:продинспектор N_KAL ;
+котума+N:котума N_KUDO ;
+причт+N:причт N_KIT ;
+кропилка+N:кропилка N_KUDO ;
+цёралем+N:цёралем N_TEV ;
+
+!! ### NOUNS WRITTEN Appart
+чувтопря+N+Orth/seventies:чувто% пря N_KUDO ;
+
+!! ### PLACE NAMES
+Ташто% Шайгова+N+Prop+Sem/Plc:Ташто% Шайгова PROP_KUDO_PLC "" ;
+!! ### GEO
+Бессоновка+N+Prop+Sem/Plc:Бессоновка NMN_KUDO ;
+Ангара+N+Prop+Sem/Plc:Ангара NMN_KUDO ;
+Муя+N+Prop+Sem/Plc:Муя NMN_KUDO ;
+
+Рыуге+N+Prop+Sem/Plc:Рыуге NMN_VELE ;
+Воронеж+N+Prop+Sem/Plc:Воронеж NMN_KENKSH ;
+Якстерекуро+N+Prop+Sem/Plc:Якстерекуро NMN_KUDO ;
+Ине-Петра+N+Prop+Sem/Plc:Ине-Петра NMN_KUDO ;
+Торбейбуе+N+Prop+Sem/Plc:Торбейбуе NMN_VELE ;
+Перм+N+Prop+Sem/Plc:Перм NMN_TEV ;
+Чебоксары+N+Prop+Sem/Plc:Чебоксары NMN_VELE ;
+Стамбул+N+Prop+Sem/Plc:Стамбул NMN_KAL ;
+Загреб+N+Prop+Sem/Plc:Загреб NMN_TEV ;
+Тарту+N+Prop+Sem/Plc:Тарту NMN_KUDO ;
+Сааремаа+N+Prop+Sem/Plc:Сааремаа NMN_KUDO ;
+Белинской+N+Prop+Sem/Plc:Белинской NMN_J ;
+Белград+N+Prop+Sem/Plc:Белград NMN_KAL ;
+Йошкар-Ола+N+Prop+Sem/Plc:Йошкар-Ола NMN_KUDO ;
+Чукало+N+Prop+Sem/Plc:Чукало NMN_KUDO ;
+Клявля+N+Prop+Sem/Plc:Клявля NMN_KUDO ;
+Тбилиси+N+Prop+Sem/Plc:Тбилиси NMN_VELE ;
+Тирана+N+Prop+Sem/Plc:Тирана NMN_KUDO ;
+Скопье+N+Prop+Sem/Plc:Скопье NMN_VELE ;
+Селища+N+Prop+Sem/Plc:Селища NMN_KUDO ;
+Лондон+N+Prop+Sem/Plc:Лондон NMN_KAL ;
+Клявля+N+Prop+Sem/Plc:Клявля NMN_KUDO ;
+Дубинька+N+Prop+Sem/Plc:Дубинька NMN_KUDO ;
+Лямбирь+N+Prop+Sem/Plc:Лямбирь NMN_L1 ;
+Нью-Йорк+N+Prop+Sem/Plc:Нью-Йорк NMN_JORK ;
+Александровка+N+Prop+Sem/Plc:Александровка NMN_KUDO ;
+Рамаданбуе+N+Prop+Sem/Plc:Рамаданбуе NMN_VELE ;
+Воткинской+N+Prop+Sem/Plc:Воткинской NMN_J ;
+Ярославль+N+Prop+Sem/Plc:Ярославль NMN_L1 ;
+Романовка+N+Prop+Sem/Plc:Романовка NMN_KUDO ;
+Оразайбуе+N+Prop+Sem/Plc:Оразайбуе NMN_VELE ;
+Манадыши+N+Prop+Sem/Plc:Манадыши NMN_VELE ;
+Батуминь+N+Prop+Sem/Plc:Батуминь NMN_L1 ;
+Мальта+N+Prop+Sem/Plc:Мальта NMN_KUDO ;
+Пярну+N+Prop+Sem/Plc:Пярну NMN_KUDO ;
+Михайловка+N+Prop+Sem/Plc:Михайловка NMN_KUDO ;
+
+!!Biblical names
+
+!
+!
+фарисей+N:фарисей N_L1 ;
+саддукей+N:саддукей N_L1 ;
+!
+пежетев+N:пежетев A_KAL ;
+! In Komi Индія
+
+!! ### ANIMAL NAMES
+Бертяз+N+Sem/Ani+Prop:Бертяз NMN_OSH ;
+
+!! ### FIRST NAMES
+Кирё+N+Sem/Mal+Prop:Кирё NMN_KUDO ;
+Тёпу+N+Sem/Mal+Prop:Тёпу NMN_KUDO ;
+
+Лапшов+N+Sem/Mal-Sur+Prop:Лапшов NMN_KAL ;
+
+
+! Erzya variant
+Троцкой+N+Prop:Троцкой CYRL-CONS_SUR ;
+Магеллан+N+Prop:Магеллан CYRL-CONS_SUR ;
+!
+
+!! 100 % homographs of Russian words
+вот+v1+Use/SpellNoSugg+Interj+Dem:вот K ;
+вот+v2+Use/SpellNoSugg+Interj+Dem:от K ;
+значит+Use/SpellNoSugg+V+Ind+Prs+ScSg3:значит K ;
+ещё+Adv:ещё ADV_TEMP ;
+ещё+Adv+Use/NG+Err/Lex:эщо ADV_TEMP ;
+тожо+Adv+Use/NG+Err/Lex:тожо ADV_ ;
+Саранск+N+Prop+Sem/Plc+Use/NG+Err/Lex:Саранск PROP-SETTLEMENT_KAL ;
+Еланька+N+Prop:Еланька PROP-SETTLEMENT_KUDO ;
+аромат+N:аромат N_ART ;
+стук+Interj:стук INTERJ_ ;
+пфу+Interj:пфу INTERJ_ ;
+фу+Interj:фу INTERJ_ ;
+вый+Interj:вый  INTERJ_ ;
+дык+Interj:дык INTERJ_ ;
+бишь+Interj:бишь INTERJ_ ;
+дескать+Interj:дескать INTERJ_ ;
+значица+Interj:значица INTERJ_ ;
+
+
+ради+Pr:ради PR_ ;
+знай+Adv:знай ADV_ ;
+как+CS:как CS_ ;
+ня+Interj:ня INTERJ_ ;
+кажной+A:кажной A_J ;
+совсем+Adv:совсем ADV_ ;
+мельцек+Adv:мельцек ADV_ ;
+мелькой+A:мелькой A_J ;
+небось+Interj:небось INTERJ_ ;
+хе+Interj:хе INTERJ_ ;
+хм+Interj:хм INTERJ_ ;
+ведрук+Adv:ведрук ADV_ ;
+кемень-кеветее+Num+Sg+Nom+Indef:кемень-кеветее K ;
+патом+Adv:патом ADV_ ;
+авакай-тиринем+N+Voc:авакай-тиринем K ;
+авакай-ванынем+N+Voc:авакай-ванынем K ;
+рядсек-рядсек+Adv:рядсек-рядсек ADV_ ;
+тюжолт+Pcle:тюжолт PCLE_ ;
+пестэ-пес+Adv:пестэ-пес ADV_ ;
+снярдо+CS:снярдо CS_ ;
+сука+A:сука N_KUDO ;
+руской+A:руской A_J ;
+трявт+N:трявт N_BT ;
+пегой+A:пегой A_J ;
+
+аероплан+N:аероплан N_KAL ;
+отец+N:отец N_LEVKS ;
+
+опять+Adv:опять ADV_TEMP ;
+если+CS:если CS_ ;
+нильзя+Adv:нильзя ADV_ ;
+богородица+N:богородица N_KUDO ;
+
+свинарка+N:свинарка N_KUDO ;
+граница+N:граница N_KUDO ;
+голуба+N:голуба N_KUDO ;
+оживления+N:оживления N_KUDO ;
+художества+N:художества N_KUDO ;
+противоречия+N:противоречия N_KUDO ;
+повествования+N:повествования N_KUDO ;
+нагрузка+N:нагрузка N_KUDO ;
+причина+N:причина N_KUDO ;
+счастья+N:счастья N_KUDO ;
+
+што-ли+Pcle:што-ли PCLE_ ;
+наверна+Adv:наверна ADV_ ;
+успешнасто+Adv:успешнасто ADV_ ;
+наизусть+Adv:наизусть ADV_ ;
+
+ёзнэ+v2+N:ёзны N_KUDO ;
+стирь+N:стирь N_L1 ;
+одцёра+N:одцёра N_KUDO ;
+паркной+N:паркной N_L1 ;
+группировка+N:группировка N_KUDO ;
+лелька+N:лелька N_KUDO ;
+лелька+N:лелька N-VOC_J ;
+голупка+N:голупка N_KUDO ;
+великолукской+A:великолукской A_L1 ;
+парламентёр+N:парламентёр N_KAL ;
+
+Дамай+N+Prop:Дамай PROP_L1 ;
+Яраска+N+Prop:Яраска PROP_KUDO ;
+Сураля+N+Prop:Сураля PROP_KUDO ;
+Пандай+N+Prop:Пандай PROP_L1 ;
+Сыржа+N+Prop:Сыржа PROP_KUDO ;
+Стенька+N+Prop:Стенька PROP_KUDO ;
+Сталинград+N+Prop:Сталинград PROP_KAL ;
+Сивка+N+Prop:Сивка PROP_KUDO ;
+Смоленск+N+Prop:Смоленск PROP_KAL ;
+Иванка+N+Prop:Иванка PROP_KUDO ;
+Новосокольники+N+Prop:Новосокольники PROP_KUDO ;
+
+
+
+!!
+!! adjectives in _ой_ Adj-od >> A_RU-OJ
+!! with  +Use/SpellNoSugg
+покштояк-покш+A+Sg+Nom+Indef:покштояк-покш # ;!what should be done with these?2025-06-17
+
+икельсь+A+Sg+Nom+Indef:икельсь # ;
+
+багажной+A:багажной A_RU-OJ ;
+високосной+A:високосной A_RU-OJ ;
+возможной+A:возможной A_RU-OJ ;
+горячевской+A:горячевской A_RU-OJ ;
+крепкой+A:крепкой A_RU-OJ ;
+ледовитой+A:ледовитой A_RU-OJ ;
+литературно-художественной+A:литературно-художественной A_RU-OJ ;
+обзорной+A:обзорной A_RU-OJ ;
+общественно-политической+A:общественно-политической A_RU-OJ ;
+парно-копытной+A:парно-копытной A_RU-OJ ;
+портвейной+A:портвейной A_RU-OJ ;
+постоянной+A:постоянной A_RU-OJ ;
+профессорско-преподавательской+A:профессорско-преподавательской A_RU-OJ ;
+разнообразной+A:разнообразной A_RU-OJ ;
+скандальной+A:скандальной A_RU-OJ ;
+спокой+A:спокой A_RU-OJ ;
+тропической+A:тропической A_RU-OJ ;
+умеренной+A:умеренной A_RU-OJ ;
+чувашской+A:чувашской A_RU-OJ ;
+чудаковатой+A:чудаковатой A_RU-OJ ;
+ономатопоэтической+A:ономатопоэтической A_RU-OJ ;
+
+!!
+!! +SP+Gen+Indef attributes as adjectives
+григорианонь+A:григорианонь A_IS_GEN "" ;
+манынь+A:манынь A_IS_GEN ;
+Пелевеёнксонь-Кавказонь+A:Пелевеёнксонь-#Кавказонь A_IS_GEN "" ;
+Хантонь-Мансинь+A:Хантонь-#Мансинь A_IS_GEN "" ;
+кавонек+Pron+AssocColl:кавонек # "CHECKME" ;
+хотя+CS:хотя CS_ ;
+
+ламо-мезе+Pron:ламо-мезе # ;
+келей-кувака+A:келей-кувака # ;
+!Якстерть
+!Истя-аволь
+!нолажтсь
+!ушкс:ушкс
+!эседензэ
+!эрьгела
+!текесь
+!Но-о
+!тоцк
+!икелекс
+!эседень
+!сэрей-келей
+!начица
+!знатчица
+!чольдерькай:чольдерькай
+!симагай:симагай
+!покш-келей:покш-келей
+!видьстэ-видьстэ:видьстэ-видьстэ
+!потякай:потякай
+!кургостонзо
+!бешом:бешом
+!цинсть
+!ушкс-трокс
+!кирьксала:кирьксала A_KUDO ;
+!калдорк:калдорк
+!болыне:болыне
+!авакай-тирякай:авакай-тирякай
+!Люба-Любине+N+Prop:Люба-Любине
+!9
+Шарон+N+Prop:Шарон PROP_BN ;
+Итяй+N+Prop:Итяй PROP_J ;
+Домай+N+Prop:Домай PROP_J ;
+Эрюш+N+Prop:Эрюш PROP_BSH ;
+Эрзют+N+Prop:Эрзют PROP_BT ;
+Оржай+N+Prop:Оржай PROP_J ;
+Кулава+N+Prop:Кулава PROP_KUDO ;
+Костюш+N+Prop:Костюш PROP_BSH ;
+Кильдяй+N+Prop:Кильдяй PROP_J ;
+Шабай+N+Prop:Шабай PROP_J ;
+Шала+N+Prop:Шала PROP_KUDO ;
+Паксяз+N+Prop:Паксяз PROP_BZ ;
+Пайча+N+Prop:Пайча PROP_KUDO ;
+Индял+N+Prop:Индял PROP_BL ;
+Иер+N+Prop:Иер PROP_FL ;
+Ёколда+N+Prop:Ёколда PROP_KUDO ;
+Вишкайня+N+Prop:Вишкайня PROP_KUDO ;
+Чентяй+N+Prop:Чентяй PROP_J ;
+Ульмай+N+Prop:Ульмай PROP_J ;
+Ольгай+N+Prop:Ольгай PROP_J ;
+Цянтар+N+Prop:Цянтар PROP_BL ;
+Теряй+N+Prop:Теряй PROP_J ;
+Семтярь+N+Prop:Семтярь PROP_L1 ;
+Раюш+N+Prop:Раюш PROP_BSH ;
+Паксяй+N+Prop:Паксяй PROP_J ;
+Мияна+N+Prop:Мияна PROP_KUDO ;
+Любаня+N+Prop:Любаня PROP_KUDO ;
+Люба-Любине+N+Prop:Люба-Любине PROP_VELE ;
+Дёдя+N+Prop:Дёдя PROP_KUDO ;
+Вечкай+N+Prop:Вечкай PROP_J ;
+Ашай+N+Prop:Ашай PROP_J ;
+Азрава+N+Prop:Азрава PROP_KUDO ;
+Адиля+N+Prop:Адиля PROP_KUDO ;
+Юхма+N+Prop:Юхма PROP_KUDO ;
+Сарговеле+N+Prop:Сарговеле PROP_VELE ;
+Коян+N+Prop:Коян PROP_BN ;
+Кирдян+N+Prop:Кирдян PROP_BN ;
+Каштай+N+Prop:Каштай PROP_J ;
+Калмоньчей+N+Prop:Калмоньчей PROP_J ;
+Истляй+N+Prop:Истляй PROP_J ;
+Бажут+N+Prop:Бажут PROP_BT ;
+Тюжаня+N+Prop:Тюжаня PROP_KUDO ;
+Тюжай+N+Prop:Тюжай PROP_J ;
+Тештяйне+N+Prop:Тештяйне PROP_VELE ;
+Сэрдяй+N+Prop:Сэрдяй PROP_J ;
+Рамана+N+Prop:Рамана PROP_KUDO ;
+Пюхаярве+N+Prop:Пюхаярве PROP_VELE ;
+Пачай+N+Prop:Пачай PROP_J ;
+Папуа+N+Prop:Папуа PROP_KUDO ;
+Отянизэ+N+Prop:Отяни PROP_NIZE ;
+Олдынька+N+Prop:Олдынька PROP_KUDO ;
+Нюта+N+Prop:Нюта PROP_KUDO ;
+Нуяз+N+Prop:Нуяз PROP_BZ ;
+Ляксандра+N+Prop:Ляксандра PROP_KUDO ;
+Лияныне+N+Prop:Лияныне PROP_VELE ;
+Кулясбуе+N+Prop:Кулясбуе PROP_VELE ;
+Кирьксаня+N+Prop:Кирьксаня PROP_KUDO ;
+Кастуш+N+Prop:Кастуш PROP_BSH ;
+Кагор+N+Prop:Кагор PROP_BL ;
+Дёга+N+Prop:Дёга PROP_KUDO ;
+Дярвиш+N+Prop:Дярвиш PROP_FSH ;
+Дюния+N+Prop:Дюния PROP_KUDO ;
+Дандай+N+Prop:Дандай PROP_J ;
+Вишкайня+N+Prop:Вишкайня PROP_KUDO ;
+Бульдяй+N+Prop:Бульдяй PROP_J ;
+Берут+N+Prop:Берут PROP_BT ;
+Ахуна+N+Prop:Ахуна PROP_KUDO ;
+Арбузик+N+Prop:Арбузик PROP_FK ;
+Антай+N+Prop:Антай PROP_J ;
+Эркин+N+Prop:Эркин PROP_FN ;
+Элюшкай+N+Prop:Элюшкай PROP_J ;
+Чугур+N+Prop:Чугур PROP_BL ;
+Чирькужо+N+Prop:Чирькужо PROP_KUDO ;
+Чиргуж+N+Prop:Чиргуж PROP_BZH ;
+Чингиз+N+Prop:Чингиз PROP_BZ ;
+Чентяй+N+Prop:Чентяй PROP_J ;
+Чевгаж+N+Prop:Чевгаж PROP_BZH ;
+Хрол+N+Prop:Хрол PROP_BL ;
+Фяритовна+N+Prop:Фяритовна PROP_KUDO ;
+Фауст+N+Prop:Фауст PROP_BT ;
+Уралмаш+N+Prop:Уралмаш PROP_BSH ;
+Уосукайнен+N+Prop:Уосукайнен PROP_FN ;
+Улякай+N+Prop:Улякай PROP_J ;
+Тёляй+N+Prop:Тёляй PROP_J ;
+Тюжаня+N+Prop:Тюжаня PROP_KUDO ;
+Тимор+N+Prop:Тимор PROP_BL ;
+Тиаго+N+Prop:Тиаго PROP_KUDO ;
+Тенькуж+N+Prop:Тенькуж PROP_BZH ;
+Сурачире+N+Prop:Сурачире PROP_VELE ;
+Риитта+N+Prop:Риитта PROP_KUDO ;
+Ридигер+N+Prop:Ридигер PROP_FL ;
+Рая-Раине+N+Prop:Рая-Раине PROP_VELE ;
+!
+!
+!
+!
+!
+!
+!
+!
+
+!! Russian language words found in Erzya texts
+!!
+
+!! Old Bible Names and words
+Иосиф+v2+N+Prop+Sem/Mal:Іосиф N_KAL ;
+сон+Use/NG+Err/Orth+Pron+Pers+Sg3+Gen:сонзе # ;
+сон+Use/NG+Err/Orth+Pron+Pers+Pl3+Dat+Long:сынянст # ;
+тон+v2+Use/NG+Err/Orth+Pron+Pers+Pl2+Dat+Long:тынянк # ;
+тон+v3+Use/NG+Err/Orth+Pron+Pers+Pl2+Dat+Long:тыняньк # ;
+сон+v2+Use/NG+Err/Orth+Pron+Pers+Sg3+Dat+Short:тянзе # ;
+сон+v2+Use/NG+Err/Orth+Pron+Pers+Sg3+Dat+Long:сонянзе # ;
+алов+v2+Use/NG+Err/Orth+Adv+Lat:алом # ;
+жо+Use/NG+Err/Orth+Pcle:же # ; 
+
+!! RUSSIAN VERBS
+действовать+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:действует # ;
+зависить+V+Ind+Prs+ScPl3+Err/Lex+OLang/RUS:зависят # ;!
+зависить+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:зависит # ;!
+использоваться+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:используется # ;
+обработать+V+Inf+Err/Lex+OLang/RUS:обработать # ;
+отличаться+V+Ind+Prs+ScPl3+Err/Lex+OLang/RUS:отличаются # ;
+очистить+V+Inf+Err/Lex+OLang/RUS:очистить # ;
+очистить+V+Ind+Prt1+ScPl3+Err/Lex+OLang/RUS:очистили # ;
+очищать+V+Ind+Prs+ScPl3+Err/Lex+OLang/RUS:очищают # ;
+очищать+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:очищает # ;
+очищаться+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:очищается # ;
+привлекать+V+Ind+Prs+ScPl3+Err/Lex+OLang/RUS:привлекают # ;
+применяться+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:применяется # ;
+разрушаться+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:разрушается # ;
+расширяться+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:расширяется # ;
+предложить+V+Ind+Prt1+ScSg3+Err/Lex+OLang/RUS:предложил # ;
+сжиматься+V+Ind+Prs+ScSg3+Err/Lex+OLang/RUS:сжимается # ;
+сжиматься+V+Ind+Prs+ScPl3+Err/Lex+OLang/RUS:сжимаются # ;
+управлять+V+Inf+Err/Lex+OLang/RUS:управлять # ;
+
+молчать+V+Impf+IV+Prs+Sg1+OLang/RUS:молчу # ;
+ты+Pron+Pers+Sg2+Nom+OLang/RUS:ты # ;
+за+Pr+OLang/RUS:за # ;
+так+Adv+OLang/RUS:так # ;
+так+CC+OLang/RUS:так # ;
+что+CS+OLang/RUS:что # ;
+что+Pron+Interr+OLang/RUS+Neu+Inan+Sg+Acc:что # ;
+мать+N+Fem+OLang/RUS+Anim+Sg+Acc:мать # ;
+
+
+!! unrecognized
+весень-вейсэнь+A:весень-вейсэнь A_IS_GEN "" ;
+преамбула+N:преамбула N_KUDO "" ;
+мирэнь-эрямонь+A:мирэнь-эрямонь A_IS_GEN "" ;
+тирания+N:тирания N_KUDO "" ;
+молема-прогрес+N:молема-прогрес N_OSH "" ;
+раськеютконь+A:раськеютконь A_IS_GEN "kansainvälinen" ;
+юрисдикция+N:юрисдикция N_KUDO "" ;
+микшнема-рамсема+N:микшнема-рамсема N_KUDO "" ;
+!илязт
+!урьвакстомсто-мирденень лисемстэяк
+полаксчи+N:полаксчи N_KUDO "" ;
+!урьвакстомась-мирденень лисемась
+полаиця?n:полаиця N_KUDO "" ;
+арсемань-вановтонь+A:арсемань-вановтонь A_IS_GEN "" ;
+!ёвтнемань-тонавтомань
+!теемс-пурнамс
+сатышкачи+N:сатышкачи N_KUDO "" ;
+!сыненст
+полаямс+V:полая IV_KUNDAMS "avioitua" ;
+яволявтовомс+V:яволявтов IV_JANGAVOMS "tulla julistetuksi" ;
+лисемс+V+Err/Orth+Ind+Prt1+ScSg3:лись K ;
+эно+Pcle+Orth/PhonDeriv:ино K ;
+эно+Pcle+Orth/PhonDeriv:эна K ;
+
+!кастома-панжома
+вейсэнь-паро+A:вейсэнь-паро A_KUDO "" ;
+
+!! Problems with synchronization
+!! missing lemmas
+пильге+N:пильг N_TINGE ;
+чакш+N:чакш N_OSH ;
+эрьге+N:эрьг N_TINGE ;
+тарка-эзем+N+Sg+Nom:тарка-эзем # ;
+сельмеде-сельмс+Adv:сельмеде-сельмс # ;
+прясто-пильгс+Adv:прясто-пильгс # ;
+кедте-кедьс+Adv:кедте-кедьс # ;
+ансяк-ансяк+Adv:ансяк-ансяк ADV_ ;
+зярс-мейс+Adv:зярс-мейс ADV_ ;
+кува-кува+Adv:кува-кува ADV_ ;
+мельга-мельсек+Adv:мельга-мельсек ADV_ ;
+мельцек-мельцек+Adv:мельцек-мельцек ADV_ ;
+мельсек-мельсек+Adv:мельсек-мельсек ADV_ ;
+васоло-васоло+Adv:васоло-васоло ADV_ ;
+трокс-келес+Adv:трокс-келес ADV_ ;
+
+истя-истя+Adv:истя-истя ADV_ ;
+трокс-кувалт+Adv:трокс-кувалт ADV_ ;
+
+кавтошка-колмо+Num+Appr:кавтошка-колмо # ;
+колмошка-нилешка+Num+Appr:колмошка-нилешка # ;
+нилешка-ветешка+Num+Appr:нилешка-ветешка # ;
+ветешка-котошка+Num+Appr:ветешка-котошка # ;
+ветешка-сисемшка+Num+Appr:ветешка-сисемшка # ;
+котошка-сисемшка+Num+Appr:котошка-сисемшка # ;
+кавтошка-колмошка:кавтошка-колмошка # ;
+кеменьшка-кеветеешка:кеменьшка-кеветеешка # ;
+сисемшка-кавксошка:сисемшка-кавксошка # ;
+кеветеешка-комсешка:кеветеешка-комсешка # ;
+
+кеменьшкань-кеменьшкань+A:кеменьшкань-кеменьшкань A_IS_GEN ;
+комсешкань-комсешкань+A:комсешкань-комсешкань A_IS_GEN ;
+
+
+ветень-ветень+Num+Distr:ветень-ветень ADV_ ;
+зярыянь-зярыянь+Adv+Distr:зярыянь-зярыянь ADV_ ;
+
+мельга-меельцек+Adv:мельга-меельцек ADV_ ;
+
+панксонь-панкс+Adv:панксонь-панкс ADV_ ;
+валонь-вал+Adv:валонь-вал ADV_ ;
+слогонь-слог+Adv:слогонь-слог ADV_ ;
+пелень-пель+Adv:пелень-пель ADV_ ;
+рядонь-ряд+Adv:рядонь-ряд ADV_ ;
+часонь-час+Adv:часонь-час ADV_ ;
+коморонь-коморо+Adv:коморонь-коморо ADV_ ;
+кеменень-кемень+Adv:кеменень-кемень ADV_ ;
+палонь-пал+Adv:палонь-пал ADV_ ;
+эскельксэнь-эскелькс+Adv:эскельксэнь-эскелькс ADV_ ;
+штельксэнь-штелькс+Adv:штельксэнь-штелькс ADV_ ;
+тарадонь-тарад+Adv:тарадонь-тарад ADV_ ;
+штелень-штель+Adv:штелень-штель ADV_ ;
+чопонь-чоп+Adv:чопонь-чоп ADV_ ;
+складонь-склад+Adv:складонь-склад ADV_ ;
+цяркань-цярка+Adv:цяркань-цярка ADV_ ;
+таркань-тарка+Adv:таркань-тарка ADV_ ;
+улавонь-улав+Adv:улавонь-улав ADV_ ;
+пенчень-пенч+Adv:пенчень-пенч ADV_ ;
+пакшонь-пакш+Adv:пакшонь-пакш ADV_ ;
+клоконь-клок+Adv:клоконь-клок ADV_ ;
+повонь-пов+Adv:повонь-пов ADV_ ;
+ковонь-ков+Adv:ковонь-ков ADV_ ;
+петнявксонь-петнявкс+Adv:петнявксонь-петнявкс ADV_ ;
+цирькунонь-цирькун+Adv:цирькунонь-цирькун ADV_ ;
+сускомонь-сускомо+Adv:сускомонь-сускомо ADV_ ;
+кирьксэнь-кирькс+Adv:кирьксэнь-кирькс ADV_ ;
+щельксэнь-щелькс+Adv:щельксэнь-щелькс ADV_ ;
+кескавонь-кескав+Adv:кескавонь-кескав ADV_ ;
+гектаронь-гектар+Adv:гектаронь-гектар ADV_ ;
+штепкань-штепка+Adv:штепкань-штепка ADV_ ;
+стопкань-стопка+Adv:стопкань-стопка ADV_ ;
+коволонь-ковол+Adv:коволонь-ковол ADV_ ;
+толгань-толга+Adv:толгань-толга ADV_ ;
+пингень-пинге+Adv:пингень-пинге ADV_ ;
+печтень-печть+Adv:печтень-печть ADV_ ;
+колмонь-колмо+Adv:колмонь-колмо ADV_ ;
+жанрань-жанра+Adv:жанрань-жанра ADV_ ;
+вестень-весть+Adv:вестень-весть ADV_ ;
+аламонь-аламо+Adv:аламонь-аламо ADV_ ;
+уроконь-урок+Adv:уроконь-урок ADV_ ;
+скалонь-скал+Adv:скалонь-скал ADV_ ;
+ваксонь-вакс+Adv:ваксонь-вакс ADV_ ;
+ротань-рота+Adv:ротань-рота ADV_ ;
+нотань-нота+Adv:нотань-нота ADV_ ;
+куронь-куро+Adv:куронь-куро ADV_ ;
+кечень-кече+Adv:кечень-кече ADV_ ;
+родонь-род+Adv:родонь-род ADV_ ;
+кевень-кев+Adv:кевень-кев ADV_ ;
+канонь-кан+Adv:канонь-кан ADV_ ;
+
+виде-паронь+A:виде-паронь A_IS_GEN ;
+пингеде-пингень+A:пингеде-пингень A_IS_GEN ;
+келеде-келес+Adv:келеде-келес ADV_ ;
+педе-пецек+Adv:педе-пецек ADV_ ;
+васов-васов+Adv:васов-васов ADV_ ;
+
+марксизмань-ленинизмань+A:марксизмань-ленинизмань A_IS_GEN ;
+эрямонь-аштемань+A:эрямонь-аштемань A_IS_GEN ;
+те-тона+Pron+SP+Abl+Indef:теде-тонадо # ;
+те-тона+Pron+SP+Gen+Indef:тень-тонань # ;
+те-тона+Pron+Sg+Nom+Indef:те-тона # ;
+вейкенень-вейкенень+Pron+Refl+Dat:вейкенень-вейкенень K ;
+да-а+Interj:да-а INTERJ_ ;
+да-да+Interj:да-да INTERJ_ ;
+я-а+Interj:я-а INTERJ_ ;
+ну-у+Interj:ну-у INTERJ_ ;
+о-о+Interj:о-о INTERJ_ ;
+ха-ха+Interj:ха-ха INTERJ_ ;
+э-эх+Interj:э-эх INTERJ_ ;
+м-да+Interj:м-да INTERJ_ ;
+н-да+Interj:н-да INTERJ_ ;
+мир-мастор+N+Sg+Gen+Def:мирэнть-масторонть # ;
+мир-мастор+N+Sg+Nom+Indef:мир-мастор # ;
+шумбра-паро+A+Sg+Nom+Indef:шумбра-паро # ;
+шумбра-паро+A+Pl+Nom+Indef:шумбрат-парт # ;
+лия-мезе+Pron+SP+Abl:лиядо-мезде # ;
+лия-мезе+Pron+Sg+Gen:лиянь-мезень # ;
+лия-мезе+Pron+Sg+Nom:лия-мезе # ;
+лия-мезе+Pron+Pl+Nom:лият-мезть # ;
+пертьпелькс+N+Err/Orth-pre2012:перть-пелькс N_LEVKS ;
+!+Abl, +Comp, +Gen, +Ill, +Nom
+!Часошкань-кавтонь, эскелькс, цяс, стопка, иешка-кавто, ведра
+!Чишка-кавто, Not just measures 2022-05-03, 2026-09-28
+!вал-кавто+N:вал N_KAL_AND_KAVTO ;
+!ие-кавто+N:ие N_VELE_AND_KAVTO ;
+!ков-кавто+N:ков N_LAV_AND_KAVTO ;
+!ведра-кавто+N:ведра N_KUDO_AND_KAVTO ;
+!сулика-кавто+N:сулика N_KUDO_AND_KAVTO ;
+!цярка-кавто+N:цярка N_KUDO_AND_KAVTO ;
+!минута-кавто+N:минута N_KUDO_AND_KAVTO ;
+!недля-кавто+N:недля N_KUDO_AND_KAVTO ;
+!пенч-кавто+N:пенч N_KENKSH_AND_KAVTO ;
+!эскелькс-кавто+N:эскелькс N_LEVKS_AND_KAVTO ;
+!цяс-кавто+N:цяс N_BS_AND_KAVTO ;
+!час-кавто+N:час N_BS_AND_KAVTO ;
+!чи-кавто+N:чи N_VELE_AND_KAVTO ;
+авакай-корьмакай+N+Voc:авакай-корьмакай # ;
+ава+N+Voc:авай # ;
+састо-састо+Adv:састо-састо ADV_ ;
+честнасто+Adv:честнасто ADV_ ;
+советнасто+Adv:советнасто ADV_ ;
+отличнасто+Adv:отличнасто ADV_ ;
+достойнасто+Adv:достойнасто ADV_ ;
+интереснасто+Adv:интереснасто ADV_ ;
+шождынестэ+Adv:чождынестэ ADV_errorth ;
+литературнасто+Adv:литературнасто ADV_ ;
+культурнасто+Adv:культурнасто ADV_ ;
+ламо-ламо+Adv:ламо-ламо ADV_ ;
+сядонь-сядонь+Adv:сядонь-сядонь ADV_ ;
+чопода-сэнь+A:чопода-#сӒ3нь A_L1 ;
+секе-тев+Adv:секе-тев # ;
+
+кавксть-колмоксть+Adv:кавксть-колмоксть ITER_ ;
+нилексть-ветексть+Adv:нилексть-ветексть ITER_ ;
+колмоксть-нилексть+Adv:колмоксть-нилексть ITER_ ;
+ветексть-котоксть+Adv:ветексть-котоксть ITER_ ;
+колмоцексть+Adv:колмоцексть ITER_ ;
+комсексть+Adv:комсексть ITER_ ;
+
+колмов-нилев+Adv:колмов-нилев ADV_IS_LAT ;
+вейке-кавто+Num:вейке-кавто # ;
+
+сисем-кавксо+Num:сисем-кавксо # ;
+кото-сисем+Num:кото-сисем # ;
+вейксэ-кемень+Num:вейксэ-кемень # ;
+вете-сисем+Num:вете-сисем # ;
+кемготово-кемсисемге+Num:кемготово-кемсисемге # ;
+колоньгемень-ниленьгемень+Num:колоньгемень-ниленьгемень # ;
+кемгавксово-комсь+Num:кемгавксово-комсь # ;
+кемень-кемгавтово+Num:кемень-кемгавтово # ;
+колоньгемень-ниленьгемень+Num:колоньгемень-ниленьгемень # ;
+кемгавтово-комськавтово+Num:кемгавтово-комськавтово # ;
+ведьгемень-кодгемень+Num:ведьгемень-кодгемень # ;
+кемгавтово-кемнилее+Num:кемгавтово-кемнилее # ;
+кемголмово-кемнилее+Num:кемголмово-кемнилее # ;
+
+котонь-котонь+Num+Distr:котонь-котонь # ;
+колоньгеменень-колоньгеменень+Num:колоньгеменень-колоньгеменень # ;
+колоньгеменьшка-ниленьгеменьшка+Num:колоньгеменьшка-ниленьгеменьшка # ;
+
+вейкееце+A:вейкееце A_VELE ;
+колмовоце+A:колмовоце A_VELE ;
+ниленьгеменце-ведьгеменце+A:ниленьгеменце-ведьгеменце A_VELE ;
+вейкеть-вейкеть+A+Pl+Nom+Indef:вейкеть-вейкеть K ;!they are equals in their distributions
+вейксэце-кеменце+A:вейксэце-кеменце A_VELE ;
+комсеце-колоньгеменце+A:комсеце-колоньгеменце A_VELE ;
+колоньгеменце-ниленьгеменце+A:колоньгеменце-ниленьгеменце A_VELE ;
+
+колмонеске+Pron:колмонеске K ;
+вейкезэст-вейкезэст+Pron:вейкезэст-вейкезэст K ;
+вейкедест-вейкедест+Pron:вейкедест-вейкедест K ;
+вейке-вейкезэст+Pron:вейке-вейкезэст K ;
+вейке-вейкеде+Pron:вейке-вейкеде K ;
+вейке-вейкест+Pron:вейке-вейкест K ;
+вейке-вейкест+Pron:вейке-вейкест K ;
+корректор-техредактор+N+Sg+Nom+Def:корректорось-техредакторось # ;
+
+!! COLLECTIVE NOUNS
+тетят-цёрат+N:тетя N_TET1AT-TSORAT ;
+ават-цёрат+N:ава N_TET1AT-TSORAT ;
+бабат-цёрат+N:баба N_TET1AT-TSORAT ;
+урьват-цёрат+N:урьва N_TET1AT-TSORAT ;
+
+тейтерть-цёрат+N:тейтер  N_TEJTERT1-TSORAT ;
+
+тетят-ават+N:тетя N_TET1AT-AVAT ;
+
+LEXICON N_TET1AT-TSORAT
++Com:%>нек-цёранек K ;
++Pl+Nom+Indef:%>т-цёрат K ;
++Pl+Nom+Def:%>тне-цёратне K ;
++Pl+Gen+Def:%>тнень-цёратнень K ;
++Pl+Abl+Def:%>тнеде-цёратнеде K ;
+
+LEXICON N_TEJTERT1-TSORAT
++Com:%>нек-цёранек K ;
++Pl+Nom+Indef:%>ть-цёрат K ;
++Pl+Nom+Def:%>тне-цёратне K ;
++Pl+Gen+Def:%>тнень-цёратнень K ;
++Pl+Abl+Def:%>тнеде-цёратнеде K ;
+
+LEXICON N_TET1AT-AVAT
++Com:%>нек-аванек K ;
++Sg+Nom+Def:%>сь-авась K ;
++Sg+Gen+Def:%>нть-аванть K ;
++Sg+Dat+Def:%>нтень-авантень K ;
++Pl+Nom+Indef:%>ть-ават K ;
++Pl+Nom+Def:%>тне-аватне K ;
++Pl+Gen+Def:%>тнень-аватнень K ;
++Pl+Dat+Def:%>тненень-аватненень K ;
++Pl+Abl+Def:%>тнеде-аватнеде K ;
+
++Pl+Nom+PxSg1:%>н-аван K ;
++Pl+Nom+PxSg1:%>м-авам K ;
++Pl+Gen+PxSg1:%>нь-авань K ;
++Pl+Abl+PxSg1:%>дон-авадон K ;
++Pl+Nom+PxSg2:%>т-ават K ;
++Pl+Gen+PxSg2:%>ть-авать K ;
++Pl+Abl+PxSg2:%>дот-авадот K ;
++Sg+Nom+PxSg3:%>зо-авазо K ;
++Pl+Nom+PxSg3:%>нзо-аванзо K ;
++Pl+Gen+PxSg3:%>нзо-аванзо K ;
++Pl+Dat+PxSg3:%>нстэнь-аванстэнь K ;
++Pl+Abl+PxSg3:%>донзо-авадонзо K ;
++Pl+Nom+PxPl1:%>нок-аванок K ;
++Pl+Gen+PxPl1:%>нок-аванок K ;
++Pl+Abl+PxPl1:%>донок-авадонок K ;
++Pl+Nom+PxPl2:%>нк-аванк K ;
++Pl+Gen+PxPl2:%>нк-аванк K ;
++Pl+Abl+PxPl2:%>донк-авадонк K ;
++Pl+Nom+PxPl3:%>ст-аваст K ;
++Pl+Gen+PxPl3:%>ст-аваст K ;
++Pl+Abl+PxPl3:%>дост-авадост K ;
++SP+Abe+Indef:%>втомо-ававтомо K ;
++SP+Abl+Indef:%>до-авадо K ;
++SP+Ela+Indef:%>сто-авасто K ;
++SP+Tra+Indef:%>кс-авакс K ;
++SP+Dat+Indef:%>нень-аванень K ;

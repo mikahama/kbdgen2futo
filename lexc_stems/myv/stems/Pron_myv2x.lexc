@@ -1,0 +1,30 @@
+
+LEXICON Pron_myv2x
+
+весе+Pron:вӒ4се vese-QNT  "kaikki" ;
+весеме+Pron:вӒ4семе QNT_VESEME  "" ;
+кие-бути+Pron:ки PRON-INDEF-HUM_KIE-BUTI  "joku" ;
+кой-мезе+Pron+Indef:кой-#мӒ4 PRON-INDEF_KOJ-MEZE  "" ;
+аламо+Pron:аламо N_KUDO  "" ;
+ламо+Pron:ламо N_KUDO  "" ;
+мезе-бути+Pron:мӒ4 PRON_INDEF_MEZE-BUTI  "jokin" ;
+мезеяк+Pron:мӒ4 PRON_INDEF_MEZEJAK  "mikään" ;
+нете+Pron:нете DET_DEM_TE  "" ;
+секе+Pron+Dem:секе PRON-DEM-CASE  "" ;
+сете+Pron:сете DET_DEM_TE  "" ;
+ськамон+Pron:ськам NUM_IS_ASSOC_COLL_SG1  "minä yksin" ;
+ськамонзо+Pron:ськам NUM_IS_ASSOC_COLL_SG3  "hän yksin" ;
+ськамонк+Pron:ськам NUM_IS_ASSOC_COLL_PL2  "te yksin" ;
+ськамонок+Pron:ськам NUM_IS_ASSOC_COLL_PL1  "me yksin" ;
+ськамост+Pron:ськам NUM_IS_ASSOC_COLL_PL3  "he yksin" ;
+ськамот+Pron:ськам NUM_IS_ASSOC_COLL_SG2  "sinä yksin" ;
+та-кода+Adv:та-кода ADV-IS-INDEF-MANNER  "" ;
+та-косо+Adv:та-косо ADV-IS-INDEF-INE  "" ;
+тевате+Pron:тевате PRON_DEM_TE  "" ;
+теке+Pron:теке PRON_DEM_TE  "juuri tämä" ;
+эськан+Pron:эськан PRON-IS-REFL-PRL-PXSG1  "itsekseni" ;
+эськанзо+Pron:эськанзо PRON-IS-REFL-PRL-PXSG3  "itsekseen" ;
+эськанк+Pron:эськанк PRON-IS-REFL-PRL-PXPL2  "itseksenne" ;
+эськанок+Pron:эськанок PRON-IS-REFL-PRL-PXPL1  "itseksemme" ;
+эськаст+Pron:Ӓ3ськаст PRON-IS-REFL-PRL-PXPL3  "itsekseen" ;
+эськат+Pron:Ӓ3ськат PRON-IS-REFL-PRL-PXSG2  "itseksesi" ;

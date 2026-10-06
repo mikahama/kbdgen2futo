@@ -1,0 +1,24 @@
+
+LEXICON conjunctors
+
+а+CC:а CC_  "ja" ;
+али+CC:али CC_  "vai" ;
+да+CC:да CC_  "ja" ;
+дай+CC:дай CC_  "ja sitten" ;
+!жӧ+CC:жӧ CC_  "vuorostaan" ; Pcle
+!2017-10-02за+CC:за CC_  "mutta" ;
+зато+CC:зато CC_  "" ;
+и+CC:и CC_  "myös" ;
+ли+CC:ли CC_  "" ;
+либӧ+CC:либӧ CC_  "eli" ;
+либӧ+CC:либӧ CC_  "eikä" ;
+либӧнӧсь+CC:либӧнӧсь CC_  "" ;
+ни+CC:ни CC_  "eikä" ;
+но+CC:но CC_  "mutta (kuitenkin)" ;
+!но% и+CC:но% и CC_  "vaan myös" ;
+!сэсся% и+CC:сэсся% и CC_  "" ;
+то+CC:то CC_  "" ;
+
+нисьӧ+CC:нисьӧ CONJ_  "" ;
+ыштӧ+CC:ыштӧ CONJ_  "" ;
+ыштӧкӧ+CC:ыштӧкӧ CONJ_  "" ;

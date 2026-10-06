@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?> <r xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xsi:noNamespaceSchemaLocation="../../../../giella-core/schemas/fiu-dict-schema.xsd" xml:lang="mdf">
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">а</l>
+     <stg>
+       <st Contlex="CC_">а</st>
+     </stg> <phonet>a</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">ja</t>
+     </tg>
+     <defNative/>
+   </mg>
+   <mg relId="1">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">mutta</t>
+       <t pos="CC">vaan</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>мон молян куду, а сон театрав</x> <phonet>mon moľan kudu a son ťeatrav</phonet>
+       <xt xml:lang="fin">minä menen kotiin, mutta hän teatteriin.</xt>
+     </xg>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">али</l>
+     <stg>
+       <st Contlex="CC_">али</st>
+     </stg> <phonet>aľi</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">tai</t>
+       <t pos="CC">vai</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">афток</l>
+     <stg>
+       <st Contlex="CC_">афток</st>
+     </stg> <phonet>aftək</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">eli</t>
+       <t pos="CC">tai</t>
+       <t pos="CC">vai</t>
+     </tg>
+     <defNative/>
+   </mg>
+   <mg relId="1">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">muuten</t>
+       <t pos="CC">muutoin</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">да</l>
+     <stg>
+       <st Contlex="CC_">да</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">ja</t>
+       <t pos="CC">sekä</t>
+       <t pos="CC">ynnä</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>мон да сон</x> <phonet>mon də son</phonet>
+       <xt xml:lang="fin">minä ja hän.</xt>
+     </xg>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">и</l>
+     <stg>
+       <st Contlex="CC_">и</st>
+     </stg> <phonet>i</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">ja</t>
+       <t pos="CC">myös</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="CC">et</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>и мянь</x> <phonet>i mäń</phonet>
+       <xt xml:lang="fin">suorastaan.</xt>
+     </xg>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">или</l>
+     <stg>
+       <st Contlex="CC_">или</st>
+     </stg> <phonet>iľi</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">tai</t>
+       <t pos="CC">vai</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="CC">но</l>
+     <stg>
+       <st Contlex="CC_">но</st>
+     </stg> <phonet>no</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="CC">mutta</t>
+       <t pos="CC">vaan</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+</r> 

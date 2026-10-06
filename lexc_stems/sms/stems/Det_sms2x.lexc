@@ -1,0 +1,27 @@
+
+LEXICON Det_sms2x
+
+jeäʹrab+Det:jeäʹrab DET_  "muu" ;
+jueʹǩǩ+Det:jueʹǩǩ DET_  "joka" ;
+juõʹǩǩ+Det:juõʹǩǩ DET_ATTR  "joka" ;
+kuhttu+Det:kuhttu DET_  "kumpikin" ;
+kuäbbaž+Det:kuäbbaž DET_  "kumpi" ;
+kuäbbaž-a+Det:kuäbbaž-a DET_  "kumpikin" ;
+kuõhttu+Det:kuõhttu DET_  "kumpikin" ;
+kââllad+Det:kââllad ORD_  "monesko" ;
+muäʹdd+Det:muädˈd DET_JEAQNNN  "pari" ;
+muʹvddem+Det:muʹvddem DET_  "millainen" ;
+måkam+Det:måkam DET_AANAR  "millainen" ;
+måkam+Det:måkkam DET_AANAR  "millainen" ;
+måttam+Det:måttam DET_AANAR  "joku" ;
+måttam+Det+Use/SpellNoSugg:måtam DET_AANAR  "joku" ;
+nuʹvddem+Det:nuʹvddem DET_AANAR  "sellainen" ;
+näkam+Det:näkam DET_AANAR  "tällainen" ;
+nåkkam+Det:nåkkam DET_AANAR  "sellainen" ;
+nåkkam+Det:nåkam DET_AANAR  "sellainen" ;
+oouʹdbuž+Det:oouʹdbuž DET_  "edellinen" ;
+piäʹllneʹb+Det:piäʹllneʹb DET_  "puolitoista" ;
+seämma+Det:seämma DET_  "sama" ;
+tut+Det:tu DET-SHORTDEM_  "tuo" ;
+tät+Det:tä DET-SHORTDEM_  "tämä" ;
+tõt+Det:tõ DET-SHORTDEM_  "se" ;

@@ -1,0 +1,2546 @@
+<?xml version="1.0" encoding="UTF-8"?> <?xml-stylesheet title="Dictionary view" media="screen,tv,projection" href="../../../../../words/dicts/scripts/gt_dictionary.css" type="text/css"?><?xml-stylesheet alternate="yes" title="Hierarchical view" media="screen,tv,projection" href="../../../../../words/dicts/scripts/gt_dictionary_alt.css" type="text/css"?><!DOCTYPE r PUBLIC "-//DivvunGiellatekno//DTD Dictionaries//Multilingual" "gt_dictionary.dtd"><r xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xsi:noNamespaceSchemaLocation="../../../../../giella-core/schemas/fiu-dict-schema.xsd" xml:lang="mdf">
+<e>
+   <lg>
+     <l pos="Pron">ашяйкова</l>
+     <stg>
+       <st Contlex="PRON_">ашяйкова</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">(ei) mitään</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">ашяйковок</l>
+     <stg>
+       <st Contlex="PRON_">ашяйковок</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">(ei) mitään</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">всякай</l>
+     <stg>
+       <st Contlex="PRON_">всякай</st>
+     </stg> <phonet>fśakaj, fśaki, śakaj</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">kaikenlainen</t>
+     </tg>
+     <xg>
+       <x>всякайкс</x> <phonet>fśakajks</phonet>
+       <xt xml:lang="fin">kaikella tavalla.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">всякайхть</l>
+     <stg>
+       <st Contlex="N_KAL-PL">всякай</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron"/>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">гайсна</l>
+     <stg>
+       <st Contlex="PRON_">гайсна</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">tuo</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">гайся</l>
+     <stg>
+       <st Contlex="PRON_">гайся</st>
+     </stg> <phonet>gajśä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">se</t>
+       <t pos="A">tuo</t>
+       <t pos="A">tämä</t>
+     </tg>
+   </mg>
+</e>
+<e exclude="fst">
+   <lg>
+     <l pos="Pron">илядыхне</l>
+     <stg>
+       <st>илядыхне</st>
+     </stg> <phonet>iľadixńä, ľadixńä</phonet>
+       <l_ref>илядомс</l_ref>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>others</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t>toiset, muut</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кажнай</l>
+     <stg>
+       <st Contlex="PRON_">кажнай</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">jokainen</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>тя кажнайти эряви содамс</x> <phonet>ťä kažnajťi eŕavi sodams</phonet>
+       <xt xml:lang="fin">tämä tulee kaikkien tietää</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кама</l>
+     <stg>
+       <st Contlex="PRON_">кама</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кама-бъди</l>
+     <stg>
+       <st Contlex="PRON_">кама-бъди</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кати-кие</l>
+     <stg>
+       <st Contlex="PRON_">кати-кие</st>
+     </stg> <phonet>kaťi-kijä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">joku</t>
+       <t pos="A">eräs</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кати-мезе</l>
+     <stg>
+       <st Contlex="PRON-INDEF_КАТИ-МЕЗЕ">кати-мезе</st>
+     </stg> <phonet>kaťi-meźä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">jokin</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кати-мезьса</l>
+     <stg>
+       <st Contlex="PRON_">кати-мезьса</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кати-мезяма</l>
+     <stg>
+       <st Contlex="PRON_">кати-мезяма</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кивок</l>
+     <stg>
+       <st Contlex="PRON_">кивок</st>
+     </stg> <phonet>kivək</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">joku; kukaan</t>
+     </tg>
+     <xg>
+       <x>кивок аф</x> <phonet>kivək af</phonet>
+       <xt xml:lang="fin">ei kukaan.</xt>
+     </xg>
+     <xg>
+       <x>кивок аш</x> <phonet>kivək aš</phonet>
+       <xt xml:lang="fin">ei (ole) ketään.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кигава</l>
+     <stg>
+       <st Contlex="PRON_">кигава</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кигок</l>
+     <stg>
+       <st Contlex="PRON_">кигок</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кие</l>
+     <stg>
+       <st Contlex="PRON_">кие</st>
+     </stg> <phonet>kijä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">kuka</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">qui</t>
+     </tg>
+     <xg>
+       <x>кие-кие</x> <phonet>kijə-kijä</phonet>
+       <xt xml:lang="fin">joku.</xt>
+     </xg>
+     <xg>
+       <x>кой-кие</x> <phonet>koj-kijä</phonet>
+       <xt xml:lang="fin">joku, jokunen; muutama (ihminen)</xt>
+     </xg>
+     <xg>
+       <x>кие-повсь</x> <phonet>kijə-povś, ki-povś</phonet>
+       <xt xml:lang="fin">kuka tahansa.</xt>
+     </xg>
+     <xg>
+       <x>кие-бди</x> <phonet>kijə-bəďi</phonet>
+       <xt xml:lang="fin">kuka tahansa, joku.</xt>
+     </xg>
+     <xg>
+       <x>кинди</x> <phonet>kińďi</phonet>
+       <xt xml:lang="fin">kenelle.</xt>
+     </xg>
+     <xg>
+       <x>кинди максыть сёрмать?</x> <phonet>kińďi maksiť śormať</phonet>
+       <xt xml:lang="fin">kenelle annoit kirjeen?</xt>
+     </xg>
+     <xg>
+       <x>киндиге</x> <phonet>kińďigä</phonet>
+       <xt xml:lang="fin">jollekulle.</xt>
+     </xg>
+     <xg>
+       <x>кинкса</x> <phonet>kiŋksa</phonet>
+       <xt xml:lang="fin">kenen takia.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">киндивок</l>
+     <stg>
+       <st Contlex="PRON_">киндивок</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">киндиге</l>
+     <stg>
+       <st Contlex="PRON_">киндиге</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кинь</l>
+     <stg>
+       <st Contlex="PRON_">кинь</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">киньге</l>
+     <stg>
+       <st Contlex="PRON_">киньге</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Indef">кияк</l>
+     <stg>
+       <st Contlex="PRON_">кияк</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="A" type="Indef">кодамовок</l>
+     <stg>
+       <st Contlex="A_">кодамовок</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Adv" type="Indef">коданга</l>
+     <stg>
+       <st Contlex="ADV-INDEF">коданга</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t>mitenkään</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Indef">кой-кие</l>
+     <stg>
+       <st Contlex="PRON_">кой-кие</st>
+     </stg> <phonet>koj-kijä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">joku</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Indef">кой-кит</l>
+     <stg>
+       <st Contlex="PRON_">кой-кит</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Det" type="Indef">кой-кона</l>
+     <stg>
+       <st Contlex="DET_">кой-кона</st>
+     </stg> <phonet>koj-kona</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">joku, eräs</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Indef">кой-мезе</l>
+     <stg>
+       <st Contlex="PRON-INDEF_КАТИ-МЕЗЕ">кой-мезе</st>
+     </stg> <phonet>koj-meźä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">jokin, jotakin</t>
+     </tg>
+     <xg>
+       <x>тянь колга мон кой-мезе марянь</x> <phonet>ťäń kolga mon koj-meźə maŕäń</phonet>
+       <xt xml:lang="fin">tästä olen kuullut jotakin.</xt>
+     </xg>
+     <xg>
+       <x>кой-месть лият</x> <phonet>koj-meśť ľijat</phonet>
+       <xt xml:lang="fin">muunlaiset, toisenlaiset.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колган</l>
+     <stg>
+       <st Contlex="PRON-X-PXSG1">колган</st>
+     </stg> <phonet>kolgan</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about me</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">minusta</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колганза</l>
+     <stg>
+       <st Contlex="PRON-X-PXSG3">колганза</st>
+     </stg> <phonet>kolganzə</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about him</t>
+       <t>about her</t>
+       <t>about it</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">hänestä</t>
+       <t pos="Pron">siinä</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колганк</l>
+     <stg>
+       <st Contlex="PRON-X-PXPL1">колганк</st>
+     </stg> <phonet>kolgank</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about us</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">meistä</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колгант</l>
+     <stg>
+       <st Contlex="PRON-X-PXPL2">колгант</st>
+     </stg> <phonet>kolgant</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about you</t>
+       <t>about you guys</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">teistä</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колгаст</l>
+     <stg>
+       <st Contlex="PRON-X-PXPL3">колгаст</st>
+     </stg> <phonet>kolgast</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about them</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">heistä</t>
+       <t pos="Pron">niistä</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">колгат</l>
+     <stg>
+       <st Contlex="PRON-X-PXSG2">колгат</st>
+     </stg> <phonet>kolgat</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t>about you</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">sinusta</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">кона</l>
+     <stg>
+       <st Contlex="PRON-REL_AVA">кона</st>
+     </stg> <phonet>kona</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">joka, mikä</t>
+     </tg>
+     <xg>
+       <x>кона-кона</x> <phonet>kona-kona</phonet>
+       <xt xml:lang="fin">eräs.</xt>
+     </xg>
+     <xg>
+       <x>кой-кона</x> <phonet>koj-kona</phonet>
+       <xt xml:lang="fin">joku, eräs.</xt>
+     </xg>
+     <xg>
+       <x>кона аф кона</x> <phonet>kona af kona</phonet>
+       <xt xml:lang="fin">jompikumpi.</xt>
+     </xg>
+     <xg>
+       <x>кона-бди</x> <phonet>kona-bəďi</phonet>
+       <xt xml:lang="fin">jompikumpi.</xt>
+     </xg>
+     <xg>
+       <x>конавок</x> <phonet>konavək</phonet>
+       <xt xml:lang="fin">jompikumpi; kukaan, mikään.</xt>
+     </xg>
+     <xg>
+       <x>конавок тейне аф эряви</x> <phonet>konavək ťejń(ä) af eŕavi</phonet>
+       <xt xml:lang="fin">en tarvitse ketään.</xt>
+     </xg>
+     <xg>
+       <x>конатольхть</x> <phonet>konatəľxť</phonet>
+       <xt xml:lang="fin">jotka olivat.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">конашка</l>
+     <stg>
+       <st Contlex="PRON_">конашка</st>
+     </stg> <phonet>konaška</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">minkä kokoinen</t>
+     </tg>
+     <xg>
+       <x>конашкаста</x> <phonet>konaškasta</phonet>
+       <xt xml:lang="fin">niin paljon kuin.</xt>
+     </xg>
+     <xg>
+       <x>конашкава алясь нарде!</x> <phonet>konaškava aľäś naŕďä</phonet>
+       <xt xml:lang="fin">miten vahva tämä mies onkaan!</xt>
+     </xg>
+     <xg>
+       <x>конашка мароц, сяшка пароц</x> <phonet>konaška marəc, śäška parəc</phonet>
+       <xt xml:lang="fin">niin makaa kuin petaa.</xt>
+     </xg>
+     <xg>
+       <x>конашкава</x> <phonet>konaškava</phonet>
+       <xt xml:lang="fin">siinä määrin kuin.</xt>
+     </xg>
+     <xg>
+       <x>конашкада</x> <phonet>konaškada</phonet>
+       <xt xml:lang="fin">milloin, jolloin; mistä asti.</xt>
+     </xg>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="Pron">кржа</l>
+     <stg>
+       <st Contlex="PRON_AVA">кържа</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">harva</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">ладнек</l>
+     <stg>
+       <st Contlex="PRON_">ладнек</st>
+     </stg> <phonet>ladńək</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">koko, kokonaan, täysin</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтон</l>
+     <stg>
+       <st Contlex="PRON-COM-PXSG1">мархтон</st>
+     </stg> <phonet>marxtən</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">kanssani</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтонза</l>
+     <stg>
+       <st Contlex="PRON-COM-PXSG3">мархтонза</st>
+     </stg> <phonet>marxtənzə</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">hänen kanssaan</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтонк</l>
+     <stg>
+       <st Contlex="PRON-COM-PXPL1">мархтонк</st>
+     </stg> <phonet>marxtənk</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">kanssamme</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтонт</l>
+     <stg>
+       <st Contlex="PRON-COM-PXPL2">мархтонт</st>
+     </stg> <phonet>marxtənt</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">kanssanne</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтост</l>
+     <stg>
+       <st Contlex="PRON-COM-PXPL3">мархтост</st>
+     </stg> <phonet>marxtəst</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">heidän kanssaan</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мархтот</l>
+     <stg>
+       <st Contlex="PRON-COM-PXSG2">мархтот</st>
+     </stg> <phonet>marxtət</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Po">kanssasi</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезе</l>
+     <stg>
+       <st Contlex="PRON-INTERR-OBJ_МЕЗЕ">мезе</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">(se) mikä</t>
+       <t pos="Pron">mitä</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">quoi</t>
+     </tg>
+     <xg>
+       <x>мезе нинге тейть?</x> <phonet>meźə ńiŋgə ťejť</phonet>
+       <xt xml:lang="fin">mikä nyt taas on? mikä sinua nyt taas vaivaa?</xt>
+     </xg>
+     <xg>
+       <x>мезе видят, сянь и нуят</x> <phonet>meźə viďat śäń i nujat</phonet>
+       <xt xml:lang="fin">niin makaa kuin petaa.</xt>
+     </xg>
+     <xg>
+       <x>аш мезе лангс рамамс</x> <phonet>aš meź(ä) laŋks ramams</phonet>
+       <xt xml:lang="fin">ei ole millä ostaa.</xt>
+     </xg>
+     <xg>
+       <x>мезе ина?</x> <phonet>meź(ä) əna</phonet>
+       <xt xml:lang="fin">minkähän takia?</xt>
+     </xg>
+     <xg>
+       <x>мезе-бди</x> <phonet>meźə-bəďi</phonet>
+       <xt xml:lang="fin">jokin.</xt>
+     </xg>
+     <xg>
+       <x>мезе виец</x> <phonet>meźə vijəc</phonet>
+       <xt xml:lang="fin">täysin voimin.</xt>
+     </xg>
+     <xg>
+       <x>мезе-мезе</x> <phonet>meźə-meźä</phonet>
+       <xt xml:lang="fin">jokin.</xt>
+     </xg>
+     <xg>
+       <x>мезевок</x> <phonet>meźəvək</phonet>
+       <xt xml:lang="fin">jokin; mikään.</xt>
+     </xg>
+     <xg>
+       <x>макст мезевок морафтомс</x> <phonet>makst meźəvək moraftəms</phonet>
+       <xt xml:lang="fin">luetaanpas jotakin.</xt>
+     </xg>
+     <xg>
+       <x>сон мезевок ашезь юкста</x> <phonet>son meźəvək ašəź juksta</phonet>
+       <xt xml:lang="fin">hän ei unohtanut mitään.</xt>
+     </xg>
+     <xg>
+       <x>мезень ал?</x> <phonet>meźəń al</phonet>
+       <xt xml:lang="fin">minkä linnun muna se on?</xt>
+     </xg>
+     <xg>
+       <x>мезенкса</x> <phonet>meźəŋksa</phonet>
+       <xt xml:lang="fin">minkä tähden, miksi.</xt>
+     </xg>
+     <xg>
+       <x>аш мезенкса</x> <phonet>aš meźəŋksa</phonet>
+       <xt xml:lang="fin">turhaan, suotta; ei kestä kiittää.</xt>
+     </xg>
+     <xg>
+       <x>мезенди</x> <phonet>meźəńďi</phonet>
+       <xt xml:lang="fin">mitä varten.</xt>
+     </xg>
+     <xg>
+       <x>мезце ули?</x> <phonet>meźć(ə) uľi</phonet>
+       <xt xml:lang="fin">mikä sinun on? mitä sinulla on?</xt>
+     </xg>
+     <xg>
+       <x>мезецка аш</x> <phonet>meźəck(a) aš</phonet>
+       <xt xml:lang="fin">hänellä ei ole mitään.</xt>
+     </xg>
+     <xg>
+       <x>мезняцка ашель</x> <phonet>meźńack(a) ašəľ</phonet>
+       <xt xml:lang="fin">hänellä ei ollut mitään.</xt>
+     </xg>
+     <xg>
+       <x>мезнек</x> <phonet>meźńək</phonet>
+       <xt xml:lang="fin">kaikkineen.</xt>
+     </xg>
+     <xg>
+       <x>сахарнек-мезнек</x> <phonet>saxərńək-meźńək</phonet>
+       <xt xml:lang="fin">sokereineen päivineen.</xt>
+     </xg>
+     <xg>
+       <x>тналнек-мезнек</x> <phonet>tənalńək-meźńək</phonet>
+       <xt xml:lang="fin">perheineen.</xt>
+     </xg>
+     <xg>
+       <x>мезьда</x> <phonet>meźda</phonet>
+       <xt xml:lang="fin">paljonko, mitä (maksaa).</xt>
+     </xg>
+     <xg>
+       <x>мезьс ба афоль стя</x> <phonet>meźs bə afəľ śťä</phonet>
+       <xt xml:lang="fin">mitä sitten maksaakin.</xt>
+     </xg>
+     <xg>
+       <x>мезьса аф мезьса</x> <phonet>meźs(ə) af meźsa</phonet>
+       <xt xml:lang="fin">1. millä tahansa. 2. jossakin.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезь</l>
+     <stg>
+       <st Contlex="PRON_">мезь</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезьге</l>
+     <stg>
+       <st Contlex="PRON_">мезьге</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезьда</l>
+     <stg>
+       <st Contlex="PRON_">мезьда</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезьда-мезьда</l>
+     <stg>
+       <st Contlex="PRON_">мезьда-мезьда</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезьса аф мезьса</l>
+     <stg>
+       <st Contlex="PRON_">мезьса аф мезьса</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мезьске</l>
+     <stg>
+       <st Contlex="PRON_">мезьске</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мейя</l>
+     <stg>
+       <st Contlex="PRON_">мейя</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мес</l>
+     <stg>
+       <st Contlex="PRON_">мес</st>
+     </stg> <phonet>mes, mäs</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">miksi</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>мес ашеть ваймя?</x> <phonet>mes ašəť vajmä</phonet>
+       <xt xml:lang="fin">miksi et levännyt?</xt>
+     </xg>
+     <xg>
+       <x>сяс ... мес</x> <phonet>śas … mes</phonet>
+       <xt xml:lang="fin">siksi … että.</xt>
+     </xg>
+     <xg>
+       <x>мес-бди</x> <phonet>mes-bəďi</phonet>
+       <xt xml:lang="fin">jostain syystä.</xt>
+     </xg>
+     <xg>
+       <x>мес-кда!</x> <phonet>mes-kəda</phonet>
+       <xt xml:lang="fin">sillä lailla! kyllä kai!; mikäpäs siinä.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">месть</l>
+     <stg>
+       <st Contlex="PRON_">месть</st>
+     </stg> <phonet>meśť</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">mitä</t>
+       <t pos="Pron">miksi</t>
+     </tg>
+     <xg>
+       <x>ашель месть</x> <phonet>ašəľ meśť</phonet>
+       <xt xml:lang="fin">ei ollut syytä.</xt>
+     </xg>
+     <xg>
+       <x>аш месть корхтамска</x> <phonet>aš meśť korxtamska</phonet>
+       <xt xml:lang="fin">ei kannata mainitakaan.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">меяма</l>
+     <stg>
+       <st Contlex="PRON_">меяма</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мийеге</l>
+     <stg>
+       <st Contlex="PRON_">мийеге</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">миндейнек</l>
+     <stg>
+       <st Contlex="PRON_">миндейнек</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">минцень</l>
+     <stg>
+       <st Contlex="PRON_">минцень</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">минць</l>
+     <stg>
+       <st Contlex="PRON_">минць</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">минь</l>
+     <stg>
+       <st Contlex="PERS-PL1">мин</st>
+     </stg> <phonet>miń</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">me; meidän</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">nous; notre</t>
+     </tg>
+     <xg>
+       <x>минь инксонк</x> <phonet>miń iŋksəŋk/iŋksənək</phonet>
+       <xt xml:lang="fin">meidän takiamme.</xt>
+     </xg>
+     <xg>
+       <x>минь понань ломатть</x> <phonet>miń ponań lomaťť</phonet>
+       <xt xml:lang="fin">meidän kaltaisiamme ihmisiä.</xt>
+     </xg>
+     <xg>
+       <x>минць</x> <phonet>mińć</phonet>
+       <xt xml:lang="fin">me itse.</xt>
+     </xg>
+     <xg>
+       <x>минцень</x> <phonet>mińćəń</phonet>
+       <xt xml:lang="fin">ikiomamme.</xt>
+     </xg>
+   </mg>
+</e>
+<e exclude="fst">
+   <lg>
+     <l pos="Pron">минь ёткозонк</l>
+     <stg>
+       <st>минь ёткозонк</st>
+     </stg> <phonet>miń jotkəzəŋk/jotkəzənək</phonet>
+       <l_ref>ётка</l_ref>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t>joukkoomme</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">миявок</l>
+     <stg>
+       <st Contlex="PRON_">миявок</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">миярс</l>
+     <stg>
+       <st Contlex="PRON_">миярс</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">миятка</l>
+     <stg>
+       <st Contlex="PRON_">миятка</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <map/>
+   <lg>
+     <l pos="Pron" type="Pers">мон</l>
+     <etymology>
+     </etymology>
+     <stg>
+       <st Contlex="PERS-SG1">мон</st>
+     </stg> <compg> </compg> <phonet>mon</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="eng">
+       <t pos="Pron" type="Pers">I</t>
+     </tg>
+     <tg xml:lang="fin">
+       <t pos="Pron">minä</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">je</t>
+     </tg>
+     <xg>
+       <x>монць</x> <phonet>mońć</phonet>
+       <xt xml:lang="fin">minä itse.</xt>
+     </xg>
+     <xg>
+       <x>монць няине</x> <phonet>mońć ńäjińä</phonet>
+       <xt xml:lang="fin">näin sen omin silmin.</xt>
+     </xg>
+     <xg>
+       <x>монцень</x> <phonet>mońćəń</phonet>
+       <xt xml:lang="fin">(iki)omani.</xt>
+     </xg>
+     <xg>
+       <x>монь</x> <phonet>moń/ mońń/mońńä/mojń</phonet>
+       <xt xml:lang="fin">minun, (minun) omani.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">мяйя</l>
+     <stg>
+       <st Contlex="PRON_">мяйя</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">нона</l>
+     <stg>
+       <st Contlex="PRON_">нона</st>
+     </stg> <phonet>nona</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">muu, toinen, edellinen</t>
+     </tg>
+     <xg>
+       <x>нона кизотнень</x> <phonet>nona kizəťńəń</phonet>
+       <xt xml:lang="fin">edellisinä vuosina.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Dem">ня</l>
+     <stg>
+       <st Contlex="PRON_">ня</st>
+     </stg> <phonet>ńä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">nämä, ne</t>
+     </tg>
+     <xg>
+       <x>нят</x> <phonet>ńat</phonet>
+       <xt xml:lang="fin">(mon.) nämä, ne.</xt>
+     </xg>
+     <xg>
+       <x>ня ломаттне</x> <phonet>ńä lomaťťńä</phonet>
+       <xt xml:lang="fin">(määr., mon.) nämä ihmiset.</xt>
+     </xg>
+     <xg>
+       <x>няка ломаттне</x> <phonet>ńaka lomaťťńä</phonet>
+       <xt xml:lang="fin">(määr., mon.) samat ihmiset.</xt>
+     </xg>
+     <xg>
+       <x>нятка</x> <phonet>ńatka</phonet>
+       <xt xml:lang="fin">nämäkin.</xt>
+     </xg>
+     <xg>
+       <x>нянкса</x> <phonet>ńaŋksa</phonet>
+       <xt xml:lang="fin">näiden takia.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">нява</l>
+     <stg>
+       <st Contlex="PRON_">нява</st>
+     </stg> <phonet>ńava</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">tuolla</t>
+     </tg>
+     <xg>
+       <x>минь кудоньке нява</x> <phonet>miń kudəńkə ńava</phonet>
+       <xt xml:lang="fin">meidän talomme on tuolla.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">някот</l>
+     <stg>
+       <st Contlex="PRON_">някот</st>
+     </stg> <phonet>ńakət</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">(mon.) vain nämä</t>
+       <t pos="Pron">ainoastaan nämä</t>
+       <t pos="Pron">juuri nämä</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">ома</l>
+     <stg>
+       <st Contlex="PRON_">ома</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">самай</l>
+     <stg>
+       <st Contlex="PRON_">самай</st>
+     </stg> <phonet>samaj</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">1. juuri, aivan. 2. superlatiivin apusana</t>
+     </tg>
+     <xg>
+       <x>самай тяста</x> <phonet>samaj ťasta</phonet>
+       <xt xml:lang="fin">juuri tästä.</xt>
+     </xg>
+     <xg>
+       <x>самай сяс</x> <phonet>samaj śas</phonet>
+       <xt xml:lang="fin">juuri siksi.</xt>
+     </xg>
+     <xg>
+       <x>самай кучкати</x> <phonet>samaj kučkaťi</phonet>
+       <xt xml:lang="fin">keskimpään</xt>
+     </xg>
+     <xg>
+       <x>самай оцю</x> <phonet>samaj oću</phonet>
+       <xt xml:lang="fin">suurin.</xt>
+     </xg>
+   </mg>
+</e>
+<e meta="" id="None">
+   <lg>
+     <l pos="Pron">сембе</l>
+     <stg>
+       <st Contlex="PRON_SEL1ME">семб{ЕО}</st>
+     </stg> <phonet>śembä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="N">kaikki</t>
+       <t pos="N">superlatiivin apusana</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>сембода оцю</x> <phonet>śembəd(a) oću</phonet>
+       <xt xml:lang="fin">suurin</xt>
+     </xg>
+     <xg>
+       <x>сембодонга оцю</x> <phonet>śembədəŋg(a) oću</phonet>
+       <xt xml:lang="fin">suurin</xt>
+     </xg>
+     <xg>
+       <x>сембода осал</x> <phonet>śembəd(a) osal</phonet>
+       <xt xml:lang="fin">huonoin</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">синць</l>
+     <stg>
+       <st Contlex="PRON_">синць</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">синь</l>
+     <stg>
+       <st Contlex="PERS-PL3">син</st>
+     </stg> <phonet>śiń</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">he; heidän</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t gen="m" pos="Pron">ils; leur</t>
+       <t gen="f" pos="Pron">elles; leur</t>
+     </tg>
+     <xg>
+       <x>синьфтомост</x> <phonet>śińftəməst, śińfťəməst</phonet>
+       <xt xml:lang="fin">ilman heitä.</xt>
+     </xg>
+     <xg>
+       <x>синць</x> <phonet>śińć</phonet>
+       <xt xml:lang="fin">he itse.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">сон</l>
+     <stg>
+       <st Contlex="PERS-SG3">сон</st>
+     </stg> <phonet>son</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">hän</t>
+       <t pos="Pron">se</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t gen="m" pos="Pron">il</t>
+       <t gen="f" pos="Pron">elle</t>
+     </tg>
+     <xg>
+       <x>сонць</x> <phonet>sońć</phonet>
+       <xt xml:lang="fin">hän itse.</xt>
+     </xg>
+     <xg>
+       <x>сонь инксонза</x> <phonet>soń iŋksənʒa</phonet>
+       <xt xml:lang="fin">hänen takiaan/puolestaan.</xt>
+     </xg>
+     <xg>
+       <x>соньфтомонза</x> <phonet>sońftəmənʒa, sońfťəmənʒa</phonet>
+       <xt xml:lang="fin">ilman häntä.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">стама</l>
+     <stg>
+       <st Contlex="PRON_">стама</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">стамка</l>
+     <stg>
+       <st Contlex="PRON_">стамка</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">ськамонза</l>
+     <stg>
+       <st Contlex="PRON-PERIF-MOD_СЬКАМОНЗА">ськам</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t>hän yksin</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">сювакай</l>
+     <stg>
+       <st Contlex="PRON_">сювакай</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">ся</l>
+     <stg>
+       <st Contlex="PRON-DEM_">ся</st>
+     </stg> <phonet>śä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">se</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">cela</t>
+     </tg>
+     <xg>
+       <x>сят</x> <phonet>śat</phonet>
+       <xt xml:lang="fin">(mon.) ne.</xt>
+     </xg>
+     <xg>
+       <x>ся ломанць</x> <phonet>śä lomańć</phonet>
+       <xt xml:lang="fin">se ihminen.</xt>
+     </xg>
+     <xg>
+       <x>ся ломаттне, сят ломаттне</x> <phonet>śä lomaťťńä, śat lomaťťńä</phonet>
+       <xt xml:lang="fin">(mon.) ne ihmiset.</xt>
+     </xg>
+     <xg>
+       <x>сят или тонат</x> <phonet>śat iľi tonat</phonet>
+       <xt xml:lang="fin">(mon.) nämä tai nuo.</xt>
+     </xg>
+     <xg>
+       <x>сяфтома</x> <phonet>śaftəma</phonet>
+       <xt xml:lang="fin">ilman sitä.</xt>
+     </xg>
+     <xg>
+       <x>сянкса</x> <phonet>śaŋksa</phonet>
+       <xt xml:lang="fin">siksi, sen tähden.</xt>
+     </xg>
+     <xg>
+       <x>сянь меле/ мельге</x> <phonet>śäń meľä /meľgä</phonet>
+       <xt xml:lang="fin">sitten, sen jälkeen.</xt>
+     </xg>
+     <xg>
+       <x>сяшкава</x> <phonet>śäškava</phonet>
+       <xt xml:lang="fin">niin paljon, siinä määrin.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">сяка</l>
+     <stg>
+       <st Contlex="PRON_">сяка</st>
+     </stg> <phonet>śaka</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">sama</t>
+     </tg>
+     <xg>
+       <x>сяка кизоня</x> <phonet>śakə kizəńä</phonet>
+       <xt xml:lang="fin">samana vuonna.</xt>
+     </xg>
+     <xg>
+       <x>сяка киге</x> <phonet>śakə kigä</phonet>
+       <xt xml:lang="fin">saman tien.</xt>
+     </xg>
+     <xg>
+       <x>сяка жа</x> <phonet>śakə ža</phonet>
+       <xt xml:lang="fin">samanlainen.</xt>
+     </xg>
+     <xg>
+       <x>сяка тев</x> <phonet>śakə ťev</phonet>
+       <xt xml:lang="fin">jatkuvasti, alinomaa, tämän tästä.</xt>
+     </xg>
+     <xg>
+       <x>сяконь ёткова</x> <phonet>śakəń jotkəva</phonet>
+       <xt xml:lang="fin">sillä välin, välillä.</xt>
+     </xg>
+     <xg>
+       <x>сяконь лангс</x> <phonet>śakəń laŋks</phonet>
+       <xt xml:lang="fin">samalla kertaa, saman tien.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">теене</l>
+     <stg>
+       <st Contlex="PERS-SG1-IS-DAT">теене</st>
+       <st Contlex="PERS-SG1-IS-DAT">тейне</st>
+       <st Contlex="PERS-SG1-IS-DAT">теень</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">minulle</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">теенза</l>
+     <stg>
+       <st Contlex="PERS-SG3-IS-DAT">теенза</st>
+       <st Contlex="PERS-SG3-IS-DAT">тейнза</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">hänelle</t>
+       <t pos="Pron">sille</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">теенть</l>
+     <stg>
+       <st Contlex="PERS-PL2-IS-DAT">теенть</st>
+       <st Contlex="PERS-PL2-IS-DAT">тейнть</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">teille</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">тееньк</l>
+     <stg>
+       <st Contlex="PERS-PL1-IS-DAT">тееньк</st>
+       <st Contlex="PERS-PL1-IS-DAT">тейнек</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">meille</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">теест</l>
+     <stg>
+       <st Contlex="PERS-PL3-IS-DAT">теест</st>
+       <st Contlex="PERS-PL3-IS-DAT">тейст</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">heille</t>
+       <t pos="Pron">niille</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">тейть</l>
+     <stg>
+       <st Contlex="PERS-SG2-IS-DAT">тейть</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">sinulle</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тинне</l>
+     <stg>
+       <st Contlex="PRON_">тинне</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тинценне</l>
+     <stg>
+       <st Contlex="PRON_">тинценне</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тинцень</l>
+     <stg>
+       <st Contlex="PRON_">тинцень</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тинць</l>
+     <stg>
+       <st Contlex="PRON_">тинць</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Pers">тинь</l>
+     <stg>
+       <st Contlex="PERS-PL2">тин</st>
+     </stg> <phonet>ťiń</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">te</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">vous</t>
+     </tg>
+   </mg>
+   <mg relId="1">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">teidän</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">votre</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <map/>
+   <lg>
+     <l pos="Pron" type="Pers">тон</l>
+     <etymology>
+     </etymology>
+     <stg>
+       <st Contlex="PERS-SG2">тон</st>
+     </stg> <compg> </compg> <phonet>ton</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">sinä</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">tu</t>
+       <t pos="Pron">vous (formal)</t>
+     </tg>
+     <xg>
+       <x>тонць</x> <phonet>tońć</phonet>
+       <xt xml:lang="fin">sinä itse.</xt>
+     </xg>
+     <xg>
+       <x>аф тонь тевсь</x> <phonet>af toń/tońńə ťevś</phonet>
+       <xt xml:lang="fin">se ei kuulu sinulle, mitä se sinulle kuuluu.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тона</l>
+     <stg>
+       <st Contlex="PRON_">тона</st>
+     </stg> <phonet>tona</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">tuo, se</t>
+     </tg>
+     <xg>
+       <x>тона кизоне</x> <phonet>tona kizəńä</phonet>
+       <xt xml:lang="fin">viime vuonna.</xt>
+     </xg>
+     <xg>
+       <x>тона куд</x> <phonet>tona kud</phonet>
+       <xt xml:lang="fin">kamari, sisähuone.</xt>
+     </xg>
+     <xg>
+       <x>тона пяленге</x> <phonet>tona päľəŋgä</phonet>
+       <xt xml:lang="fin">1. silläkin puolella. 2. sillekin puolelle.</xt>
+     </xg>
+     <xg>
+       <x>тона пяльде</x> <phonet>tona päľďä</phonet>
+       <xt xml:lang="fin">sieltä, tuolta.</xt>
+     </xg>
+     <xg>
+       <x>тона боку</x> <phonet>tona boku</phonet>
+       <xt xml:lang="fin">toiselle puolelle.</xt>
+     </xg>
+     <xg>
+       <x>Волгать тона шири</x> <phonet>Volgať tona šiŕi</phonet>
+       <xt xml:lang="fin">Volgan toisella rannalla.</xt>
+     </xg>
+     <xg>
+       <x>тя шиса ... тона шиса</x> <phonet>ťä šisa … tona šisa</phonet>
+       <xt xml:lang="fin">tässä maailmassa … tuonpuoleisessa.</xt>
+     </xg>
+     <xg>
+       <x>сят или тонат</x> <phonet>śat iľi tonat</phonet>
+       <xt xml:lang="fin">nämä tai nuo.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тя</l>
+     <stg>
+       <st Contlex="PRON-DEM_">тя</st>
+     </stg> <phonet>ťä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">tämä, se; (mon.) nämä, ne</t>
+     </tg>
+     <tg xml:lang="fra">
+       <t pos="Pron">ceci</t>
+     </tg>
+     <xg>
+       <x>тя ломаттне</x> <phonet>ťä lomaťťńä</phonet>
+       <xt xml:lang="fin">(mon.) nämä/ne ihmiset.</xt>
+     </xg>
+     <xg>
+       <x>тя веня</x> <phonet>ťä veńä</phonet>
+       <xt xml:lang="fin">tänä yönä.</xt>
+     </xg>
+     <xg>
+       <x>тя пяленге</x> <phonet>ťä päľəńgä</phonet>
+       <xt xml:lang="fin">tälläkin puolella.</xt>
+     </xg>
+     <xg>
+       <x>тя пяли</x> <phonet>ťä päľi</phonet>
+       <xt xml:lang="fin">tännepäin.</xt>
+     </xg>
+     <xg>
+       <x>тя пялинге</x> <phonet>ťä päľiŋgä</phonet>
+       <xt xml:lang="fin">tällekin puolelle.</xt>
+     </xg>
+     <xg>
+       <x>тя пяльде</x> <phonet>ťä päľďä</phonet>
+       <xt xml:lang="fin">täältä.</xt>
+     </xg>
+     <xg>
+       <x>тя пингс</x> <phonet>ťä piŋks</phonet>
+       <xt xml:lang="fin">tähän (aikaan) asti.</xt>
+     </xg>
+     <xg>
+       <x>тя шиса ... тона шиса</x> <phonet>ťä šisa … tona šisa</phonet>
+       <xt xml:lang="fin">tässä maailmassa … tuonpuoleisessa.</xt>
+     </xg>
+     <xg>
+       <x>тя шитнень</x> <phonet>ťä šiťńəń</phonet>
+       <xt xml:lang="fin">tämänpäiväinen.</xt>
+     </xg>
+     <xg>
+       <x>тят</x> <phonet>ťat</phonet>
+       <xt xml:lang="fin">(mon.) nämä, ne.</xt>
+     </xg>
+     <xg>
+       <x>тянкса</x> <phonet>ťaŋksa</phonet>
+       <xt xml:lang="fin">juuri täällä.</xt>
+     </xg>
+     <xg>
+       <x>тяза</x> <phonet>ťaza</phonet>
+       <xt xml:lang="fin">tänne.</xt>
+     </xg>
+     <xg>
+       <x>тяса</x> <phonet>ťasa</phonet>
+       <xt xml:lang="fin">täällä, tässä.</xt>
+     </xg>
+     <xg>
+       <x>тяса-тоса</x> <phonet>ťasa-tosa</phonet>
+       <xt xml:lang="fin">siellä täällä.</xt>
+     </xg>
+     <xg>
+       <x>тязк</x> <phonet>ťazk</phonet>
+       <xt xml:lang="fin">1. tänne. 2. heti.</xt>
+     </xg>
+     <xg>
+       <x>илядомс тязк</x> <phonet>iľadəms ťazk</phonet>
+       <xt xml:lang="fin">jäädä tänne.</xt>
+     </xg>
+     <xg>
+       <x>кодак ... тязк</x> <phonet>kodak … ťazk</phonet>
+       <xt xml:lang="fin">sitten kun … niin heti.</xt>
+     </xg>
+     <xg>
+       <x>тяста</x> <phonet>ťasta</phonet>
+       <xt xml:lang="fin">täältä.</xt>
+     </xg>
+     <xg>
+       <x>тястотне</x> <phonet>ťastəťńä</phonet>
+       <xt xml:lang="fin">(mon.) täkäläiset.</xt>
+     </xg>
+     <xg>
+       <x>тястонь</x> <phonet>ťastəń</phonet>
+       <xt xml:lang="fin">täkäläinen.</xt>
+     </xg>
+     <xg>
+       <x>тяда башка</x> <phonet>ťadə baška</phonet>
+       <xt xml:lang="fin">sitä paitsi, sen lisäksi.</xt>
+     </xg>
+     <xg>
+       <x>тянкса</x> <phonet>ťäŋksa</phonet>
+       <xt xml:lang="fin">tämän, sen takia.</xt>
+     </xg>
+     <xg>
+       <x>тянди-тонанди</x> <phonet>ťäńďi-tonańďi</phonet>
+       <xt xml:lang="fin">sille ja tälle.</xt>
+     </xg>
+     <xg>
+       <x>тяшкава</x> <phonet>ťäškava, ťaškava</phonet>
+       <xt xml:lang="fin">näin paljon.</xt>
+     </xg>
+     <xg>
+       <x>мянь тяшкамс</x> <phonet>mäń ťäškams</phonet>
+       <xt xml:lang="fin">tähän asti.</xt>
+     </xg>
+     <xg>
+       <x>тяшкас</x> <phonet>ťäškas</phonet>
+       <xt xml:lang="fin">tähän asti.</xt>
+     </xg>
+     <xg>
+       <x>мянь тяшкас</x> <phonet>mäń ťäškas</phonet>
+       <xt xml:lang="fin">tähän asti.</xt>
+     </xg>
+     <xg>
+       <x>тяшкань</x> <phonet>ťäškań</phonet>
+       <xt xml:lang="fin">tämän kokoinen.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тяка</l>
+     <stg>
+       <st Contlex="PRON_">тяка</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">tämä sama</t>
+     </tg>
+     <xg>
+       <x>тяка веня</x> <phonet>ťakə veńä</phonet>
+       <xt xml:lang="fin">tänä yönä.</xt>
+     </xg>
+     <xg>
+       <x>тяконь мархта</x> <phonet>ťakəń marxta</phonet>
+       <xt xml:lang="fin">samalla (kertaa), saman tien.</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">тяшка</l>
+     <stg>
+       <st Contlex="PRON_">тяшка</st>
+     </stg> <phonet>ťäška/ťaška/ťeška</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">sellainen, semmoinen, samanlainen</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">финцне</l>
+     <stg>
+       <st Contlex="PRON_">финцне</st>
+     </stg> <phonet>fincńä</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">jotkut</t>
+       <t pos="Pron">yhdet</t>
+       <t pos="Pron">eräät</t>
+     </tg>
+     <defNative/>
+     <xg>
+       <x>финцне ... омбонцне</x> <phonet>fincńä ... ombəncńä</phonet>
+       <xt xml:lang="fin">toiset ... toiset</xt>
+     </xg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">фкя-фкада</l>
+     <stg>
+       <st Contlex="PRON_">фкя-фкада</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">фкя-фкянь</l>
+     <stg>
+       <st Contlex="PRON_">фкя-фкянь</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">эковай</l>
+     <stg>
+       <st Contlex="PRON_">эковай</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron">эрь</l>
+     <stg>
+       <st Contlex="PRON_KAL">эрь</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron">jokainen</t>
+     </tg>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейне</l>
+     <stg>
+       <st Contlex="REFL-SG1-IS-DAT">эстейне</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron" type="Refl">itselleni</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейнек</l>
+     <stg>
+       <st Contlex="REFL-PL1-IS-DAT">эстейнек</st>
+       <st Contlex="REFL-PL1-IS-DAT">эстеенек</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron" type="Refl">itsellemme</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейнза</l>
+     <stg>
+       <st Contlex="REFL-SG3-IS-DAT">эстейнза</st>
+       <st Contlex="REFL-SG3-IS-DAT">эстеенза</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t nb="Sg" pos="Pron" type="Refl">itselleen</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейнть</l>
+     <stg>
+       <st Contlex="REFL-PL2-IS-DAT">эстейнть</st>
+       <st Contlex="REFL-PL2-IS-DAT">эстеенть</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron" type="Refl">itsellenne</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейст</l>
+     <stg>
+       <st Contlex="REFL-PL3-IS-DAT">эстейст</st>
+       <st Contlex="REFL-PL3-IS-DAT">эстеест</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t nb="Pl" pos="Pron" type="Refl">itselleen</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <lg>
+     <l pos="Pron" type="Refl">эстейть</l>
+     <stg>
+       <st Contlex="REFL-SG2-IS-DAT">эстейть</st>
+       <st Contlex="REFL-SG2-IS-DAT">эстееть</st>
+     </stg>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="Pron" type="Refl">itsellesi</t>
+     </tg>
+     <defNative/>
+   </mg>
+</e>
+<e>
+   <map/>
+   <lg>
+     <l pos="Pron">эсь</l>
+     <etymology>
+     </etymology>
+     <stg>
+       <st Contlex="PRON_">эсь</st>
+     </stg> <compg> </compg> <phonet>eś</phonet>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t pos="A" type="Refl">oma</t>
+       <t pos="Pron" type="Refl">itse</t>
+     </tg>
+     <xg>
+       <x>эсь тевозе</x> <phonet>eś ťevəźä</phonet>
+       <xt xml:lang="fin">oma asiani.</xt>
+     </xg>
+     <xg>
+       <x>эсь ётконь ломатть</x> <phonet>eś jotkəń lomaťť</phonet>
+       <xt xml:lang="fin">meidän laisemme ihmiset</xt>
+       <xt xml:lang="fin">meikäläiset.</xt>
+     </xg>
+     <xg>
+       <x>эсь прянь кирди</x> <phonet>eś pŕäń kiŕďi</phonet>
+       <xt xml:lang="fin">pidättyväinen.</xt>
+     </xg>
+     <xg>
+       <x>эсь кодаф сукна</x> <phonet>eś kodaf sukna</phonet>
+       <xt xml:lang="fin">kotikutoinen kangas.</xt>
+     </xg>
+     <xg>
+       <x>эсь паньф</x> <phonet>eś pańf</phonet>
+       <xt xml:lang="fin">kotipolttoinen (viina).</xt>
+     </xg>
+     <xg>
+       <x>эсь отям</x> <phonet>eś oťam</phonet>
+       <xt xml:lang="fin">vaistomaisesti</xt>
+       <xt xml:lang="fin">itsestään</xt>
+     </xg>
+     <xg>
+       <x>эсь пачка</x> <phonet>eś pačka</phonet>
+       <xt xml:lang="fin">itsekseen.</xt>
+     </xg>
+   </mg>
+</e>
+<e exclude="fst">
+   <lg>
+     <l pos="Pron">ёткозост</l>
+     <stg>
+       <st>ёткозост</st>
+     </stg> <phonet>jotkəzəst</phonet>
+       <l_ref>ётка</l_ref>
+   </lg>
+     <sources>
+     </sources>
+   <mg relId="0">
+     <semantics>
+     </semantics>
+     <tg xml:lang="fin">
+       <t>heidän joukkoonsa</t>
+     </tg>
+   </mg>
+</e>
+</r> 

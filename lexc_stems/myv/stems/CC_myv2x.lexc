@@ -1,0 +1,10 @@
+
+LEXICON CC_myv2x
+
+а+CC:а CC_  "mutta" ;
+али+CC:али CC_  "" ;
+да+CC:да CC_  "" ;
+ды+CC:ды CC_  "ja" ;
+но+CC:но CC_  "mutta" ;
+эли+CC:эли CC_  "vai" ;
+эли+CC+Use/NG+Use/SpellNoSugg:или CC_  "vai" ;

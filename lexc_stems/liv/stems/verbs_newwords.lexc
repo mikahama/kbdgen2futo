@@ -1,0 +1,12 @@
+!! This is where new words are added as lexc entries before they are 
+!! added to the xml source files.
+!!  V_ "(eng) ear/(est) /(fin) /(lav)" ;
+
+
+LEXICON V_NEWWORDS !!= @CODE@ are commented out in root.lexc, comment in as needed
+test:test TV_KĪTÕ "" ;
+!! Add new verbs below
+
+sintõ+V+Use/-Spell:sīndtõ TV_AŖŠTÕ ;
+!!
+!

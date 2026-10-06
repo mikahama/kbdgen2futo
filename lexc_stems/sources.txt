@@ -1,0 +1,1 @@
+These files are from https://github.com/giellalt/lang-XXX/tree/main/src/fst/morphology/stems, repalce XXX with the language code

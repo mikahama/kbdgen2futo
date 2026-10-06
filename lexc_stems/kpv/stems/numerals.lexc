@@ -1,0 +1,356 @@
+
+LEXICON numerals
+
+! number words are still not treated here.
+
+ARABIC          ; ! for the arabic numerals !
+ROMAN           ; ! for the roman numerals  !
+NUM-PREFIXES    ; ! for §34 etc.            !
+ISOLATED-NUMEXP ; ! for ½ etc.                      !
+COORDINATES_1	; ! for 65˚36′8,30″ etc.
+
+LEXICON ARABIC   !!= * **@CODE@** arabic numerals
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICS      ;
+                           ARABICYEAR ;
+
+LEXICON ARABICS
+ ARABICLOOP      ;
+ ARABICLOOPORD   ;
+ ARABICLOOPCOLL  ;
+ ARABICLOOPphone ;
+
+LEXICON ARABICYEAR
+< [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > numyear ;
+
+LEXICON numyear
+ yeartag ;
+ %/:%/ moreyear ;
+ %-:%- moreyear ;
+
+LEXICON moreyear 
+< [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
+
+LEXICON yeartag
++Num+Sem/Year:  yearcase ;
+
+LEXICON yeartagpl
+ +Num+Sem/Year+Sg+Nom:       #      ;
+
+
+LEXICON yearcase
+ +Sg+Nom:       #      ;
+ +Cmp/SplitR:%–    ENDLEX ;
+
+LEXICON ARABICLOOPphone   !!= * **@CODE@** +358(0)16671254
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphone ;
+  (:(             ARABICLOOPphone ;
+  ):)             ARABICLOOPphone ;
+ %—:%—            ARABICLOOPphone ; 
+!2019-08-01                           ARABICCASEphone ;
+
+!LEXICON ARABICCASEphone   !!= * __@CODE@__  
+! +Num+Arab+Sg+Nom: # ;
+! +Num+Arab+Sg+Acc: # ;
+! +Num+Arab+Sg+Gen: # ;
+
+LEXICON ARABICLOOP   !!= * **@CODE@**
+         :         ARABIC ;
+       %-:%-       ARABIC ; ! 1-2 multipart numbers
+       %–:%–       ARABIC ; ! 1–2 multipart numbers
+       %—:%—       ARABIC ; ! 1—2 multipart numbers
+     %.%-:%.%-     ARABIC ; ! 1.-2 multipart numbers ! !
+     %.%–:%.%–     ARABIC ; ! 1.–2 multipart numbers ! !
+     %.%—:%.%—     ARABIC ; ! 1.—2 multipart numbers ! !
+     %-% :%-%      ARABIC ; ! 1- 2 multipart numbers
+     %–% :%–%      ARABIC ; ! 1– 2 multipart numbers
+     %—% :%—%      ARABIC ; ! 1— 2 multipart numbers
+     % %-:% %-     ARABIC ; ! 1 -2 multipart numbers
+     % %–:% %–     ARABIC ; ! 1 –2 multipart numbers
+     % %—:% %—     ARABIC ; ! 1 —2 multipart numbers
+   % %-% :% %-%    ARABIC ; ! 1 - 2 multipart numbers
+   % %–% :% %–%    ARABIC ; ! 1 – 2 multipart numbers
+   % %—% :% %—%    ARABIC ; ! 1 — 2 multipart numbers
+ % %-%-% :% %-%-%  ARABIC ; ! 1 -- 2 multipart numbers
+ % %–%–% :% %–%–%  ARABIC ; ! 1 –– 2 multipart numbers
+ % %—%—% :% %—%—%  ARABIC ; ! 1 —— 2 multipart numbers
+       %.:%.       ARABIC ;
+       %::%:       ARABIC ;
+       %,:%,       ARABIC ;
+       % :%        ARABIC ; ! Allowing for "23 500".
+         :         ARABIC ; ! Allowing for "23 500" w/nbsp (init char = alt-space)
+       %/:%/       ARABIC ; ! 24/12
+     %/% :%/%      ARABIC ; ! 24/ 12
+     % %/:% %/     ARABIC ; ! 24 /12
+
+!+Num:         RNum   ; ! Num Cmp Noun, with hyphen
+
+         ,%-+Num:,%-    ARABICCASES     ; ! 10,-
+,%-+Num+Err/Orth:.%-    ARABICCASES     ; ! 10.- It is wrong, but written.
+   % %-+Err/Orth:% %-   ARABICDELIMITER ; ! 1 - multipart numbers - "1 -:s"?
+ % %-%-+Err/Orth:% %-%- ARABICDELIMITER ; ! 1 -- multipart numbers
+              %%:%%     ARABICDELIMITER ; ! 50%. It is wrong, but 75 % of us write "75%".
+            % %%:% %%   ARABICDELIMITER ; ! the correct ones as well... 50 % etc.
+                                 ARABICDELIMITER ; ! list of number-case delimiters
+
+LEXICON ARABICLOOPORD   !!= * **@CODE@** ordinals
+ +A+Ord:%. ABS_ ;
+ +A+Ord: ARABICDELIMITERORD ;
+ < [a|b|c|d|e|f|f %  f] > ACASETAG ;
+
+LEXICON ACASETAG   !!= * **@CODE@**  is for 1e+Num+Sg+Num:1e
++Num: ARABICCASES ;
+
+LEXICON ARABICLOOPCOLL   !!= * **@CODE@** collectives
++Num+Coll:%-нан ABS_ ;
+! +N+Coll: ARABICDELIMITERCOLL ;
+
+
+LEXICON ARABICDELIMITER   !!= * **@CODE@**  blank + 3 delim, what does the lg counc prefer?
+ +Num:            ARABICCASE0      ; ! This is the 1984 case, ie NGA
+ +Num:%-          ARABICCASE       ; ! This is the 1984:s case.
+! +Num:            ARAB_DER ; ! 6-jáhkasaš, 
+! +Num: Rhyph ; ! 3-
+
+
+LEXICON ARABICDELIMITERORD   !!= * **@CODE@** ordinals
+!             ARABICCASE0   ; ! This is the 1984 case, ie NGA
+          :%-ӧд ARABICCASEORD ; ! This is the 1984:s case.
+
+
+LEXICON ARABICCASES   !!= * **@CODE@**  to distinguish between 0 and oblique
+ARABICCASE0 ;
+:%- ARABICCASE ;
+
+LEXICON ARABICCASE0   !!= * **@CODE@**
+ +Arab+Sg+Nom:      #      ;
+ +Arab+Cmp/SplitR:%–    ENDLEX ;
+
+
+LEXICON ARABICCASE
+ +Arab+Der/a+Sg+Nom:%>а        # ;
+ +Arab+Sg+Acc1:%>ӧс        # ;
+ +Arab+Sg+Dat:%>лы        # ;
+ +Arab+Sg+Egr:%>сянь        # ;
+ +Arab+Sg+Ela:%>ысь        # ; ! Perhaps +Iter
+ +Arab+Sg+Ill:%>ӧ        # ;
+ +Arab+Sg+Ter:%>ӧдз        # ;
+ +Arab+Sg+Ter+PxSg3:%>ӧдзыс        # ;
+
+LEXICON ARABICCASEORD
+ +Arab+Sg+Gen:%>лӧн    K ;
+ +Arab+Sg+Ill:%>ӧ        # ;
+ +Arab+Sg+Nom:    K ;
+ +Arab+Sg+Nom+PxSg3:%>ыс    K ;
+
+
+! The Roman numerals !
+! ------------------ !
+
+LEXICON ROMAN						!^C^
+ : ROM-THOUSAND ;						!
+ : ROM-HUNDRED ;						!
+ : ROM-TEN ;							!
+ : ROM-ONE ;							!
+
+LEXICON ROM-THOUSAND              	!^C^
+ M:M ROM-THOUSAND-TAG;				!
+ MM:MM ROM-THOUSAND-TAG;				!
+ MMM:MMM ROM-THOUSAND-TAG;				!
+ MMMM:MMMM ROM-THOUSAND-TAG;			!
+ MMMMM:MMMMM ROM-THOUSAND-TAG;			!
+
+LEXICON ROM-THOUSAND-TAG			!^C^
+ : ROMNUMTAG ;						!
+ : ROM-HUNDRED ;						!
+ : ROM-SPLIT	;						!
+
+LEXICON ROM-HUNDRED					!^C^
+ C:C ROM-HUNDRED-TAG;				!
+ CC:CC ROM-HUNDRED-TAG;				!
+ CCC:CCC ROM-HUNDRED-TAG;				!
+ CD:CD ROM-HUNDRED-TAG;				!
+ D:D ROM-HUNDRED-TAG;				!
+ DC:DC ROM-HUNDRED-TAG;				!
+ DCC:DCC ROM-HUNDRED-TAG;				!
+ DCCC:DCCC ROM-HUNDRED-TAG;				!
+ CM:CM ROM-HUNDRED-TAG;				!
+
+LEXICON ROM-HUNDRED-TAG				!^C^
+ : ROMNUMTAG ;						!
+ : ROM-TEN ;							!
+ : ROM-SPLIT ;						!
+
+LEXICON ROM-TEN						!^C^
+ X:X ROM-TEN-TAG;					!
+ XX:XX ROM-TEN-TAG;					!
+ XXX:XXX ROM-TEN-TAG;					!
+ XL:XL ROM-TEN-TAG;					!
+ L:L ROM-TEN-TAG;					!
+ LX:LX ROM-TEN-TAG;					!
+ LXX:LXX ROM-TEN-TAG;					!
+ LXXX:LXXX ROM-TEN-TAG;					!
+ XC:XC ROM-TEN-TAG;					!
+
+LEXICON ROM-TEN-TAG					!^C^
+ : ROMNUMTAG ;						!
+ : ROM-ONE ;							!
+ : ROM-SPLIT ;						!
+
+LEXICON ROM-ONE						!^C^
+ I:I ROM-ONE-TAG;					!
+ II:II ROM-ONE-TAG;					!
+ III:III ROM-ONE-TAG;					!
+ IV:IV ROM-ONE-TAG;					!
+ V:V ROM-ONE-TAG;					!
+ VI:VI ROM-ONE-TAG;					!
+ VII:VII ROM-ONE-TAG;					!
+ VIII:VIII ROM-ONE-TAG;					!
+ IX:IX ROM-ONE-TAG;					!
+
+LEXICON ROM-ONE-TAG					!^C^
+ : ROMNUMTAG ;						!
+! +N: ROMNUMTAG ;					!^C^ !The Olav viđeš fix (Roman V now gets A)
+%-: ROM-SPLIT ;						!
+
+! Here, we split the Roman numerals, in order to account for cases like "Kapihtal II-IV".
+! We may send this first part directly to ROM-TAG below (and get the +Num tag), or we may
+! send them through a second loop, identical to the first one, but marked wit "2" (the lexica
+! are called 2ROMAN, etc. We do this instead of making a loop, since we do not want cases
+! like "II-IV-VI-VII-IX". If that should turn out to be a good idea, a loop would do the 
+! trick.
+
+LEXICON ROM-SPLIT						!^C^
+ :%- 2ROMAN ; ! II-VI, etc.				!
+
+
+! Here goes loop 2.
+
+LEXICON 2ROMAN							!^C^
+ : 2ROM-THOUSAND ;						!
+ : 2ROM-HUNDRED ;							!
+ : 2ROM-TEN ;								!
+ : 2ROM-ONE ;								!
+
+LEXICON 2ROM-THOUSAND              		!^C^
+ M:M 2ROM-THOUSAND-TAG;					!
+ MM:MM 2ROM-THOUSAND-TAG;					!
+ MMM:MMM 2ROM-THOUSAND-TAG;				!
+ MMMM:MMMM 2ROM-THOUSAND-TAG;				!
+ MMMMM:MMMMM 2ROM-THOUSAND-TAG;				!
+
+LEXICON 2ROM-THOUSAND-TAG				!^C^
+ : ROMNUMTAG ;							!
+ : 2ROM-HUNDRED ;							!
+
+LEXICON 2ROM-HUNDRED					!^C^
+ C:C 2ROM-HUNDRED-TAG;					!
+ CC:CC 2ROM-HUNDRED-TAG;					!
+ CCC:CCC 2ROM-HUNDRED-TAG;					!
+ CD:CD 2ROM-HUNDRED-TAG;					!
+ D:D 2ROM-HUNDRED-TAG;					!
+ DC:DC 2ROM-HUNDRED-TAG;					!
+ DCC:DCC 2ROM-HUNDRED-TAG;					!
+ DCCC:DCCC 2ROM-HUNDRED-TAG;				!
+ CM:CM 2ROM-HUNDRED-TAG;					!
+
+LEXICON 2ROM-HUNDRED-TAG				!^C^
+ : ROMNUMTAG ;							!
+ : 2ROM-TEN ;								!
+
+LEXICON 2ROM-TEN						!^C^
+ X:X 2ROM-TEN-TAG;						!
+ XX:XX 2ROM-TEN-TAG;						!
+ XXX:XXX 2ROM-TEN-TAG;						!
+ XL:XL 2ROM-TEN-TAG;						!
+ L:L 2ROM-TEN-TAG;						!
+ LX:LX 2ROM-TEN-TAG;						!
+ LXX:LXX 2ROM-TEN-TAG;						!
+ LXXX:LXXX 2ROM-TEN-TAG;					!
+ XC:XC 2ROM-TEN-TAG;						!
+
+LEXICON 2ROM-TEN-TAG					!^C^
+ : ROMNUMTAG ;							!
+ : 2ROM-ONE ;								!
+
+LEXICON 2ROM-ONE						!^C^
+ I:I 2ROM-ONE-TAG;						!
+ II:II 2ROM-ONE-TAG;						!
+ III:III 2ROM-ONE-TAG;						!
+ IV:IV 2ROM-ONE-TAG;						!
+ V:V 2ROM-ONE-TAG;						!
+ VI:VI 2ROM-ONE-TAG;						!
+ VII:VII 2ROM-ONE-TAG;						!
+ VIII:VIII 2ROM-ONE-TAG;					!
+ IX:IX 2ROM-ONE-TAG;						!
+
+LEXICON 2ROM-ONE-TAG
+ ROMNUMTAG ;
+ 
+LEXICON ROMNUMTAG
+ +Num+Rom+Sg+Nom: # ;
+ +Num+Rom+Sg+Gen: # ;
+!+Num+Acc: # ;
+ +A+Rom+Ord+Sg:%. # ; !III. as ordinal.
+ +A+Rom+Ord+Sg:   # ; !Looking for trouble...
+ +Num:%: ROMNUMTAGOBL  ;
+ +Num:%'  ROMNUMTAGOBL ;
+ +Num:%- ROMNUMTAGOBL  ;
+ +Num:%´ ROMNUMTAGOBL  ;
+! +Num:   ROMNUMTAGOBL ;
+
+LEXICON ROMNUMTAGOBL
+ +Rom+Sg+Ill:%>hán        # ;
+ +Rom+Sg+Ill:%>n        # ;
+ +Rom+Sg+Com:%>jn       # ;
+
+
+!LEXICON ARAB_DER ! only for arabics
+! +Cmp-#nummeer:»»»-nummeers DER-SAS ;
+! +Der+Der/ahasas:-ahas ANOLASJ  ;
+! +Cmp-#:»»»- CMP_NAMAG ;
+! +Cmp-#:»»»- CMP_IHASAS ;
+
+LEXICON COORDINATES_1
+!65˚36′8,30″
+< [1|2|3|4|5|6|7|8|9] [˚] > COORDINATES_2 ;
+< [1|2|3|4|5|6|7|8] [1|2|3|4|5|6|7|8|9|%0] [˚] > COORDINATES_2 ;
+< [9] [%0] [˚] > COORDINATES_END ;
+
+LEXICON COORDINATES_2
+ COORDINATES_END ; ! only degrees
+< [1|2|3|4|5|6|7|8|9] [′] > COORDINATES_3 ;
+< [1|2|3|4|5] [1|2|3|4|5|6|7|8|9|%0] [′] > COORDINATES_3 ;
+< [6] [%0] [′] > COORDINATES_END ;
+LEXICON COORDINATES_3
+ COORDINATES_END ; ! only minutes
+< [1|2|3|4|5|6|7|8|9] > COORDINATES_4 ;
+< [1|2|3|4|5] [1|2|3|4|5|6|7|8|9|%0] > COORDINATES_4 ;
+< [6] [%0] [″] > COORDINATES_END ;
+LEXICON COORDINATES_4
+″ COORDINATES_END ; ! only whole seconds
+, COORDINATES_5 ;
+
+LEXICON COORDINATES_5
+< [1|2|3|4|5|6|7|8|9] [″] > COORDINATES_END ;
+< [1|2|3|4|5|6|7|8|9] [1|2|3|4|5|6|7|8|9|%0] [″] > COORDINATES_END ;
+< [1] [%0] [%0] [″] > COORDINATES_END ;
+
+LEXICON COORDINATES_END
++Num+Coord: # ;
+
+
+ 
+
+! A final section with some isolated numeral expresssions !
+! ------------------------------------------------------- !
+
+      
+LEXICON ISOLATED-NUMEXP					!^C^
+ ½+Num:½ # ;						!
+ ¹+Num:¹ # ;						!
+ ²+Num:² # ;						!
+ ³+Num:³ # ;						!
+ ¼+Num:¼ # ;						!
+
+
+
