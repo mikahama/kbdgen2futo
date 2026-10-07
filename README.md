@@ -50,8 +50,12 @@ producing a broken layout.
 ## Building a vocabulary from lexc stems
 
 `build_vocabulary.py` scans only `.lexc` files below each language directory
-and inflects unique `(lemma, POS)` pairs using UralicNLP. Run it with the
-system `python3` that provides UralicNLP:
+and inflects unique `(lemma, POS)` pairs using UralicNLP. If a POS tag is listed
+in `black_list/<language>.json`, the word is not inflected and is stored as is
+with the POS tag as its only morphological analysis. If a `(language, POS)`
+combination is present in `morph_lookup/`, tags from that lookup are used to
+inflect words with `uralicApi.generate`; otherwise, `uralicApi.get_all_forms` is
+used as a fallback. Run it with the system `python3` that provides UralicNLP:
 
 ```sh
 python3 build_vocabulary.py lexc_stems vocabularies
