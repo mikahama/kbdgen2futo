@@ -73,3 +73,27 @@ reading is a list of tags returned after the surface form by UralicNLP. This
 retains separate readings where different analyses have the same spelling.
 Any individual entries UralicNLP cannot inflect are logged in a neighbouring
 `.errors.txt` file, while the remaining vocabulary is still saved.
+
+## Counting corpus morphology frequencies
+
+`count_morphology_frequencies.py` reads all `.txt` and `.xml` corpus files
+below each language directory in `lang_corpora`. It tokenizes their text and
+uses `uralicApi.analyze` to count complete morphological tag sequences (for
+example, `N+Sg+Nom`). Ambiguous words add to every returned analysis. Analyses
+are cached per distinct token, so a token occurring many times is analysed only
+once while all its occurrences are counted.
+
+```sh
+python3 count_morphology_frequencies.py lang_corpora morphology_frequencies
+```
+
+To process a single language:
+
+```sh
+python3 count_morphology_frequencies.py --language sms
+```
+
+The output `morphology_frequencies/<language>.json` contains metadata and a
+`frequencies` mapping, sorted from the most frequent analysis to the least.
+Language directories without corpus files (such as an as-yet-empty `mdf`
+directory) are skipped.
