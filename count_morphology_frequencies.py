@@ -123,8 +123,12 @@ def count_morphologies(
             analyses = []
         if analyses:
             analysed_tokens += occurrences
+            # A token must contribute one unit of evidence in total.  Giving
+            # every ambiguous FST reading a full count inflates morphology
+            # frequencies; predictive_model.py uses the same fractional rule.
+            share = occurrences / len(analyses)
             for tags in analyses:
-                frequencies[tags] += occurrences
+                frequencies[tags] += share
 
     statistics = {
         "files": file_count,

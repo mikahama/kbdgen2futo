@@ -79,9 +79,10 @@ Any individual entries UralicNLP cannot inflect are logged in a neighbouring
 `count_morphology_frequencies.py` reads all `.txt` and `.xml` corpus files
 below each language directory in `lang_corpora`. It tokenizes their text and
 uses `uralicApi.analyze` to count complete morphological tag sequences (for
-example, `N+Sg+Nom`). Ambiguous words add to every returned analysis. Analyses
-are cached per distinct token, so a token occurring many times is analysed only
-once while all its occurrences are counted.
+example, `N+Sg+Nom`). Analyses are cached per distinct token, so a token
+occurring many times is analysed only once while all its occurrences are
+counted. Each ambiguous token is split equally among its analyses, preventing
+ambiguity from inflating counts.
 
 ```sh
 python3 count_morphology_frequencies.py lang_corpora morphology_frequencies
@@ -97,3 +98,82 @@ The output `morphology_frequencies/<language>.json` contains metadata and a
 `frequencies` mapping, sorted from the most frequent analysis to the least.
 Language directories without corpus files (such as an as-yet-empty `mdf`
 directory) are skipped.
+
+## Building a predictive-text unigram model
+
+`predictive_model.py` combines the existing target-language FST, corpus data,
+vocabulary forms, and `fin_frequencies.json` into a per-language word-form
+model:
+
+```sh
+python3 predictive_model.py --language sms
+```
+
+It writes `predictive_models/sms.json` (forms with probabilities, costs, and
+their analyses), a compact `sms.report.json`, and a persistent lexical lookup
+cache in `predictive_models/cache/`. Delete that cache only when dictionary
+data has changed. Target surface forms are lemmatized by their target-language
+FST analyses and translated with `get_translation(lemma, language, "fin")`.
+Those Finnish translations are looked up directly, because
+`fin_frequencies.json` is already lemma-keyed. A Finnish lemma's count is split
+uniformly among all target lemmas reached by it.
+Thus Finnish Common Crawl counts are first tempered and normalised within POS,
+then used only as `mu` pseudo-counts; they are never added as target tokens.
+
+For an analysis `POS + lemma + morphology`, the implemented probability is:
+
+```
+P(POS) * P(lemma | POS) * P(morphology | lemma, POS)
+```
+
+Ambiguous FST readings are summed for a surface form. During corpus collection
+an ambiguous token gives each reading `1/k` evidence, rather than one full
+count. The model enumerates bounded legal forms with `get_all_forms` and
+renormalizes the POS morphology backoff distribution over each lemma's legal
+morphologies. If enumeration fails, analysed vocabulary/corpus forms remain
+the legal-form fallback.
+
+The main tuning options are `--tau` (smaller flattens Finnish ranks), `--mu`
+(Finnish-prior pseudo-count strength), `--kappa` (POS morphology smoothing),
+`--rho` (lemma morphology smoothing), `--eta` (POS smoothing), `--epsilon`,
+and `--probability-floor`. Defaults are `0.7`, `100`, `10`, `5`, `1`, `1e-8`,
+and `1e-300` respectively. Legal generation is bounded by
+`--legal-form-limit` (per lemma) and `--legal-enumeration-max-lemmas` (2,000
+by default), so exceptionally large lexica remain buildable; the report notes
+when the fallback was used. Individual translation/FST failures are retained
+in the report rather than stopping a build. `tqdm` shows progress while reading
+corpora, analysing forms, resolving Finnish mappings, and generating legal
+forms; use `--no-progress` for quiet batch runs.
+
+## Converting a predictive model to a FUTO/HeliBoard dictionary
+
+`predictive_model2dict.py` converts a model in `predictive_models/` into the
+AOSP combined wordlist format used by FUTO Keyboard and HeliBoard. It streams
+the model twice, so even a multi-gigabyte model does not need to fit in memory.
+Model probabilities are converted to AOSP's logarithmic `f=0..255` score;
+relative ranking is retained and scores are clamped to `15..255` by default.
+
+```sh
+python3 predictive_model2dict.py --language myv
+```
+
+This reads `predictive_models/myv.json`, writes
+`futo_dictionaries/myv.combined`, then uses the bundled
+`dictool/dicttool_aosp.jar` to produce `futo_dictionaries/main_myv.dict`. Use
+`--models` or `--output` only when those standard project directories have
+been intentionally changed.
+
+The resulting `.combined` file is the inspectable source dictionary. Compile
+it with the AOSP dictionary tool to make the binary file that FUTO Keyboard and
+HeliBoard import:
+
+```sh
+java -jar dicttool_aosp.jar makedict -s futo_dictionaries/myv.combined -d main_myv.dict
+```
+
+To use a different copy of the tool:
+
+```sh
+python3 predictive_model2dict.py --language myv \
+  --dicttool path/to/dicttool_aosp.jar
+```
