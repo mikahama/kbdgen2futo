@@ -1,0 +1,179 @@
+name: Līvõ kēļ
+languages:
+- liv
+rows:
+- letters:
+  - type: case
+    normal: q
+    shifted: Q
+  - type: case
+    normal: w
+    shifted: W
+  - type: case
+    normal:
+    - e
+    - ē
+    shifted:
+    - E
+    - Ē
+  - type: case
+    normal:
+    - r
+    - ŗ
+    shifted:
+    - R
+    - Ŗ
+  - type: case
+    normal:
+    - t
+    - ţ
+    - ț
+    shifted:
+    - T
+    - Ţ
+    - Ț
+  - type: case
+    normal:
+    - y
+    - ȳ
+    shifted:
+    - Y
+    - Ȳ
+  - type: case
+    normal:
+    - u
+    - ū
+    - ü
+    - ǖ
+    shifted:
+    - U
+    - Ū
+    - Ü
+    - Ǖ
+  - type: case
+    normal:
+    - i
+    - ī
+    shifted:
+    - I
+    - Ī
+  - type: case
+    normal:
+    - o
+    - ō
+    - õ
+    - ȭ
+    - ȯ
+    - ȱ
+    - ö
+    - ȫ
+    - ǭ
+    shifted:
+    - O
+    - Ō
+    - Õ
+    - Ȭ
+    - Ȯ
+    - Ȱ
+    - Ö
+    - Ȫ
+    - Ǭ
+  - type: case
+    normal: p
+    shifted: P
+- letters:
+  - type: case
+    normal:
+    - a
+    - ā
+    - ä
+    - ǟ
+    shifted:
+    - A
+    - Ā
+    - Ä
+    - Ǟ
+  - type: case
+    normal:
+    - s
+    - š
+    shifted:
+    - S
+    - Š
+  - type: case
+    normal:
+    - d
+    - ḑ
+    shifted:
+    - D
+    - Ḑ
+  - type: case
+    normal: f
+    shifted: F
+  - type: case
+    normal:
+    - g
+    - ģ
+    shifted:
+    - G
+    - Ģ
+  - type: case
+    normal: h
+    shifted: H
+  - type: case
+    normal: j
+    shifted: J
+  - type: case
+    normal:
+    - k
+    - ķ
+    shifted:
+    - K
+    - Ķ
+  - type: case
+    normal:
+    - l
+    - ļ
+    shifted:
+    - L
+    - Ļ
+- letters:
+  - $shift
+  - ','
+  - type: case
+    normal:
+    - z
+    - ž
+    shifted:
+    - Z
+    - Ž
+  - type: case
+    normal: x
+    shifted: X
+  - type: case
+    normal:
+    - c
+    - č
+    shifted:
+    - C
+    - Č
+  - type: case
+    normal: v
+    shifted: V
+  - type: case
+    normal: b
+    shifted: B
+  - type: case
+    normal:
+    - n
+    - ņ
+    shifted:
+    - N
+    - Ņ
+  - type: case
+    normal: m
+    shifted: M
+  - .
+  - $delete
+attributes:
+  moreKeyMode: OnlyExplicit

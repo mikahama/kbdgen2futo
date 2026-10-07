@@ -1,0 +1,311 @@
+name: Nuõrttsääʹmǩiõll
+languages:
+- sms
+rows:
+- letters:
+  - - ʼ
+    - ˈ
+  - type: case
+    normal: w
+    shifted: W
+  - type: case
+    normal: ǩ
+    shifted: Ǩ
+  - type: case
+    normal: ǥ
+    shifted: Ǥ
+  - type: case
+    normal: ǧ
+    shifted: Ǧ
+  - type: case
+    normal: ŋ
+    shifted: Ŋ
+  - type: case
+    normal: đ
+    shifted: Đ
+  - type: case
+    normal: ǯ
+    shifted: Ǯ
+  - type: case
+    normal: ʒ
+    shifted: Ʒ
+  - type: case
+    normal:
+    - ö
+    - ø
+    shifted:
+    - Ö
+    - Ø
+  - - ʹ
+    - ˈ
+- letters:
+  - type: case
+    normal:
+    - â
+    - q
+    shifted:
+    - Â
+    - Q
+  - type: case
+    normal: š
+    shifted: Š
+  - type: case
+    normal:
+    - e
+    - ë
+    - é
+    - è
+    - ê
+    - ẽ
+    - ē
+    - ẹ
+    - ė
+    - ǝ
+    shifted:
+    - E
+    - Ë
+    - É
+    - È
+    - Ê
+    - Ẽ
+    - Ē
+    - Ẹ
+    - Ė
+    - Ǝ
+  - type: case
+    normal: r
+    shifted: R
+  - type: case
+    normal:
+    - t
+    - ŧ
+    - ț
+    - ṱ
+    - ṯ
+    shifted:
+    - T
+    - Ŧ
+    - Ț
+    - Ṱ
+    - Ṯ
+  - type: case
+    normal:
+    - y
+    - ÿ
+    - ý
+    - ỳ
+    - ŷ
+    - ỹ
+    - ȳ
+    - ẏ
+    - ẙ
+    - ɏ
+    shifted:
+    - Y
+    - Ÿ
+    - Ý
+    - Ỳ
+    - Ŷ
+    - Ỹ
+    - Ȳ
+    - Ẏ
+    - Y̊
+    - Ɏ
+  - type: case
+    normal:
+    - u
+    - ü
+    - ú
+    - ù
+    - û
+    - ũ
+    - ū
+    - ụ
+    - ů
+    shifted:
+    - U
+    - Ü
+    - Ú
+    - Ù
+    - Û
+    - Ũ
+    - Ū
+    - Ụ
+    - Ů
+  - type: case
+    normal:
+    - i
+    - ï
+    - í
+    - ì
+    - î
+    - ĩ
+    - ī
+    - ị
+    - i
+    shifted:
+    - I
+    - Ï
+    - Í
+    - Ì
+    - Î
+    - Ĩ
+    - Ī
+    - Ị
+    - I
+  - type: case
+    normal:
+    - o
+    - ó
+    - ò
+    - ô
+    - õ
+    - ō
+    - ọ
+    - ȯ
+    - ő
+    - œ
+    shifted:
+    - O
+    - Ó
+    - Ò
+    - Ô
+    - Õ
+    - Ō
+    - Ọ
+    - Ȯ
+    - Ő
+    - Œ
+  - type: case
+    normal: p
+    shifted: P
+  - type: case
+    normal: å
+    shifted: Å
+- letters:
+  - type: case
+    normal:
+    - a
+    - á
+    - à
+    - â
+    - ã
+    - ā
+    - ạ
+    shifted:
+    - A
+    - Á
+    - À
+    - Â
+    - Ã
+    - Ā
+    - Ạ
+  - type: case
+    normal:
+    - s
+    - ŝ
+    - ṣ
+    - ș
+    - ss
+    shifted:
+    - S
+    - Ŝ
+    - Ṣ
+    - Ș
+    - SS
+  - type: case
+    normal:
+    - d
+    - ḓ
+    - ď
+    shifted:
+    - D
+    - Ḓ
+    - Ď
+  - type: case
+    normal: f
+    shifted: F
+  - type: case
+    normal:
+    - g
+    - ģ
+    shifted:
+    - G
+    - Ģ
+  - type: case
+    normal: h
+    shifted: H
+  - type: case
+    normal: j
+    shifted: J
+  - type: case
+    normal:
+    - k
+    - ḵ
+    - ķ
+    shifted:
+    - K
+    - Ḵ
+    - Ķ
+  - type: case
+    normal: l
+    shifted: L
+  - type: case
+    normal: õ
+    shifted: Õ
+  - type: case
+    normal:
+    - ä
+    - æ
+    shifted:
+    - Ä
+    - Æ
+- letters:
+  - $shift
+  - type: case
+    normal: ž
+    shifted: Ž
+  - type: case
+    normal: z
+    shifted: Z
+  - type: case
+    normal:
+    - č
+    - x
+    shifted:
+    - Č
+    - X
+  - type: case
+    normal:
+    - c
+    - ç
+    - ĉ
+    shifted:
+    - C
+    - Ç
+    - Ĉ
+  - type: case
+    normal: v
+    shifted: V
+  - type: case
+    normal: b
+    shifted: B
+  - type: case
+    normal:
+    - n
+    - ñ
+    - ň
+    - ṋ
+    - ṉ
+    shifted:
+    - N
+    - Ñ
+    - Ň
+    - Ṋ
+    - Ṉ
+  - type: case
+    normal: m
+    shifted: M
+  - $delete
+attributes:
+  moreKeyMode: OnlyExplicit

@@ -1,0 +1,171 @@
+name: Коми-зырян кыв
+languages:
+- kpv
+rows:
+- letters:
+  - type: case
+    normal: ё
+    shifted: Ё
+  - type: case
+    normal: ӧ
+    shifted: Ӧ
+  - type: case
+    normal: і
+    shifted: І
+  - type: case
+    normal: ө
+    shifted: Ө
+  - type: case
+    normal: ӱ
+    shifted: Ӱ
+  - type: case
+    normal: ь
+    shifted: Ь
+  - type: case
+    normal: ъ
+    shifted: Ъ
+  - type: case
+    normal: х
+    shifted: Х
+  - type: case
+    normal: э
+    shifted: Э
+- letters:
+  - type: case
+    normal:
+    - й
+    - ј
+    shifted:
+    - Й
+    - Ј
+  - type: case
+    normal: ц
+    shifted: Ц
+  - type: case
+    normal: у
+    shifted: У
+  - type: case
+    normal: к
+    shifted: К
+  - type: case
+    normal: е
+    shifted: Е
+  - type: case
+    normal:
+    - н
+    - ԋ
+    shifted:
+    - Н
+    - Ԋ
+  - type: case
+    normal: г
+    shifted: Г
+  - type: case
+    normal: ш
+    shifted: Ш
+  - type: case
+    normal: щ
+    shifted: Щ
+  - type: case
+    normal:
+    - з
+    - ԅ
+    - ԇ
+    - ӟ
+    shifted:
+    - З
+    - Ԅ
+    - Ԇ
+    - Ӟ
+- letters:
+  - type: case
+    normal: ф
+    shifted: Ф
+  - type: case
+    normal: ы
+    shifted: Ы
+  - type: case
+    normal: в
+    shifted: В
+  - type: case
+    normal: а
+    shifted: А
+  - type: case
+    normal: п
+    shifted: П
+  - type: case
+    normal: р
+    shifted: Р
+  - type: case
+    normal: о
+    shifted: О
+  - type: case
+    normal:
+    - л
+    - ԉ
+    shifted:
+    - Л
+    - Ԉ
+  - type: case
+    normal:
+    - д
+    - ԁ
+    - ԃ
+    shifted:
+    - Д
+    - Ԁ
+    - Ԃ
+  - type: case
+    normal:
+    - ж
+    - җ
+    - ӝ
+    shifted:
+    - Ж
+    - Җ
+    - Ӝ
+- letters:
+  - $shift
+  - type: case
+    normal: я
+    shifted: Я
+  - type: case
+    normal:
+    - ч
+    - ӵ
+    shifted:
+    - Ч
+    - Ӵ
+  - type: case
+    normal:
+    - с
+    - ԍ
+    shifted:
+    - С
+    - Ԍ
+  - type: case
+    normal: м
+    shifted: М
+  - type: case
+    normal:
+    - и
+    - ӥ
+    shifted:
+    - И
+    - Ӥ
+  - type: case
+    normal:
+    - т
+    - ԏ
+    shifted:
+    - Т
+    - Ԏ
+  - type: case
+    normal: б
+    shifted: Б
+  - type: case
+    normal: ю
+    shifted: Ю
+  - $delete
+attributes:
+  moreKeyMode: OnlyExplicit

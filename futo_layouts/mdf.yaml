@@ -1,0 +1,172 @@
+name: Мокша
+languages:
+- mdf
+rows:
+- letters:
+  - type: case
+    normal: й
+    shifted: Й
+  - type: case
+    normal:
+    - ц
+    - џ
+    shifted:
+    - Ц
+    - Џ
+  - type: case
+    normal:
+    - у
+    - ў
+    - ѵ
+    - ѷ
+    shifted:
+    - У
+    - Ў
+    - Ѵ
+    - Ѷ
+  - type: case
+    normal: к
+    shifted: К
+  - type: case
+    normal:
+    - е
+    - ѣ
+    - ә
+    shifted:
+    - Е
+    - Ѣ
+    - Ә
+  - type: case
+    normal:
+    - н
+    - ҥ
+    shifted:
+    - Н
+    - Ҥ
+  - type: case
+    normal: г
+    shifted: Г
+  - type: case
+    normal:
+    - ш
+    - ѕ
+    shifted:
+    - Ш
+    - Ѕ
+  - type: case
+    normal: щ
+    shifted: Щ
+  - type: case
+    normal: з
+    shifted: З
+  - type: case
+    normal: х
+    shifted: Х
+  - type: case
+    normal: ъ
+    shifted: Ъ
+- letters:
+  - type: case
+    normal:
+    - ф
+    - ѳ
+    shifted:
+    - Ф
+    - Ѳ
+  - type: case
+    normal: ы
+    shifted: Ы
+  - type: case
+    normal: в
+    shifted: В
+  - type: case
+    normal:
+    - а
+    - ӓ
+    shifted:
+    - А
+    - Ӓ
+  - type: case
+    normal: п
+    shifted: П
+  - type: case
+    normal:
+    - р
+    - ԗ
+    shifted:
+    - Р
+    - Ԗ
+  - type: case
+    normal:
+    - о
+    - ө
+    shifted:
+    - О
+    - Ө
+  - type: case
+    normal:
+    - л
+    - ԕ
+    shifted:
+    - Л
+    - Ԕ
+  - type: case
+    normal: д
+    shifted: Д
+  - type: case
+    normal:
+    - ж
+    - җ
+    shifted:
+    - Ж
+    - Җ
+  - type: case
+    normal:
+    - э
+    - є
+    shifted:
+    - Э
+    - Є
+  - type: case
+    normal: ё
+    shifted: Ё
+- letters:
+  - $shift
+  - type: case
+    normal:
+    - я
+    - ԙ
+    shifted:
+    - Я
+    - Ԙ
+  - type: case
+    normal: ч
+    shifted: Ч
+  - type: case
+    normal: с
+    shifted: С
+  - type: case
+    normal: м
+    shifted: М
+  - type: case
+    normal:
+    - и
+    - і
+    shifted:
+    - И
+    - І
+  - type: case
+    normal: т
+    shifted: Т
+  - type: case
+    normal: ь
+    shifted: Ь
+  - type: case
+    normal: б
+    shifted: Б
+  - type: case
+    normal: ю
+    shifted: Ю
+  - $delete
+attributes:
+  moreKeyMode: OnlyExplicit

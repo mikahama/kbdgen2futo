@@ -15,6 +15,12 @@ python3 -m pip install PyYAML
 
 ## Use
 
+Convert all checked-in layouts into `futo_layouts/`:
+
+```sh
+python3 kbdgen2futo.py
+```
+
 Convert one layout to standard output:
 
 ```sh
@@ -27,25 +33,27 @@ Write one layout to a file:
 python3 kbdgen2futo.py kbdgen_layouts/sms.yaml out/sms.yaml
 ```
 
-Convert every YAML layout below a directory:
+Convert every YAML layout below a directory other than the project default:
 
 ```sh
 python3 kbdgen2futo.py kbdgen_layouts out/
 ```
 
-Use `--overwrite` to replace outputs. For a single layout, `--name` and
+Outputs are replaced by default; use `--no-overwrite` to preserve existing
+files. For a single layout, `--name` and
 `--language` override the name selected from `displayNames` and the language
 code inferred from the source filename.
 
 ## Conversion scope
 
-The converter intentionally targets kbdgen's Android `primary` layout. It
-maps `\\s{shift}`, `\\s{backspace}`, `\\s{return}`, `\\s{space}`, and
-`\\s{shiftSymbols}` to FUTO template keys. It does not attempt to translate
-iOS/tablet/desktop layouts, spell-checker configuration, dead keys, or kbdgen
-features that have no direct FUTO equivalent. Unsupported special keys and
-incompatible row sizes stop conversion with a clear error instead of silently
-producing a broken layout.
+The converter intentionally targets kbdgen's Android `primary` layout; iOS,
+tablet, desktop, and other source sections are not read. It maps
+`\\s{shift}`, `\\s{backspace}`, `\\s{return}`, `\\s{space}`, and
+`\\s{shiftSymbols}` to FUTO template keys, and translates the source-level
+`longpress` map into FUTO explicit `moreKeys` for the relevant normal and
+shifted keys. It does not attempt to translate spell-checker configuration or
+dead keys. Unsupported special keys and incompatible row sizes stop conversion
+with a clear error instead of silently producing a broken layout.
 
 ## Building a vocabulary from lexc stems
 

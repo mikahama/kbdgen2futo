@@ -54,19 +54,47 @@ def convert_special(token: str) -> str:
     return SPECIAL_KEYS[kind]
 
 
-def futo_key(normal: str, shifted: str | None) -> Any:
+def futo_base_key(token: str, longpress: dict[str, list[str]]) -> Any:
+    """Convert one kbdgen key and attach its explicit long-press choices."""
+    converted = convert_special(token)
+    if converted.startswith("$"):
+        return converted
+    more_keys = longpress.get(token, [])
+    return [converted, *(convert_special(item) for item in more_keys)] if more_keys else converted
+
+
+def futo_key(normal: str, shifted: str | None, longpress: dict[str, list[str]]) -> Any:
     """Return the shortest FUTO representation of one key position."""
-    normal = convert_special(normal)
+    normal_key = futo_base_key(normal, longpress)
     if shifted is None:
-        return normal
-    shifted = convert_special(shifted)
-    if normal == shifted:
-        return normal
-    if normal.startswith("$") or shifted.startswith("$"):
+        return normal_key
+    shifted_key = futo_base_key(shifted, longpress)
+    if normal_key == shifted_key:
+        return normal_key
+    if (isinstance(normal_key, str) and normal_key.startswith("$")) or (
+        isinstance(shifted_key, str) and shifted_key.startswith("$")
+    ):
         raise ConversionError(
-            f"a special key changes between default and shift: {normal!r} / {shifted!r}"
+            f"a special key changes between default and shift: {normal_key!r} / {shifted_key!r}"
         )
-    return {"type": "case", "normal": normal, "shifted": shifted}
+    return {"type": "case", "normal": normal_key, "shifted": shifted_key}
+
+
+def longpress_keys(source: dict[str, Any]) -> dict[str, list[str]]:
+    """Parse kbdgen's shared longpress mapping into FUTO moreKeys lists."""
+    raw = source.get("longpress", {})
+    if raw is None:
+        return {}
+    if not isinstance(raw, dict):
+        raise ConversionError("longpress must be a mapping")
+    result: dict[str, list[str]] = {}
+    for key, value in raw.items():
+        if not isinstance(key, str) or not isinstance(value, str):
+            raise ConversionError("longpress keys and values must be strings")
+        options = value.split()
+        if options:
+            result[key] = options
+    return result
 
 
 def source_metadata(source: dict[str, Any], source_path: Path) -> tuple[str, str]:
@@ -95,6 +123,7 @@ def convert_layout(source: dict[str, Any], source_path: Path, name: str | None,
     if shifted_rows is not None and len(default_rows) != len(shifted_rows):
         raise ConversionError("default and shift layers have different numbers of rows")
 
+    longpress = longpress_keys(source)
     result_rows: list[dict[str, list[Any]]] = []
     for row_index, default_row in enumerate(default_rows, start=1):
         shifted_row = shifted_rows[row_index - 1] if shifted_rows is not None else None
@@ -108,17 +137,22 @@ def convert_layout(source: dict[str, Any], source_path: Path, name: str | None,
             )
         result_rows.append({
             "letters": [
-                futo_key(key, shifted_row[position] if shifted_row else None)
+                futo_key(key, shifted_row[position] if shifted_row else None, longpress)
                 for position, key in enumerate(default_row)
             ]
         })
 
     detected_language, detected_name = source_metadata(source, source_path)
-    return {
+    result = {
         "name": name or detected_name,
         "languages": [language or detected_language],
         "rows": result_rows,
     }
+    # kbdgen's map contains all long-press behavior. Prevent FUTO from adding
+    # unrelated automatic alternatives on top of those explicit choices.
+    if longpress:
+        result["attributes"] = {"moreKeyMode": "OnlyExplicit"}
+    return result
 
 
 def load_and_convert(path: Path, name: str | None, language: str | None) -> dict[str, Any]:
@@ -141,13 +175,22 @@ def dump(document: dict[str, Any]) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("source", type=Path, help="kbdgen YAML file, or a directory of YAML files")
+    parser.add_argument("source", type=Path, nargs="?", help="kbdgen YAML file, or a directory of YAML files")
     parser.add_argument("destination", type=Path, nargs="?", help="output file, or output directory")
     parser.add_argument("--name", help="override the FUTO layout name (single-file conversion only)")
     parser.add_argument("--language", help="override the language code (single-file conversion only)")
-    parser.add_argument("--overwrite", action="store_true", help="replace an existing output file")
+    parser.add_argument("--overwrite", dest="overwrite", action="store_true", default=True,
+                        help="replace existing output files (default)")
+    parser.add_argument("--no-overwrite", dest="overwrite", action="store_false",
+                        help="fail rather than replace an existing output file")
     args = parser.parse_args()
 
+    # The normal project workflow converts every checked-in kbdgen layout. A
+    # supplied source retains the original single-file and custom-directory
+    # behaviours below.
+    if args.source is None:
+        args.source = Path("kbdgen_layouts")
+        args.destination = Path("futo_layouts")
     if not args.source.exists():
         parser.error(f"source does not exist: {args.source}")
     if args.source.is_dir():
