@@ -153,6 +153,15 @@ in the report rather than stopping a build. `tqdm` shows progress while reading
 corpora, analysing forms, resolving Finnish mappings, and generating legal
 forms; use `--no-progress` for quiet batch runs.
 
+Every completed expensive build stage is written atomically below
+`predictive_models/checkpoints/<language>/`: corpus statistics, vocabulary
+analyses, and merged/generated candidate analyses. A later invocation resumes
+valid stages automatically; source file size/mtime and legal-form settings
+invalidate only affected stages. The target-to-Finnish cache is additionally
+saved after each lemma lookup, so interruption during lexical mapping resumes
+at the next unresolved lemma. Use `--restart` to ignore checkpoints, or
+`--checkpoints DIR` to store them elsewhere.
+
 ## Converting a predictive model to a FUTO/HeliBoard dictionary
 
 `predictive_model2dict.py` converts a model in `predictive_models/` into the

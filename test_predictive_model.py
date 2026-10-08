@@ -42,6 +42,32 @@ def model(readings, finnish, mapping, lemma_counts=None, morph_counts=None, conf
 
 
 class PredictiveModelTests(unittest.TestCase):
+    def test_initial_case_duplicates_merge_to_lowercase(self):
+        counts = pm.merge_initial_case_counts(Counter({"Word": 2, "word": 3, "Name": 4}))
+        self.assertEqual(counts, {"word": 5, "Name": 4})
+        calls = []
+        analyses, _errors = pm.analyse_surfaces(
+            "x", ["Word", "word", "Name"],
+            lambda word, _language: calls.append(word) or [(word.lower() + "+N", 0)], show_progress=False,
+        )
+        self.assertEqual(calls, ["Name", "word"])
+        self.assertEqual(set(analyses), {"Name", "word"})
+
+    def test_checkpoints_resume_only_when_fingerprint_matches(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = pm.CheckpointStore(Path(directory), "x")
+            store.save("stage", {"source": 1}, {"completed": True})
+            self.assertEqual(store.load("stage", {"source": 1}), {"completed": True})
+            self.assertIsNone(store.load("stage", {"source": 2}))
+
+    def test_translation_cache_is_immediately_persistent(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "translations.json"
+            cache = pm.TranslationCache(path, "x", FakeApi({"target": ["finnish"]}))
+            self.assertEqual(cache.finnish_terms("target"), (["finnish"], "translation_without_frequency"))
+            recovered = pm.TranslationCache(path, "x", FakeApi({}))
+            self.assertEqual(recovered.finnish_terms("target"), (["finnish"], "translation_without_frequency"))
+
     def test_one_to_one_and_frequency_order(self):
         readings = {"a": {analysis("a")}, "b": {analysis("b")}}
         result = model(readings, {"fi_a": 100, "fi_b": 10}, {"a": ["fi_a"], "b": ["fi_b"]})

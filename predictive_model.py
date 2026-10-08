@@ -27,6 +27,43 @@ except ImportError:  # pragma: no cover - depends on the user's installation
     sys.exit("uralicNLP is required; use the Python installation that provides it.")
 
 
+def write_json_atomic(path: Path, data: Any) -> None:
+    """Write a checkpoint without leaving a truncated file after a crash."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
+class CheckpointStore:
+    """Small JSON checkpoints for independently expensive build stages."""
+
+    VERSION = 1
+
+    def __init__(self, root: Path | None, language: str, resume: bool = True):
+        self.root, self.language, self.resume = root, language, resume
+
+    def load(self, stage: str, fingerprint: Mapping[str, Any]) -> Any | None:
+        if self.root is None or not self.resume:
+            return None
+        path = self.root / self.language / f"{stage}.json"
+        try:
+            saved = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return None
+        if (saved.get("version") == self.VERSION and saved.get("language") == self.language
+                and saved.get("fingerprint") == fingerprint):
+            return saved.get("data")
+        return None
+
+    def save(self, stage: str, fingerprint: Mapping[str, Any], data: Any) -> None:
+        if self.root is not None:
+            write_json_atomic(
+                self.root / self.language / f"{stage}.json",
+                {"version": self.VERSION, "language": self.language, "fingerprint": fingerprint, "data": data},
+            )
+
+
 @dataclass(frozen=True, order=True)
 class Analysis:
     """One FST reading split into the factors used by the probability model."""
@@ -34,6 +71,48 @@ class Analysis:
     pos: str
     lemma: str
     morphology: tuple[str, ...]
+
+
+def analysis_to_json(item: Analysis) -> dict[str, Any]:
+    return {"pos": item.pos, "lemma": item.lemma, "morphology": list(item.morphology)}
+
+
+def analysis_from_json(data: Mapping[str, Any]) -> Analysis:
+    return Analysis(str(data["pos"]), str(data["lemma"]), tuple(str(tag) for tag in data.get("morphology", [])))
+
+
+def analyses_to_json(analyses_by_surface: Mapping[str, set[Analysis]]) -> dict[str, list[dict[str, Any]]]:
+    return {surface: [analysis_to_json(item) for item in sorted(readings)] for surface, readings in sorted(analyses_by_surface.items())}
+
+
+def analyses_from_json(data: Mapping[str, Any]) -> dict[str, set[Analysis]]:
+    return {surface: {analysis_from_json(item) for item in readings} for surface, readings in data.items() if isinstance(surface, str) and isinstance(readings, list)}
+
+
+def initial_lowercase_variant(surface: str, candidates: Iterable[str]) -> str:
+    """Return lowercase only when both initial-case spellings occur."""
+    if not surface or not surface[0].isupper():
+        return surface
+    lower = surface[0].lower() + surface[1:]
+    return lower if lower != surface and lower in candidates else surface
+
+
+def merge_initial_case_counts(counts: Counter[str]) -> Counter[str]:
+    """Merge ``Word`` into ``word`` only when both are present."""
+    merged: Counter[str] = Counter()
+    known = set(counts)
+    for surface, count in counts.items():
+        merged[initial_lowercase_variant(surface, known)] += count
+    return merged
+
+
+def merge_initial_case_analyses(analyses_by_surface: Mapping[str, set[Analysis]]) -> dict[str, set[Analysis]]:
+    """Merge title-case/lowercase duplicate output forms, retaining lowercase."""
+    merged: dict[str, set[Analysis]] = defaultdict(set)
+    known = set(analyses_by_surface)
+    for surface, readings in analyses_by_surface.items():
+        merged[initial_lowercase_variant(surface, known)].update(readings)
+    return dict(merged)
 
 
 @dataclass
@@ -132,15 +211,18 @@ class TranslationCache:
         except Exception as error:
             status = "api_failure"
             self.entries[lemma] = {"translations": translations, "finnish_terms": [], "status": status, "error": str(error)}
+            self.save()
             return [], status
         self.entries[lemma] = {"translations": translations, "finnish_terms": sorted(finnish_terms), "status": status}
+        # This is intentionally immediate: dictionary lookups are the longest
+        # stage, and completed lemmas must survive an interrupted build.
+        self.save()
         return sorted(finnish_terms), status
 
     def save(self) -> None:
         if self.path is None:
             return
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(json.dumps({"version": self.CACHE_VERSION, "language": self.language, "entries": self.entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        write_json_atomic(self.path, {"version": self.CACHE_VERSION, "language": self.language, "entries": self.entries})
 
 
 @dataclass
@@ -153,6 +235,29 @@ class TargetStatistics:
     corpus_tokens: int
     ambiguous_tokens: int
     failures: list[str]
+
+
+def statistics_to_json(stats: TargetStatistics) -> dict[str, Any]:
+    return {
+        "pos": [[pos, count] for pos, count in sorted(stats.pos.items())],
+        "lemma": [[pos, lemma, count] for (pos, lemma), count in sorted(stats.lemma.items())],
+        "morphology": [[pos, list(morph), count] for (pos, morph), count in sorted(stats.morphology.items())],
+        "lemma_morphology": [[pos, lemma, list(morph), count] for (pos, lemma, morph), count in sorted(stats.lemma_morphology.items())],
+        "analyses_by_surface": analyses_to_json(stats.analyses_by_surface),
+        "corpus_tokens": stats.corpus_tokens,
+        "ambiguous_tokens": stats.ambiguous_tokens,
+        "failures": stats.failures,
+    }
+
+
+def statistics_from_json(data: Mapping[str, Any]) -> TargetStatistics:
+    return TargetStatistics(
+        Counter({str(pos): float(count) for pos, count in data["pos"]}),
+        Counter({(str(pos), str(lemma)): float(count) for pos, lemma, count in data["lemma"]}),
+        Counter({(str(pos), tuple(str(tag) for tag in morph)): float(count) for pos, morph, count in data["morphology"]}),
+        Counter({(str(pos), str(lemma), tuple(str(tag) for tag in morph)): float(count) for pos, lemma, morph, count in data["lemma_morphology"]}),
+        analyses_from_json(data["analyses_by_surface"]), int(data["corpus_tokens"]), int(data["ambiguous_tokens"]), list(data.get("failures", [])),
+    )
 
 
 def collect_target_statistics(
@@ -170,6 +275,7 @@ def collect_target_statistics(
             surface_counts.update(file_tokens(path))
         except Exception as error:
             failures.append(f"{path}: {error}")
+    surface_counts = merge_initial_case_counts(surface_counts)
     pos: Counter[str] = Counter()
     lemma: Counter[tuple[str, str]] = Counter()
     morphology: Counter[tuple[str, tuple[str, ...]]] = Counter()
@@ -212,7 +318,8 @@ def analyse_surfaces(
 ) -> tuple[dict[str, set[Analysis]], list[str]]:
     results: dict[str, set[Analysis]] = {}
     errors: list[str] = []
-    unique_surfaces = sorted(set(surfaces))
+    raw_surfaces = set(surfaces)
+    unique_surfaces = sorted({initial_lowercase_variant(surface, raw_surfaces) for surface in raw_surfaces})
     for surface in tqdm(unique_surfaces, desc=f"Analysing {language} vocabulary", unit="form", dynamic_ncols=True, disable=not show_progress):
         try:
             analyses = {parsed for reading in analyze(surface, language) if (parsed := parse_reading(reading))}
@@ -261,6 +368,9 @@ def add_legal_generated_forms(
             surface = prefix.split(":", 1)[0]
             if surface:
                 analyses_by_surface.setdefault(surface, set()).add(parsed)
+    merged = merge_initial_case_analyses(analyses_by_surface)
+    analyses_by_surface.clear()
+    analyses_by_surface.update(merged)
     return errors
 
 
@@ -376,17 +486,73 @@ def load_finnish_frequencies(path: Path) -> dict[str, int]:
     return {lemma: count for lemma, count in data.items() if isinstance(lemma, str) and isinstance(count, (int, float)) and count > 0}
 
 
-def build_language_model(language: str, corpus_root: Path, vocabulary_root: Path, finnish_path: Path, cache_path: Path, config: ModelConfig) -> tuple[UnigramModel, list[str]]:
-    stats = collect_target_statistics(language, corpus_files(corpus_root / language), show_progress=config.show_progress)
-    vocabulary_surfaces = load_vocabulary_surfaces(vocabulary_root / f"{language}.json")
-    vocabulary_analyses, errors = analyse_surfaces(language, vocabulary_surfaces, show_progress=config.show_progress)
-    combined = dict(stats.analyses_by_surface)
-    combined.update(vocabulary_analyses)
-    if config.enumerate_legal_forms:
-        errors.extend(add_legal_generated_forms(language, combined, config.legal_form_limit, config.legal_enumeration_max_lemmas, show_progress=config.show_progress))
+def file_fingerprint(files: Iterable[Path]) -> list[list[Any]]:
+    """Cheap invalidation key for source-dependent checkpoints."""
+    result = []
+    for path in files:
+        try:
+            stat = path.stat()
+            result.append([str(path), stat.st_size, stat.st_mtime_ns])
+        except OSError:
+            result.append([str(path), None, None])
+    return result
+
+
+def build_language_model(
+    language: str,
+    corpus_root: Path,
+    vocabulary_root: Path,
+    finnish_path: Path,
+    cache_path: Path,
+    config: ModelConfig,
+    checkpoint_root: Path | None = None,
+    resume: bool = True,
+) -> tuple[UnigramModel, list[str]]:
+    checkpoints = CheckpointStore(checkpoint_root, language, resume)
+    files = corpus_files(corpus_root / language)
+    corpus_fingerprint = {"files": file_fingerprint(files)}
+    saved_stats = checkpoints.load("corpus_statistics", corpus_fingerprint)
+    if saved_stats is not None:
+        print(f"{language}: resumed corpus statistics checkpoint", file=sys.stderr)
+        stats = statistics_from_json(saved_stats)
+    else:
+        stats = collect_target_statistics(language, files, show_progress=config.show_progress)
+        checkpoints.save("corpus_statistics", corpus_fingerprint, statistics_to_json(stats))
+
+    vocabulary_path = vocabulary_root / f"{language}.json"
+    vocabulary_fingerprint = {"files": file_fingerprint([vocabulary_path])}
+    combined_fingerprint = {
+        "corpus": corpus_fingerprint,
+        "vocabulary": vocabulary_fingerprint,
+        "enumerate_legal_forms": config.enumerate_legal_forms,
+        "legal_form_limit": config.legal_form_limit,
+        "legal_enumeration_max_lemmas": config.legal_enumeration_max_lemmas,
+    }
+    saved_combined = checkpoints.load("candidate_analyses", combined_fingerprint)
+    if saved_combined is not None:
+        print(f"{language}: resumed candidate analyses checkpoint", file=sys.stderr)
+        combined = analyses_from_json(saved_combined["analyses"])
+        errors = list(saved_combined.get("errors", []))
+    else:
+        saved_vocabulary = checkpoints.load("vocabulary_analyses", vocabulary_fingerprint)
+        if saved_vocabulary is not None:
+            print(f"{language}: resumed vocabulary analyses checkpoint", file=sys.stderr)
+            vocabulary_analyses = analyses_from_json(saved_vocabulary["analyses"])
+            errors = list(saved_vocabulary.get("errors", []))
+        else:
+            vocabulary_surfaces = load_vocabulary_surfaces(vocabulary_path)
+            vocabulary_analyses, errors = analyse_surfaces(language, vocabulary_surfaces, show_progress=config.show_progress)
+            checkpoints.save("vocabulary_analyses", vocabulary_fingerprint, {"analyses": analyses_to_json(vocabulary_analyses), "errors": errors})
+        combined_source: dict[str, set[Analysis]] = defaultdict(set)
+        for source in (stats.analyses_by_surface, vocabulary_analyses):
+            for surface, readings in source.items():
+                combined_source[surface].update(readings)
+        combined = merge_initial_case_analyses(combined_source)
+        if config.enumerate_legal_forms:
+            errors.extend(add_legal_generated_forms(language, combined, config.legal_form_limit, config.legal_enumeration_max_lemmas, show_progress=config.show_progress))
+        checkpoints.save("candidate_analyses", combined_fingerprint, {"analyses": analyses_to_json(combined), "errors": errors})
     cache = TranslationCache(cache_path, language)
     model = UnigramModel(config, stats, combined, load_finnish_frequencies(finnish_path), cache)
-    cache.save()
     return model, errors
 
 
@@ -398,6 +564,8 @@ def main() -> int:
     parser.add_argument("--finnish-frequencies", type=Path, default=Path("fin_frequencies.json"))
     parser.add_argument("--output", type=Path, default=Path("predictive_models"))
     parser.add_argument("--cache", type=Path, default=Path("predictive_models/cache"))
+    parser.add_argument("--checkpoints", type=Path, help="directory for resumable build checkpoints (default: <output>/checkpoints)")
+    parser.add_argument("--restart", action="store_true", help="ignore existing checkpoints and rebuild all stages")
     parser.add_argument("--no-progress", action="store_true", help="disable tqdm progress bars")
     for name in ("tau", "mu", "kappa", "rho", "eta", "epsilon", "probability_floor", "legal_form_limit", "legal_enumeration_max_lemmas"):
         parser.add_argument("--" + name.replace("_", "-"), type=int if name.startswith("legal_") else float)
@@ -405,10 +573,11 @@ def main() -> int:
     values = {key: value for key, value in vars(args).items() if key in ModelConfig.__dataclass_fields__ and value is not None}
     values["show_progress"] = not args.no_progress
     config = ModelConfig(**values)
-    model, errors = build_language_model(args.language, args.corpora, args.vocabularies, args.finnish_frequencies, args.cache / f"{args.language}.json", config)
     args.output.mkdir(parents=True, exist_ok=True)
-    (args.output / f"{args.language}.json").write_text(json.dumps({"language": args.language, "config": asdict(config), "forms": model.surface_records()}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (args.output / f"{args.language}.report.json").write_text(json.dumps(model.report() | {"vocabulary_analysis_failures": errors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    checkpoint_root = args.checkpoints or args.output / "checkpoints"
+    model, errors = build_language_model(args.language, args.corpora, args.vocabularies, args.finnish_frequencies, args.cache / f"{args.language}.json", config, checkpoint_root, resume=not args.restart)
+    write_json_atomic(args.output / f"{args.language}.json", {"language": args.language, "config": asdict(config), "forms": model.surface_records()})
+    write_json_atomic(args.output / f"{args.language}.report.json", model.report() | {"vocabulary_analysis_failures": errors})
     print(json.dumps(model.report(), ensure_ascii=False, indent=2), file=sys.stderr)
     return 0
 
