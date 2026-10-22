@@ -1,0 +1,231 @@
+name: Võro
+languages:
+- vro
+rows:
+- letters:
+  - type: case
+    normal: q
+    shifted: Q
+  - type: case
+    normal: w
+    shifted: W
+  - type: case
+    normal:
+    - e
+    - é
+    shifted:
+    - E
+    - É
+  - type: case
+    normal:
+    - r
+    - ŕ
+    shifted:
+    - R
+    - Ŕ
+  - type: case
+    normal:
+    - t
+    - t́
+    shifted:
+    - T
+    - T́
+  - type: case
+    normal:
+    - y
+    - ý
+    shifted:
+    - Y
+    - Ý
+  - type: case
+    normal:
+    - u
+    - ú
+    - ü
+    - ü̬
+    - u̬
+    shifted:
+    - U
+    - Ú
+    - Ü
+    - Ü̬
+    - U̬
+  - type: case
+    normal:
+    - i
+    - í
+    - i̬
+    shifted:
+    - I
+    - Í
+    - I̬
+  - type: case
+    normal:
+    - o
+    - ó
+    - ö
+    - õ
+    - ø
+    - õ̭
+    shifted:
+    - O
+    - Ó
+    - Ö
+    - Õ
+    - Ø
+    - Õ̭
+  - type: case
+    normal:
+    - p
+    - ṕ
+    shifted:
+    - P
+    - Ṕ
+  - type: case
+    normal:
+    - ü
+    - ü̬
+    shifted:
+    - Ü
+    - Ü̬
+  - type: case
+    normal:
+    - õ
+    - õ̭
+    shifted:
+    - Õ
+    - Õ̭
+- letters:
+  - type: case
+    normal:
+    - a
+    - á
+    - ä
+    - æ
+    - å
+    shifted:
+    - A
+    - Á
+    - Ä
+    - Æ
+    - Å
+  - type: case
+    normal:
+    - s
+    - ś
+    - š
+    shifted:
+    - S
+    - Ś
+    - Š
+  - type: case
+    normal:
+    - d
+    - d́
+    shifted:
+    - D
+    - D́
+  - type: case
+    normal:
+    - f
+    - f́
+    shifted:
+    - F
+    - F́
+  - type: case
+    normal:
+    - g
+    - ǵ
+    shifted:
+    - G
+    - Ǵ
+  - type: case
+    normal:
+    - h
+    - h́
+    shifted:
+    - H
+    - H́
+  - type: case
+    normal: j
+    shifted: J
+  - type: case
+    normal:
+    - k
+    - ḱ
+    shifted:
+    - K
+    - Ḱ
+  - type: case
+    normal:
+    - l
+    - ĺ
+    shifted:
+    - L
+    - Ĺ
+  - type: case
+    normal: ö
+    shifted: Ö
+  - type: case
+    normal: ä
+    shifted: Ä
+  - type: case
+    normal: ''''
+    shifted: '*'
+- letters:
+  - $shift
+  - type: case
+    normal:
+    - z
+    - ź
+    - ž
+    shifted:
+    - Z
+    - Ź
+    - Ž
+  - type: case
+    normal: x
+    shifted: X
+  - type: case
+    normal:
+    - c
+    - ć
+    - č
+    shifted:
+    - C
+    - Ć
+    - Č
+  - type: case
+    normal:
+    - v
+    - v́
+    shifted:
+    - V
+    - V́
+  - type: case
+    normal:
+    - b
+    - b́
+    shifted:
+    - B
+    - B́
+  - type: case
+    normal:
+    - n
+    - ń
+    shifted:
+    - N
+    - Ń
+  - type: case
+    normal:
+    - m
+    - ḿ
+    shifted:
+    - M
+    - Ḿ
+  - type: case
+    normal: đ
+    shifted: Đ
+  - $delete
+attributes:
+  moreKeyMode: OnlyExplicit
