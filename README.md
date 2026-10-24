@@ -1,3 +1,7 @@
+# Cite
+
+ Hämäläinen, M., Rueter, J. & Alnajjar, K. (2026) Open-Source FUTO Keyboard Layouts and Predictive Text for a Few Endangered Languages. In _The Proceedings of the 11th International Workshop on Computational Linguistics for Uralic Languages_
+
 # Build a FUTO Keyboard / HeliBoard layout and dictionary
 
 This project turns two kinds of language resources into files that can be used
