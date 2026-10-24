@@ -1,196 +1,194 @@
-# kbdgen to FUTO Keyboard converter
+# Build a FUTO Keyboard / HeliBoard layout and dictionary
 
-`kbdgen2futo.py` converts the Android phone layout in a Divvun/kbdgen YAML
-file into a [FUTO Keyboard layout](https://github.com/futo-org/futo-keyboard-layouts/blob/main/LayoutSpec.md).
-It reads `android.primary.layers.default` and (when present) `shift`, producing
-FUTO `case` keys wherever the two layers differ.
+This project turns two kinds of language resources into files that can be used
+with **FUTO Keyboard** and **HeliBoard**:
 
-## Requirements
+1. a Divvun/kbdgen keyboard definition becomes a FUTO layout YAML file; and
+2. a lexicon plus optional text corpus becomes a predictive-text dictionary
+   (`.dict`).
 
-Python 3 and [PyYAML](https://pyyaml.org/):
+The compiled predictive dictionaries created from the models are compatible
+with both keyboards.
 
-```sh
-python3 -m pip install PyYAML
-```
+This guide is for adding a **new language**. The language must already be
+supported by [UralicNLP](https://github.com/mikahama/uralicNLP): its analyser,
+generator, and translation data are used to build the model. A layout alone can
+be converted without UralicNLP, but predictive text cannot be built for a
+language that UralicNLP does not support.
 
-## Use
+Use the language code recognised by UralicNLP consistently below. In the
+examples, `xxx` means that code.
 
-Convert all checked-in layouts into `futo_layouts/`:
+## Before you start
 
-```sh
-python3 kbdgen2futo.py
-```
+You need:
 
-Convert one layout to standard output:
+- Python 3 with `PyYAML`, `tqdm`, and UralicNLP installed;
+- Java, to compile the final Android dictionary; and
+- for a layout: a kbdgen YAML layout for the language;
+- for predictive text: the language's `.lexc` source files and, preferably,
+  UTF-8 plain-text (`.txt`) or XML (`.xml`) corpus files.
 
-```sh
-python3 kbdgen2futo.py kbdgen_layouts/sms.yaml
-```
-
-Write one layout to a file:
-
-```sh
-python3 kbdgen2futo.py kbdgen_layouts/sms.yaml out/sms.yaml
-```
-
-Convert every YAML layout below a directory other than the project default:
+Install the Python dependencies in the same Python environment you will use to
+run the scripts:
 
 ```sh
-python3 kbdgen2futo.py kbdgen_layouts out/
+python3 -m pip install PyYAML tqdm uralicNLP
 ```
 
-Outputs are replaced by default; use `--no-overwrite` to preserve existing
-files. For a single layout, `--name` and
-`--language` override the name selected from `displayNames` and the language
-code inferred from the source filename.
-
-## Conversion scope
-
-The converter intentionally targets kbdgen's Android `primary` layout; iOS,
-tablet, desktop, and other source sections are not read. It maps
-`\\s{shift}`, `\\s{backspace}`, `\\s{return}`, `\\s{space}`, and
-`\\s{shiftSymbols}` to FUTO template keys, and translates the source-level
-`longpress` map into FUTO explicit `moreKeys` for the relevant normal and
-shifted keys. It does not attempt to translate spell-checker configuration or
-dead keys. Unsupported special keys and incompatible row sizes stop conversion
-with a clear error instead of silently producing a broken layout.
-
-## Building a vocabulary from lexc stems
-
-`build_vocabulary.py` scans only `.lexc` files below each language directory
-and inflects unique `(lemma, POS)` pairs using UralicNLP. If a POS tag is listed
-in `black_list/<language>.json`, the word is not inflected and is stored as is
-with the POS tag as its only morphological analysis. If a `(language, POS)`
-combination is present in `morph_lookup/`, tags from that lookup are used to
-inflect words with `uralicApi.generate`; otherwise, `uralicApi.get_all_forms` is
-used as a fallback. Run it with the system `python3` that provides UralicNLP:
+Then verify that UralicNLP can analyse the language before preparing a large
+build. Replace `xxx` with the actual language code:
 
 ```sh
-python3 build_vocabulary.py lexc_stems vocabularies
+python3 -c 'from uralicNLP import uralicApi; print(uralicApi.analyze("test", "xxx"))'
 ```
 
-To build a single language:
+If this fails because the language is unknown or its resources cannot be
+loaded, stop here and install/configure that language in UralicNLP first. This
+repository does not create language analysers or dictionaries for UralicNLP.
+
+## 1. Convert the keyboard layout
+
+Put the kbdgen YAML file somewhere in the repository, for example
+`kbdgen_layouts/xxx.yaml`. It must contain the phone layout at
+`android.primary.layers.default`; a `shift` layer is used when present.
+
+Convert one layout:
 
 ```sh
-python3 build_vocabulary.py lexc_stems vocabularies --language sms
+python3 kbdgen2futo.py kbdgen_layouts/xxx.yaml futo_layouts/xxx.yaml \
+  --language xxx --name "Language name"
 ```
 
-The result is one file per language, such as `vocabularies/sms.json`. Its keys
-are surface forms. Every value is a list of morphological readings; each
-reading is a list of tags returned after the surface form by UralicNLP. This
-retains separate readings where different analyses have the same spelling.
-Any individual entries UralicNLP cannot inflect are logged in a neighbouring
-`.errors.txt` file, while the remaining vocabulary is still saved.
+The result, `futo_layouts/xxx.yaml`, is a FUTO Keyboard layout and is also
+compatible with HeliBoard. Review it before importing it, particularly the
+language code, key rows, shifted keys, and long-press characters.
 
-## Counting corpus morphology frequencies
+The converter handles the Android phone `primary` layout only. It preserves
+the default and shift layers, converts common kbdgen special keys, and carries
+over explicit `longpress` entries. It deliberately does not convert desktop,
+tablet, iOS, spell-checker, or dead-key settings. A row with more than 12 keys
+or an unsupported special key produces an error instead of a layout that may
+not work.
 
-`count_morphology_frequencies.py` reads all `.txt` and `.xml` corpus files
-below each language directory in `lang_corpora`. It tokenizes their text and
-uses `uralicApi.analyze` to count complete morphological tag sequences (for
-example, `N+Sg+Nom`). Analyses are cached per distinct token, so a token
-occurring many times is analysed only once while all its occurrences are
-counted. Each ambiguous token is split equally among its analyses, preventing
-ambiguity from inflating counts.
+To convert every YAML layout in a directory instead, provide an output
+directory:
 
 ```sh
-python3 count_morphology_frequencies.py lang_corpora morphology_frequencies
+python3 kbdgen2futo.py kbdgen_layouts futo_layouts
 ```
 
-To process a single language:
+Existing output is replaced by default. Add `--no-overwrite` to prevent that.
+
+## 2. Prepare resources for predictive text
+
+Predictive text needs a morphological lexicon. Create these directories, using
+the same UralicNLP language code:
+
+```text
+lexc_stems/xxx/       # one or more .lexc files, including subdirectories
+lang_corpora/xxx/     # optional but strongly recommended .txt and/or .xml files
+```
+
+Copy the language's `.lexc` files under `lexc_stems/xxx/`. Only files ending
+in `.lexc` are read. The builder extracts lexical entries that contain a lemma
+and a part of speech, then asks UralicNLP to generate usable surface forms.
+
+Put representative, legally usable corpus text under `lang_corpora/xxx/`. The
+model uses it to rank forms according to observed language use. It can build
+with no corpus, but then its rankings depend mostly on the generated lexicon
+and Finnish-derived prior, so quality will be substantially lower.
+
+Two optional per-language controls can improve generation for unusual lexica:
+
+- `morph_lookup/xxx_lookup.json` lists the tags to generate for each part of
+  speech. Copy and adapt an existing file if needed.
+- `black_list/xxx.json` lists parts of speech that should remain uninflected.
+
+Neither file is required to begin: without a lookup, the builder uses
+UralicNLP's `get_all_forms` fallback.
+
+## 3. Build the vocabulary
+
+Generate a JSON vocabulary from the `.lexc` stems:
 
 ```sh
-python3 count_morphology_frequencies.py --language sms
+python3 build_vocabulary.py lexc_stems vocabularies --language xxx
 ```
 
-The output `morphology_frequencies/<language>.json` contains metadata and a
-`frequencies` mapping, sorted from the most frequent analysis to the least.
-Language directories without corpus files (such as an as-yet-empty `mdf`
-directory) are skipped.
+This creates `vocabularies/xxx.json`. If individual lemmas cannot be
+generated, they are recorded in `vocabularies/xxx.errors.txt`; inspect that
+file, fix the source or UralicNLP configuration if necessary, and rerun the
+command. Other successfully generated words are still written.
 
-## Building a predictive-text unigram model
+## 4. Build the predictive-text model
 
-`predictive_model.py` combines the existing target-language FST, corpus data,
-vocabulary forms, and `fin_frequencies.json` into a per-language word-form
-model:
+Run the model builder after the vocabulary exists:
 
 ```sh
-python3 predictive_model.py --language sms
+python3 predictive_model.py --language xxx
 ```
 
-It writes `predictive_models/sms.json` (forms with probabilities, costs, and
-their analyses), a compact `sms.report.json`, and a persistent lexical lookup
-cache in `predictive_models/cache/`. Delete that cache only when dictionary
-data has changed. Target surface forms are lemmatized by their target-language
-FST analyses and translated with `get_translation(lemma, language, "fin")`.
-Those Finnish translations are looked up directly, because
-`fin_frequencies.json` is already lemma-keyed. A Finnish lemma's count is split
-uniformly among all target lemmas reached by it.
-Thus Finnish Common Crawl counts are first tempered and normalised within POS,
-then used only as `mu` pseudo-counts; they are never added as target tokens.
+It reads `lang_corpora/xxx/`, `vocabularies/xxx.json`, and the included
+`fin_frequencies.json`, then writes:
 
-For an analysis `POS + lemma + morphology`, the implemented probability is:
+- `predictive_models/xxx.json` — the word-form model;
+- `predictive_models/xxx.report.json` — counts, coverage, and failures; and
+- `predictive_models/cache/xxx.json` plus resumable checkpoints.
 
-```
-P(POS) * P(lemma | POS) * P(morphology | lemma, POS)
-```
+Read the report before publishing a dictionary. In particular, check how many
+target lemmas were recognised, how many mapped to Finnish frequencies, and any
+reported API failures. The builder resumes expensive stages automatically. Use
+`--restart` only when you intentionally want to discard its checkpoints, such
+as after changing the source lexicon or corpus.
 
-Ambiguous FST readings are summed for a surface form. During corpus collection
-an ambiguous token gives each reading `1/k` evidence, rather than one full
-count. The model enumerates bounded legal forms with `get_all_forms` and
-renormalizes the POS morphology backoff distribution over each lemma's legal
-morphologies. If enumeration fails, analysed vocabulary/corpus forms remain
-the legal-form fallback.
+For a quiet non-interactive run, add `--no-progress`. Advanced smoothing and
+form-generation controls are available through `--help`; the defaults are a
+reasonable first build.
 
-The main tuning options are `--tau` (smaller flattens Finnish ranks), `--mu`
-(Finnish-prior pseudo-count strength), `--kappa` (POS morphology smoothing),
-`--rho` (lemma morphology smoothing), `--eta` (POS smoothing), `--epsilon`,
-and `--probability-floor`. Defaults are `0.7`, `100`, `10`, `5`, `1`, `1e-8`,
-and `1e-300` respectively. Legal generation is bounded by
-`--legal-form-limit` (per lemma) and `--legal-enumeration-max-lemmas` (2,000
-by default), so exceptionally large lexica remain buildable; the report notes
-when the fallback was used. Individual translation/FST failures are retained
-in the report rather than stopping a build. `tqdm` shows progress while reading
-corpora, analysing forms, resolving Finnish mappings, and generating legal
-forms; use `--no-progress` for quiet batch runs.
+### Optional: inspect corpus morphology
 
-Every completed expensive build stage is written atomically below
-`predictive_models/checkpoints/<language>/`: corpus statistics, vocabulary
-analyses, and merged/generated candidate analyses. A later invocation resumes
-valid stages automatically; source file size/mtime and legal-form settings
-invalidate only affected stages. The target-to-Finnish cache is additionally
-saved after each lemma lookup, so interruption during lexical mapping resumes
-at the next unresolved lemma. Use `--restart` to ignore checkpoints, or
-`--checkpoints DIR` to store them elsewhere.
-
-## Converting a predictive model to a FUTO/HeliBoard dictionary
-
-`predictive_model2dict.py` converts a model in `predictive_models/` into the
-AOSP combined wordlist format used by FUTO Keyboard and HeliBoard. It streams
-the model twice, so even a multi-gigabyte model does not need to fit in memory.
-Model probabilities are converted to AOSP's logarithmic `f=0..255` score;
-relative ranking is retained and scores are clamped to `15..255` by default.
+This independent diagnostic counts morphological analyses in the corpus. It
+does not feed the model builder directly, but can help assess coverage:
 
 ```sh
-python3 predictive_model2dict.py --language myv
+python3 count_morphology_frequencies.py lang_corpora morphology_frequencies \
+  --language xxx
 ```
 
-This reads `predictive_models/myv.json`, writes
-`futo_dictionaries/myv.combined`, then uses the bundled
-`dictool/dicttool_aosp.jar` to produce `futo_dictionaries/main_myv.dict`. Use
-`--models` or `--output` only when those standard project directories have
-been intentionally changed.
+The result is `morphology_frequencies/xxx.json`.
 
-The resulting `.combined` file is the inspectable source dictionary. Compile
-it with the AOSP dictionary tool to make the binary file that FUTO Keyboard and
-HeliBoard import:
+## 5. Compile an installable dictionary
+
+Convert the model to the AOSP dictionary format used by both FUTO Keyboard and
+HeliBoard:
 
 ```sh
-java -jar dicttool_aosp.jar makedict -s futo_dictionaries/myv.combined -d main_myv.dict
+python3 predictive_model2dict.py --language xxx --overwrite
 ```
 
-To use a different copy of the tool:
+This produces two files in `futo_dictionaries/`:
 
-```sh
-python3 predictive_model2dict.py --language myv \
-  --dicttool path/to/dicttool_aosp.jar
-```
+- `xxx.combined` — readable source word list for inspection; and
+- `main_xxx.dict` — the compiled binary dictionary to import.
+
+The command uses the bundled `dictool/dicttool_aosp.jar` and requires Java.
+If you keep the tool elsewhere, pass `--dicttool path/to/dicttool_aosp.jar`.
+
+## What to import
+
+Import `futo_layouts/xxx.yaml` as the keyboard layout and
+`futo_dictionaries/main_xxx.dict` as the predictive-text dictionary in FUTO
+Keyboard or HeliBoard. Keep the layout and dictionary language codes aligned.
+The precise import screens vary by keyboard version, but both artifacts use
+their shared FUTO/AOSP-compatible formats.
+
+## Typical new-language checklist
+
+- [ ] Confirm `xxx` is supported and working in UralicNLP.
+- [ ] Convert and review `futo_layouts/xxx.yaml`.
+- [ ] Add `.lexc` files under `lexc_stems/xxx/`.
+- [ ] Add representative corpus text under `lang_corpora/xxx/`.
+- [ ] Build `vocabularies/xxx.json` and review any errors file.
+- [ ] Build and inspect `predictive_models/xxx.report.json`.
+- [ ] Compile and import `futo_dictionaries/main_xxx.dict`.
